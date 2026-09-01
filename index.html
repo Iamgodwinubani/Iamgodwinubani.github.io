@@ -1,0 +1,2684 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    <meta
+      name="description"
+      content="Godwin Ubani is a technopreneur, software engineer, and founder building products at the intersection of technology, artificial intelligence, cybersecurity, and entrepreneurship. Based in China, building for Africa and the world."
+    />
+    <meta
+      name="keywords"
+      content="Godwin Ubani, Technopreneur, Software Engineer, Founder, Korvanta, Vokra Solar, AfroBridge AI, Shield Up, Artificial Intelligence, Cybersecurity, African Technology, Cross-Border Commerce, Renewable Energy"
+    />
+    <meta name="author" content="Godwin Ubani" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Godwin Ubani — Technopreneur &amp; Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Building technology, products, and companies for the future. Based in China, building for Africa and the world."
+    />
+    <meta property="og:url" content="https://godwinubani.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->    <title>Godwin Ubani — Technopreneur &amp; Software Engineer</title>
+    <!-- Favicon -->    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111111'/%3E%3Ctext x='32' y='44' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%23ed5a2f' text-anchor='middle'%3EGU%3C/text%3E%3C/svg%3E"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Swiper Bundle -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!-- Main css -->    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- ===== Godwin Ubani — content overrides ===== -->
+    <style>
+      /* Wordmark used in place of the template's logo image */
+      .gu-wordmark {
+        font-size: 30px;
+        letter-spacing: -0.02em;
+        color: hsl(var(--heading-color));
+      }
+      .gu-wordmark-sub {
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        color: var(--main-two-600);
+        margin-block-start: 2px;
+      }
+      .gu-wordmark-light {
+        color: hsl(var(--white));
+      }
+      @media screen and (max-width: 575px) {
+        .gu-wordmark {
+          font-size: 21px;
+        }
+        .gu-wordmark-sub {
+          font-size: 9px;
+        }
+      }
+
+      /* Hero word: "technopreneur" is longer than the word this template
+         shipped with, so the fixed per-breakpoint scale is replaced by a fluid
+         one. The word always fills the row on a single line, at every width,
+         without ever overflowing the container. */
+      .banner-three-title {
+        font-size: min(calc(14vw - 6px), 250px);
+        white-space: nowrap;
+      }      /* Headshot in fixed-height slots: crop, never distort */
+      .gu-shot {
+        object-fit: cover;
+        object-position: center top;
+      }      /* Hero figure: a background-removed cutout, so it only needs the soft
+         bottom fade that keeps it from ending on a hard horizontal edge. */
+      .gu-hero-shot {
+        /* Match the template figure's HEIGHT (827px). The slot is anchored to
+           its bottom edge, so height is what controls where the head lands
+           relative to the header; matching width instead pushed it too high. */
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          #000 82%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        mask-image: linear-gradient(to bottom, #000 82%, rgba(0, 0, 0, 0) 100%);
+      }
+
+      @media screen and (min-width: 1200px) {
+        .gu-hero-shot {
+          height: 827px;
+          width: auto;
+        }
+      }
+
+      /* The cutout is transparent, so the framed slots need their own ground
+         or the section colour shows straight through the portrait. */
+      .gu-portrait {
+        background: #efedea;
+      }
+      .gu-shot-light {
+        background: #efedea;
+      }
+      .gu-shot-dark {
+        background: #171717;
+      }
+
+      /* Book section */
+      .gu-book-cover {
+        max-width: 420px;
+      }
+      .gu-book-cover img {
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      }
+      @media screen and (max-width: 1199px) {
+        .gu-book-cover {
+          max-width: 340px;
+          margin-inline: auto;
+        }
+      }
+      .gu-book-label {
+        color: var(--main-two-600);
+        letter-spacing: 0.14em;
+      }
+      .gu-book-meta {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Contact form status message */
+      .gu-form-status {
+        display: none;
+      }
+      .gu-form-status.is-visible {
+        display: block;
+      }
+      .gu-form-status.is-ok {
+        color: var(--main-two-600);
+      }
+      .gu-form-status.is-error {
+        color: #ff8a8a;
+      }
+
+      /* Community grid — text marks in place of client logos */
+      .gu-brand-text {
+        display: block;
+        font-size: 22px;
+        line-height: 1.3;
+        padding-inline: 18px;
+        color: hsl(var(--heading-color));
+        transition: color 0.3s ease-in-out;
+      }
+      .brand-item:hover .gu-brand-text {
+        color: var(--main-two-600);
+      }
+      @media screen and (max-width: 1399px) {
+        .gu-brand-text {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="tw-magic-cursor">
+    <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        <path
+          id="preloaderSvg"
+          d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"
+        ></path>
+      </svg>
+      <div class="preloader-heading">
+        <div class="load-text">
+          <span>L</span>
+          <span>o</span>
+          <span>a</span>
+          <span>d</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+        </div>
+      </div>
+    </div>
+    <!--==================== Preloader End ====================-->
+
+    <!--==================== Overlay Start ====================-->
+    <div class="overlay"></div>
+    <!--==================== Overlay End ====================-->
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="side-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+    <!--==================== Begin Magic Cursor Start ====================-->
+    <div id="magic-cursor">
+      <div id="ball"></div>
+    </div>
+    <!--==================== Begin Magic Cursor End ====================-->
+
+    <!-- Custom Toast Message start -->
+    <div id="toast-container"></div>
+    <!-- Custom Toast Message End -->
+
+    <!-- ==================== Scroll to Top End Here ==================== -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn">
+        <svg
+          width="12"
+          height="7"
+          viewBox="0 0 12 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 6L6 1L1 6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- ==================== Scroll to Top End Here ==================== -->
+
+    <!-- ==================== Offcanvus Mobile Menu Start Here ==================== -->
+    <div class="tw-offcanvas-2-area p-relative">
+      <div class="tw-offcanvas-2-bg is-left left-box"></div>
+      <div class="tw-offcanvas-2-bg is-right right-box d-none d-md-block"></div>
+      <div class="tw-offcanvas-2-wrapper">
+        <div class="tw-offcanvas-2-left left-box">
+          <div
+            class="tw-offcanvas-2-left-wrap d-flex justify-content-between align-items-center"
+          >
+            <div class="twoffcanvas__logo">              <a class="logo-1 d-inline-block" href="#home">
+                <span
+                  class="gu-wordmark gu-wordmark-light d-block font-heading fw-bold lh-1"
+                  >Godwin Ubani</span
+                >
+                <span class="gu-wordmark-sub d-block text-uppercase fw-medium"
+                  >Technopreneur · Engineer</span
+                >
+              </a>
+            </div>
+            <div class="tw-offcanvas-2-close d-md-none text-end">
+              <button class="tw-offcanvas-2-close-btn tw-offcanvas-2-close-btn">
+                <span class="text">
+                  <span class="text-white">close</span>
+                </span>
+                <span class="d-inline-block">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="32.621"
+                        height="1.00918"
+                        transform="matrix(0.704882 0.709325 -0.704882 0.709325 1.0061 0)"
+                        fill="currentcolor"
+                      />
+                      <rect
+                        width="32.621"
+                        height="1.00918"
+                        transform="matrix(0.704882 -0.709325 0.704882 0.709325 0 23.2842)"
+                        fill="currentcolor"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="tw-main-menu-mobile menu-hover-active counter-row">
+            <nav></nav>
+          </div>
+        </div>
+        <div
+          class="tw-offcanvas-2-right right-box d-none d-md-block p-relative"
+        >
+          <div class="tw-offcanvas-2-close text-end">
+            <button class="tw-offcanvas-2-close-btn">
+              <span class="text">
+                <span>close</span>
+              </span>
+              <span class="d-inline-block">
+                <span>
+                  <svg
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.80859 9.80762L28.1934 28.1924"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.80859 28.1924L28.1934 9.80761"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </div>
+          <div
+            class="tw-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100"
+          >
+            <div class="twoffcanvas__contact-info">
+              <div class="twoffcanvas__contact-title">
+                <h5 class="text-white">Contact us</h5>
+              </div>
+              <ul>
+                <li>
+                  <span class="text-main-two-600 tw-text-xl"
+                    ><i class="ph ph-map-pin-line"></i
+                  ></span>                  <a
+                    class="text-white"
+                    href="https://www.google.com/maps/place/Ganzhou,+Jiangxi,+China"
+                    target="_blank"
+                    >Ganzhou, Jiangxi, China</a
+                  >
+                </li>
+                <li>
+                  <span class="text-main-two-600 tw-text-xl"
+                    ><i class="ph ph-envelope"></i
+                  ></span>                  <a class="text-white" href="mailto:hello@godwinubani.com"
+                    >hello@godwinubani.com</a
+                  >
+                </li>                <li>
+                  <span class="text-main-two-600 tw-text-xl"
+                    ><i class="ph ph-globe-hemisphere-west"></i
+                  ></span>
+                  <a class="text-white" href="#contact"
+                    >Available for consulting &amp; collaborations</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="footer-social"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <ul class="d-flex flex-wrap tw-gap-2">
+                <li>
+                  <a href="https://www.linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >LINKEDIN
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-linkedin-logo"></i
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >X
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-x-logo"></i
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/godwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >GITHUB
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-github-logo"></i
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/iamgodwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >INSTAGRAM
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-instagram-logo"></i
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@iamgodwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >YOUTUBE
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-youtube-logo"></i
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@iamgodwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >TIKTOK
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-tiktok-logo"></i
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://medium.com/@iamgodwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >MEDIUM
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-medium-logo"></i
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://dev.to/godwinubani" target="_blank" rel="noopener">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
+                      >DEV.TO
+                      <i class="ph ph-arrow-bend-up-right"></i
+                    ></span>
+                    <span class="hover-media"
+                      ><i class="ph ph-dev-to-logo"></i
+                    ></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== Offcanvus Mobile Menu End Here ==================== -->
+
+    <!-- ==================== Header Start Here ==================== -->
+    <header
+      class="header header-two header-three tw-transition-all tw-z-99 position-relative"
+    >
+      <div class="container tw-container-1800-px">
+        <nav
+          class="d-flex align-items-center justify-content-between position-relative"
+        >
+          <!-- Logo Start -->
+          <div class="header-three-logo tw-rounded-md">            <a href="#home" class="link d-inline-block">
+              <span class="gu-wordmark d-block font-heading fw-bold lh-1"
+                >Godwin Ubani</span
+              >
+              <span class="gu-wordmark-sub d-block text-uppercase fw-medium"
+                >Technopreneur · Engineer</span
+              >
+            </a>
+          </div>
+          <!-- Logo End  -->
+
+          <!-- Menu Start  -->
+          <div class="header-three-social d-none d-xl-block">
+            <ul class="d-flex tw-gap-205">
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://www.linkedin.com/in/iamgodwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                  ><i class="ph-bold ph-linkedin-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://x.com/iamgodwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="X"
+                  ><i class="ph-bold ph-x-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://github.com/godwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="GitHub"
+                  ><i class="ph-bold ph-github-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://www.instagram.com/iamgodwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                  ><i class="ph-bold ph-instagram-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://www.youtube.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube"
+                  ><i class="ph-bold ph-youtube-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://www.tiktok.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="TikTok"
+                  ><i class="ph-bold ph-tiktok-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://medium.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Medium"
+                  ><i class="ph-bold ph-medium-logo"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
+                  href="https://dev.to/godwinubani"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Dev.to"
+                  ><i class="ph-bold ph-dev-to-logo"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Menu End  -->
+
+          <!-- Menu Start  -->
+          <div class="header-menu d-none">
+            <!-- Nav menu Start -->
+            <div class="main-menu">
+              <nav class="tw-main-menu-content">
+                <ul>
+                  <li><a class="color-active" href="#home">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#expertise">Expertise</a></li>
+                  <li><a href="#work">Work</a></li>
+                  <li><a href="#milestones">Milestones</a></li>
+                  <li><a href="#book">Book</a></li>
+                  <li><a href="#community">Community</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Nav menu End  -->
+          </div>
+          <!-- Menu End  -->
+
+          <!-- Header Right start -->
+          <div class="header-right d-flex align-items-center tw-gap-705">
+            <!-- Menu Button Start  -->
+            <div class="header-three-menu">
+              <button
+                class="tw-offcanvas-open-btn tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center tw-transition-3 tw-rounded-md"
+              >
+                <span
+                  ><img
+                    class="tw-transition-3"
+                    src="assets/images/icons/header-three-toggle.svg"
+                    alt="toggle"
+                /></span>
+              </button>
+            </div>
+            <!-- Menu Button End  -->
+
+            <!-- Header Button Start  -->
+            <div class="header-three-button d-none d-md-block">
+              <a
+                class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md"                href="#contact"
+              >
+                let’s talk
+                <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
+              </a>
+            </div>
+            <!-- Header Button End  -->
+          </div>
+
+          <!-- Header Right End  -->
+        </nav>
+      </div>
+    </header>
+    <!-- ==================== Header End Here ==================== -->
+    <div id="smooth-wrapper">
+      <div id="smooth-content">        <section class="banner-three-area" id="home">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="banner-three-wrapper position-relative z-1">
+                  <div
+                    class="banner-three-man position-absolute start-50 translate-middle-x"
+                  >
+                    <img
+                      class="gu-hero-shot"
+                      src="assets/images/thumbs/headshot.png"
+                      alt="Godwin Ubani"
+                    />
+                  </div>                  <h1 class="banner-three-title text-black tw-mb-30">technopreneur</h1>
+                  <div
+                    class="banner-three-wrap d-flex justify-content-between align-items-end position-relative z-1"
+                  >
+                    <div
+                      class="banner-three-left tw-rounded-lg"
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="200"
+                    >                      <h2 class="banner-three-left-title tw-text-3xl tw-mb-6">
+                        Hello, I’m Godwin Ubani. <br />
+                        A technopreneur and software engineer building for
+                        Africa, from China.
+                      </h2>
+                      <div class="banner-three-list">
+                        <ul>
+                          <li
+                            class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
+                          >
+                            <span
+                              ><img
+                                src="assets/images/icons/banner-three-pluse.svg"
+                                alt="pluse"
+                            /></span>                            Software Engineering
+                          </li>
+                          <li
+                            class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
+                          >
+                            <span
+                              ><img
+                                src="assets/images/icons/banner-three-pluse.svg"
+                                alt="pluse"
+                            /></span>                            Artificial Intelligence
+                          </li>
+                          <li
+                            class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
+                          >
+                            <span
+                              ><img
+                                src="assets/images/icons/banner-three-pluse.svg"
+                                alt="pluse"
+                            /></span>                            Cybersecurity
+                          </li>
+                          <li
+                            class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
+                          >
+                            <span
+                              ><img
+                                src="assets/images/icons/banner-three-pluse.svg"
+                                alt="pluse"
+                            /></span>                            Product Development
+                          </li>
+                          <li
+                            class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
+                          >
+                            <span
+                              ><img
+                                src="assets/images/icons/banner-three-pluse.svg"
+                                alt="pluse"
+                            /></span>                            Technology Entrepreneurship
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="banner-three-center text-center"
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="200"
+                    >                      <h3 class="banner-three-center-title tw-text-120">
+                        Building technology, products and companies for the
+                        future.
+                      </h3>
+                      <div class="banner-three-button">
+                        <a
+                          class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-lg"                          href="#work"
+                        >
+                          explore my work
+                          <span
+                            class="tw-hover-btn-circle-dot bg-main-two-600"
+                          ></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="banner-three-right tw-rounded-lg"
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="300"
+                    >
+                      <div
+                        class="banner-three-counter-item tw-rounded-md tw-mb-4 position-relative"
+                      >
+                        <h4
+                          class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1"
+                        >
+                          <span
+                            class="purecounter font-heading"                            data-purecounter-duration="2"
+                            data-purecounter-end="5"
+                          ></span
+                          >+
+                        </h4>
+                        <p
+                          class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading"
+                        >
+                          Ventures Built
+                        </p>
+                      </div>
+                      <div
+                        class="banner-three-counter-item tw-rounded-md tw-mb-4 ms-auto bg-black"
+                      >
+                        <h4
+                          class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-white tw-mb-2 lh-1"
+                        >
+                          <span
+                            class="purecounter font-heading"                            data-purecounter-duration="4"
+                            data-purecounter-end="3"
+                          ></span
+                          >
+                        </h4>
+                        <p
+                          class="banner-three-counter-paragraph tw-text-lg fw-medium text-white"
+                        >
+                          Countries Operated In
+                        </p>
+                      </div>
+                      <div
+                        class="banner-three-counter-item tw-rounded-md tw-mb-4"
+                      >
+                        <div class="d-flex align-items-center tw-mb-2">
+                          <div
+                            class="tw-w-9 tw-h-9 rounded-circle overflow-hidden tw-duration-300 hover-scale-2 tw-hover-z-9 position-relative z-1 border border-2 border-white"
+                          >
+                            <img
+                              src="assets/images/thumbs/team-img1.png"
+                              alt="Client Image"
+                              class="w-100 h-100 object-fit-cover"
+                            />
+                          </div>
+                          <div
+                            class="tw-w-9 tw-h-9 rounded-circle overflow-hidden tw-duration-300 hover-scale-2 tw-hover-z-9 position-relative z-2 tw--ms-16-px z-1 border border-2 border-white"
+                          >
+                            <img
+                              src="assets/images/thumbs/team-img2.png"
+                              alt="Client Image"
+                              class="w-100 h-100 object-fit-cover"
+                            />
+                          </div>
+                          <div
+                            class="tw-w-9 tw-h-9 rounded-circle overflow-hidden tw-duration-300 hover-scale-2 tw-hover-z-9 position-relative z-3 tw--ms-16-px z-1 border border-2 border-white"
+                          >
+                            <img
+                              src="assets/images/thumbs/team-img3.png"
+                              alt="Client Image"
+                              class="w-100 h-100 object-fit-cover"
+                            />
+                          </div>
+                          <div
+                            class="tw-w-9 tw-h-9 rounded-circle overflow-hidden tw-duration-300 hover-scale-2 tw-hover-z-9 position-relative z-3 tw--ms-16-px z-1 border border-2 border-white"
+                          >
+                            <img
+                              src="assets/images/thumbs/team-img4.png"
+                              alt="Client Image"
+                              class="w-100 h-100 object-fit-cover"
+                            />
+                          </div>
+                        </div>
+                        <h4
+                          class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1"
+                        >
+                          <span
+                            class="purecounter font-heading"                            data-purecounter-duration="3"
+                            data-purecounter-end="100"
+                          ></span
+                          >+
+                        </h4>
+                        <p
+                          class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading"
+                        >
+                          Hours Mentoring Founders
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="banner-three-line-shape position-absolute start-50 translate-middle-x z-n1"
+                    >
+                      <img
+                        src="assets/images/shapes/banner-three-shape.png"
+                        alt="shape"
+                      />
+                      <div class="banner-three-carcel-shape">
+                        <div><span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>        <section
+          class="about-three-area py-120 position-relative z-1"
+          id="about"
+        >
+          <div class="container tw-container-1800-px">
+            <div class="about-three-top position-relative z-1">
+              <div class="row justify-content-center tw-mb-21">
+                <div class="col-xl-9">
+                  <div class="text-center">
+                    <h2
+                      class="about-three-title text-heading tw-text-15 tw-itm-title tw-itm-anim"
+                    >                      I build technology that closes the distance between ideas
+                      and execution, businesses and markets, people and
+                      opportunity. My work speaks louder than words—explore the
+                      results.
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6">
+                  <div
+                    class="about-three-thumb w-100 tw-clip-anim tw-rounded-lg"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <img
+                      class="tw-anim-img w-100 tw-rounded-lg gu-portrait"
+                      data-animate="true"
+                      src="assets/images/thumbs/headshot.png"
+                      alt="Godwin Ubani"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div
+                    class="about-three-right"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                  >
+                    <div>
+                      <p class="tw-text-xl tw-mb-10">
+                        My journey into technology began at Mobile Tech Hub,
+                        where I first saw software solve a real problem for a
+                        real person. Curiosity turned into obsession quickly —
+                        WordPress, HTML, CSS and JavaScript — and the first
+                        websites I ever shipped became the foundation of
+                        everything that followed.
+                      </p>
+                      <p class="tw-text-xl tw-mb-10">
+                        Wanting to understand how systems actually behave
+                        beneath the interface, I moved into computer networking
+                        at Aptech and built real depth in network architecture,
+                        security protocols and system infrastructure. Today I
+                        study Computer Science and Technology at Jiangxi
+                        University of Science and Technology in China, learning
+                        inside one of the most demanding technology ecosystems
+                        in the world.
+                      </p>
+                      <p class="tw-text-xl tw-mb-10">
+                        Beyond engineering, I build companies. I founded
+                        Korvanta to make cross-border trade between African
+                        businesses and verified Chinese suppliers secure and
+                        simple, and Vokra Solar to put affordable, reliable
+                        clean energy into African homes and businesses. The
+                        mission never changes: build useful things, solve real
+                        problems, and create lasting value.
+                      </p>
+                    </div>
+                    <div class="about-three-counter d-inline-block">
+                      <div class="tw-hover-btn-wrapper d-inline-block">
+                        <a
+                          class="tw-btn-circle tw-hover-btn-item tw-hover-btn tw-w-160-px tw-h-160-px lh-1 d-inline-flex justify-content-center align-items-center rounded-circle position-relative overflow-hidden border border-1 border-neutral-200"
+                          href="#about"
+                        >
+                          <span
+                            class="d-flex flex-column justify-content-center"
+                          >
+                            <span                              class="tw-btn-circle-icon text-heading tw-text-8 tw-transition-3 font-heading fw-medium"
+                              >8+</span
+                            >
+                            <span
+                              class="text-heading fw-bold text-center tw-transition-3 tw-text-2xl fw-medium"
+                              >Years of Building</span
+                            >
+                          </span>
+                          <i class="tw-btn-circle-dot bg-main-two-600"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="about-three-wrap-shape d-flex justify-content-between"
+              >
+                <div
+                  class="banner-three-counter-item tw-rounded-md position-relative"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
+                  <h2
+                    class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1"
+                  >
+                    <span
+                      class="purecounter font-heading"                      data-purecounter-duration="4"
+                      data-purecounter-end="1"
+                    ></span
+                    >
+                  </h2>
+                  <p
+                    class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading"
+                  >
+                    Published Book
+                  </p>
+                </div>
+                <div
+                  class="banner-three-counter-item tw-rounded-md position-relative"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <h2
+                    class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1"
+                  >
+                    <span
+                      class="purecounter font-heading"                      data-purecounter-duration="2"
+                      data-purecounter-end="8"
+                    ></span
+                    >+
+                  </h2>
+                  <p
+                    class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading"
+                  >
+                    Industries Served
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              class="about-three-shape position-absolute start-0 w-100"
+              src="assets/images/shapes/about-three-shape.png"
+              alt="shape"
+            />
+          </div>
+        </section>
+        <!-- ======================== Marquee section start =========================== -->
+        <div class="marquee tw-pt-17 bg-black">
+          <div
+            class="marquee_left d-flex align-items-center justify-content-between tw-gap-16 overflow-hidden"
+          >
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-white"
+              >
+                Expertise <span class="text-white">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-stroke"
+              >
+                Expertise <span class="text-white">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-white"
+              >
+                Expertise <span class="text-white">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-stroke"
+              >
+                Expertise <span class="text-white">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-white"
+              >
+                Expertise <span class="text-white">-</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- ======================== Marquee section end =========================== -->
+        <section class="service-three-area bg-black pt-120 tw-pb-15" id="expertise">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-12">
+                <div class="service-three-wrapper">
+                  <div
+                    class="service-three-single"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="service-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span
+                            class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3"
+                            >01
+                            <img
+                              class="tw-transition-3"
+                              src="assets/images/icons/service-three-arrow.svg"
+                              alt="arrow"
+                          /></span>
+                        </div>
+                        <div>
+                          <div>
+                            <h2
+                              class="service-three-title tw-text-15 text-white tw-mb-4"
+                            >
+                              <a href="#work"
+                                >Software Engineering</a
+                              >
+                            </h2>
+                          </div>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >TypeScript</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >React &amp; Next.js</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Node.js</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Python</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <a href="#work"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb1.png"
+                            alt="thumb1"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="service-three-single ms-auto"
+                    data-aos="fade-left"
+                    data-aos-duration="2000"
+                    data-aos-delay="300"
+                  >
+                    <div
+                      class="service-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span
+                            class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3"
+                            >02
+                            <img
+                              class="tw-transition-3"
+                              src="assets/images/icons/service-three-arrow.svg"
+                              alt="arrow"
+                          /></span>
+                        </div>
+                        <div>
+                          <div>
+                            <h2
+                              class="service-three-title tw-text-15 text-white tw-mb-4"
+                            >
+                              <a href="#work"
+                                >Artificial Intelligence</a
+                              >
+                            </h2>
+                          </div>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >AI Products</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >LLM Integration</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Automation</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <a href="#work"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb2.png"
+                            alt="thumb1"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="service-three-single"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                    data-aos-delay="400"
+                  >
+                    <div
+                      class="service-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span
+                            class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3"
+                            >03
+                            <img
+                              class="tw-transition-3"
+                              src="assets/images/icons/service-three-arrow.svg"
+                              alt="arrow"
+                          /></span>
+                        </div>
+                        <div>
+                          <div>
+                            <h2
+                              class="service-three-title tw-text-15 text-white tw-mb-4"
+                            >
+                              <a href="#work">Cybersecurity</a>
+                            </h2>
+                          </div>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Zero-Trust</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Security Audits</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Secure Architecture</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <a href="#work"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb3.png"
+                            alt="thumb1"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="service-three-single ms-auto"
+                    data-aos="fade-left"
+                    data-aos-duration="2000"
+                    data-aos-delay="500"
+                  >
+                    <div
+                      class="service-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span
+                            class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3"
+                            >04
+                            <img
+                              class="tw-transition-3"
+                              src="assets/images/icons/service-three-arrow.svg"
+                              alt="arrow"
+                          /></span>
+                        </div>
+                        <div>
+                          <div>
+                            <h2
+                              class="service-three-title tw-text-15 text-white tw-mb-4"
+                            >
+                              <a href="#work"
+                                >Venture Building</a
+                              >
+                            </h2>
+                          </div>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Product Strategy</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Cross-Border Commerce</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                                  href="#"
+                                  >Renewable Energy</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <a href="#work"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb4.png"
+                            alt="thumb1"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio-three-area py-120 position-relative z-1" id="work">
+          <!-- PLACEHOLDER: portfolio-three-thumb1-4.jpg are template stock shots.
+               Replace them with real screens of AfroBridge AI, Korvanta,
+               Vokra Solar, WebZap and SafePrompt. -->
+          <div class="portfolio-three-shape position-absolute top-0 z-n1">
+            <h3 class="portfolio-three-shape-title">works</h3>
+          </div>
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-12">
+                <div
+                  class="portfolio-three-wrapper d-flex justify-content-between flex-wrap align-items-start position-relative z-1"
+                >
+                  <div
+                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper"
+                  >
+                    <div
+                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2"
+                    >
+                      <div class="tw-mb-6">
+                        <div>
+                          <h2 class="tw-text-605 fw-medium tw-mb-4">
+                            <a
+                              class="hover-text-main-two-600"
+                              href="#work"
+                              >AfroBridge AI</a
+                            >
+                          </h2>
+                        </div>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >AI</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >COMMERCE</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="portfolio-three-button">
+                          <a
+                            class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white"
+                            href="#work"
+                            ><i class="ph ph-arrow-up-right"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg"
+                      data-cursor="View"
+                    >
+                      <a
+                        class="d-block cursor-hide tw-rounded-lg"
+                        href="#work"
+                        ><img
+                          class="w-100 tw-rounded-lg"
+                          src="assets/images/thumbs/portfolio-three-thumb1.jpg"
+                          alt="thumb"
+                      /></a>
+                    </div>
+                  </div>
+                  <div
+                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper"
+                  >
+                    <div
+                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2"
+                    >
+                      <div class="tw-mb-6">
+                        <div>
+                          <h2 class="tw-text-605 fw-medium tw-mb-4">
+                            <a
+                              class="hover-text-main-two-600"
+                              href="#work"
+                              >Korvanta</a
+                            >
+                          </h2>
+                        </div>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >FINTECH</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >TRADE</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a
+                          class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white"
+                          href="#work"
+                          ><i class="ph ph-arrow-up-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div
+                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg"
+                      data-cursor="View"
+                    >
+                      <a
+                        class="d-block cursor-hide tw-rounded-lg"
+                        href="#work"
+                        ><img
+                          class="w-100 tw-rounded-lg"
+                          src="assets/images/thumbs/portfolio-three-thumb2.jpg"
+                          alt="thumb"
+                      /></a>
+                    </div>
+                  </div>
+                  <div
+                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper"
+                  >
+                    <div
+                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2"
+                    >
+                      <div class="tw-mb-6">
+                        <div>
+                          <h2 class="tw-text-605 fw-medium tw-mb-4">
+                            <a
+                              class="hover-text-main-two-600"
+                              href="#work"
+                              >Vokra Solar</a
+                            >
+                          </h2>
+                        </div>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >ENERGY</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >HARDWARE</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a
+                          class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white"
+                          href="#work"
+                          ><i class="ph ph-arrow-up-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div
+                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg"
+                      data-cursor="View"
+                    >
+                      <a
+                        class="d-block cursor-hide tw-rounded-lg"
+                        href="#work"
+                        ><img
+                          class="w-100 tw-rounded-lg"
+                          src="assets/images/thumbs/portfolio-three-thumb3.jpg"
+                          alt="thumb"
+                      /></a>
+                    </div>
+                  </div>
+                  <div
+                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper"
+                  >
+                    <div
+                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2"
+                    >
+                      <div class="tw-mb-6">
+                        <div>
+                          <h2 class="tw-text-605 fw-medium tw-mb-4">
+                            <a
+                              class="hover-text-main-two-600"
+                              href="#work"
+                              >WebZap</a
+                            >
+                          </h2>
+                        </div>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >SAAS</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3"
+                                href="#"
+                                >SEO</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a
+                          class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white"
+                          href="#work"
+                          ><i class="ph ph-arrow-up-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div
+                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg"
+                      data-cursor="View"
+                    >
+                      <a
+                        class="d-block cursor-hide tw-rounded-lg"
+                        href="#work"
+                        ><img
+                          class="w-100 tw-rounded-lg"
+                          src="assets/images/thumbs/webzap.jpg"
+                          alt="WebZap — website performance and security analysis"
+                      /></a>
+                    </div>
+                  </div>
+                  <div
+                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper"
+                  >
+                    <div
+                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2"
+                    >
+                      <div class="tw-mb-6">
+                        <div>
+                          <h2 class="tw-text-605 fw-medium tw-mb-4">
+                            <a class="hover-text-main-two-600" href="#work"
+                              >SafePrompt</a
+                            >
+                          </h2>
+                        </div>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li>
+                              <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">AI</a>
+                            </li>
+                            <li>
+                              <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">SECURITY</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a
+                          class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white"
+                          href="#work"
+                          ><i class="ph ph-arrow-up-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                    <div
+                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg"
+                      data-cursor="View"
+                    >
+                      <a class="d-block cursor-hide tw-rounded-lg" href="#work"
+                        ><img
+                          class="w-100 tw-rounded-lg"
+                          src="assets/images/thumbs/safeprompt.jpg"
+                          alt="SafePrompt — make any prompt jailbreak-proof"
+                      /></a>
+                    </div>
+                  </div>
+                  <div
+                    class="about-three-counter portfolio-three-counter d-inline-block position-absolute bottom-0 end-0"
+                  >
+                    <div class="tw-hover-btn-wrapper d-inline-block">
+                      <a
+                        class="tw-btn-circle tw-hover-btn-item tw-hover-btn tw-w-160-px tw-h-160-px lh-1 d-inline-flex justify-content-center align-items-center rounded-circle position-relative overflow-hidden"
+                        href="#milestones"
+                      >
+                        <span class="d-flex flex-column justify-content-center">
+                          <span
+                            class="text-heading fw-bold tw-transition-3 tw-text-2xl fw-semibold"
+                            >Explore <br />
+                            My Ventures <i class="ph ph-arrow-up-right"></i
+                          ></span>
+                        </span>
+                        <i class="tw-btn-circle-dot bg-main-two-600"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="feature-three-area py-120 position-relative z-1" id="milestones">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-12">
+                <!-- PLACEHOLDER: the data-background-image on each row is template stock
+                     art; point them at images for each milestone. -->
+                <div class="feature-three-wrapper hover__widget">
+                  <div
+                    class="feature-three-single current hover__reveal-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="feature-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >01</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >Shield Up</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >Published — Defending Your Digital World</span
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2025</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/shield-up-cover.png"
+                    ></div>
+                  </div>
+                  <div
+                    class="feature-three-single hover__reveal-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="feature-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >02</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >AfroBridge AI</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >AI-powered cross-border commerce platform</span
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2025</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-two-thumb1.jpg"
+                    ></div>
+                  </div>
+                  <div
+                    class="feature-three-single hover__reveal-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="feature-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >03</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >Vokra Solar</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >Renewable energy for African homes and businesses</span
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2024</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-two-thumb2.jpg"
+                    ></div>
+                  </div>
+                  <div
+                    class="feature-three-single hover__reveal-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="feature-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >04</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >Korvanta</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >Secure cross-border trade infrastructure</span
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2024</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-two-thumb3.jpg"
+                    ></div>
+                  </div>
+                  <div
+                    class="feature-three-single hover__reveal-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="feature-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >05</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >WebZap</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >SEO automation and reporting platform</span
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2023</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-two-thumb4.jpg"
+                    ></div>
+                  </div>
+                  <div
+                    class="feature-three-single hover__reveal-item"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="feature-three-item d-flex justify-content-between align-items-center"
+                    >
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >06</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >Yimba</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >P2P currency exchange for emerging markets</span
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2022</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-thumb1.jpg"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="book-area bg-black py-120" id="book">
+          <div class="container tw-container-1800-px">
+            <div class="row align-items-center gy-5">
+              <div class="col-xl-5 col-lg-6">
+                <div
+                  class="gu-book-cover"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
+                  <img
+                    class="w-100 tw-rounded-lg"
+                    src="assets/images/thumbs/shield-up-cover.png"
+                    alt="Shield Up: Defending Your Digital World — cover"
+                  />
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-6">
+                <div
+                  class="gu-book-content"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <span
+                    class="gu-book-label text-uppercase fw-semibold tw-text-sm d-inline-block tw-mb-6"
+                    >Publication · 2025 · Cybersecurity</span
+                  >
+                  <h2 class="tw-text-15 text-white tw-mb-8">
+                    Shield Up: Defending Your Digital World
+                  </h2>
+                  <p class="tw-text-xl text-white tw-mb-8">
+                    The complete Gen Z guide to online safety, digital identity
+                    and thriving in a cyber world. I wrote it because the people
+                    most exposed to modern attacks are usually the least
+                    equipped to recognise them.
+                  </p>
+                  <p class="tw-text-xl text-white tw-mb-10">
+                    It covers AI-driven attacks, zero-trust architecture, and
+                    how to build a security-first culture — written plainly, for
+                    founders, developers and anyone who lives online.
+                  </p>
+                  <div class="portfolio-list portfolio-two-list tw-mb-12">
+                    <ul class="d-flex tw-gap-205 flex-wrap">
+                      <li>
+                        <a
+                          class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                          href="#book"
+                          >AI-Driven Attacks</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                          href="#book"
+                          >Zero-Trust</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                          href="#book"
+                          >Digital Identity</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3"
+                          href="#book"
+                          >Security Culture</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="d-flex align-items-center tw-gap-6 flex-wrap">
+                    <a
+                      class="tw-hover-btn bg-main-two-600 text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-heading text-uppercase tw-rounded-lg"
+                      href="assets/files/shield-up-defending-your-digital-world.pdf"
+                      download
+                    >
+                      download now
+                      <span class="tw-hover-btn-circle-dot bg-white"></span>
+                    </a>
+                    <span class="gu-book-meta tw-text-lg"
+                      >PDF · free · 510 KB</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testimonial-three-area pt-120 tw-pb-22" id="testimonials">
+          <div class="container tw-container-1800-px">
+            <div class="row justify-content-center tw-mb-21">
+              <div class="col-xl-10">
+                <div class="text-center">
+                  <h2
+                    class="testimonial-three-title text-heading tw-text-15 tw-itm-title tw-itm-anim"
+                  >
+                    Honest words from the founders and teams I have built alongside,
+                    and the principle that sits underneath every product I ship
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="testimonial-three-slider position-relative z-1">
+                  <div class="testimonial-three-active swiper-container">
+                    <div class="swiper-wrapper">
+                      <!-- item 1 -->
+                      <div
+                        class="testimonial-three-wrapper d-flex align-items-center tw-gap-9 tw-rounded-lg tw-mb-705 swiper-slide"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="200"
+                      >
+                        <div
+                          class="testimonial-three-thumb position-relative z-1"
+                        >
+                          <img
+                            class="w-100 h-100 tw-rounded-lg"
+                            src="assets/images/thumbs/testimonial-three-thumb1.jpg"
+                            alt="thumb"
+                          />
+                          <!-- PLACEHOLDER: testimonial-three-thumb1.jpg (the accelerator
+                               Tech Lead) is still a template stock photo. -->
+                        </div>
+                        <div class="testimonial-three-content w-100">
+                          <div
+                            class="d-flex align-items-center justify-content-between tw-mb-16"
+                          >
+                            <div>
+                              <span
+                                ><img
+                                  src="assets/images/icons/testimonial-three-icon.svg"
+                                  alt="icon"
+                              /></span>
+                            </div>
+                            <div class="testimonial-three-review">
+                              <span class="text-heading tw-text-lg"
+                                ><i class="ph-bold ph-star"></i
+                              ></span>
+                              <span class="text-heading tw-text-lg"
+                                ><i class="ph-bold ph-star"></i
+                              ></span>
+                              <span class="text-heading tw-text-lg"
+                                ><i class="ph-bold ph-star"></i
+                              ></span>
+                              <span class="text-heading tw-text-lg"
+                                ><i class="ph-bold ph-star"></i
+                              ></span>
+                              <span class="text-heading tw-text-lg"
+                                ><i class="ph-bold ph-star"></i
+                              ></span>
+                            </div>
+                          </div>
+                          <div class="tw-mb-15">
+                            <p
+                              class="testimonial-three-paragraph text-heading tw-text-2xl fw-semibold"
+                            >
+                              Godwin is one of the most visionary builders I
+                              have worked with. He does not just write code — he
+                              thinks about ecosystems, markets and long-term
+                              impact. His ability to bridge technology and
+                              entrepreneurship is rare and valuable.
+                            </p>
+                          </div>
+                          <div>
+                            <h2 class="tw-text-2xl fw-medium">Tech Lead</h2>
+                            <p class="tw-text-lg">
+                              African Startup Accelerator
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- item 2 -->
+                      <div
+                        class="testimonial-three-wrapper d-flex align-items-center tw-gap-9 tw-rounded-lg tw-mb-705 swiper-slide"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                      >
+                        <div
+                          class="testimonial-three-thumb position-relative z-1"
+                        >
+                          <img
+                            class="w-100 h-100 tw-rounded-lg gu-shot gu-shot-light"
+                            src="assets/images/thumbs/headshot.png"
+                            alt="Godwin Ubani"
+                          />
+                          
+                        </div>
+                        <div class="testimonial-three-content w-100">
+                          <div
+                            class="d-flex align-items-center justify-content-between tw-mb-16"
+                          >
+                            <div>
+                              <span
+                                ><img
+                                  src="assets/images/icons/testimonial-three-icon.svg"
+                                  alt="icon"
+                              /></span>
+                            </div>
+                            <div class="testimonial-three-review">
+                              <span
+                                class="text-heading tw-text-sm fw-semibold text-uppercase"
+                                >Personal Philosophy</span
+                              >
+                            </div>
+                          </div>
+                          <div class="tw-mb-15">
+                            <p
+                              class="testimonial-three-paragraph text-heading tw-text-2xl fw-semibold"
+                            >
+                              Technology is only valuable when it solves a real
+                              problem. Build with purpose, think globally,
+                              execute relentlessly — and create value that
+                              outlasts you.
+                            </p>
+                          </div>
+                          <div>
+                            <h2 class="tw-text-2xl fw-medium">Godwin Ubani</h2>
+                            <p class="tw-text-lg">
+                              Founder, Korvanta &amp; Vokra Solar
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="brand-three-area brand-two-area pb-120" id="community">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="text-center tw-mb-15">
+                  <h2 class="brand-three-title tw-text-xl tw-char-animation">
+                    Where I have built, learned and contributed
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="row gx-2">
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >Google Developer Group</span
+                  >
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >Startup Grind</span
+                  >
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-6 col-md-6"></div>
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >Jiangxi University of Science &amp; Technology</span
+                  >
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-6 col-md-6"></div>
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >Aptech</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row gx-2">
+              <div class="col-xl-2 col-lg-6 col-md-6"></div>
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >Mobile Tech Hub</span
+                  >
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >China Computer Federation</span
+                  >
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-6 col-md-6"></div>
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >Tech Hub Africa</span
+                  >
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-6 col-md-6">
+                <div
+                  class="brand-item brand-three-item position-relative z-1 tw-mb-1"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                >
+                  <span class="gu-brand-text text-center fw-semibold"
+                    >Africa Tech Community</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="footer-three-area pt-120 tw-pb-10 position-relative z-1"
+          id="contact"
+        >
+          <div class="container tw-container-1800-px">
+            <div class="row justify-content-between pb-120">
+              <div class="col-xl-5 col-lg-6">
+                <div
+                  class="footer-three-top-left tw-me-25"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                >
+                  <div class="tw-mb-9">
+                    <h2 class="tw-text-15 text-white tw-char-animation">
+                      Have an idea worth building?
+                    </h2>
+                  </div>
+                  <div
+                    class="d-inline-flex align-items-center tw-gap-6 tw-mb-10 flex-wrap"
+                  >
+                    <a
+                      class="tw-text-2xl fw-medium text-main-600 hover-underline hover-text-white"
+                      href="mailto:hello@godwinubani.com"
+                      >hello@godwinubani.com</a
+                    >
+                    <span class="tw-text-2xl fw-medium text-main-600">//</span>
+                    <a
+                      class="tw-text-2xl fw-medium text-main-600 hover-underline hover-text-white"
+                      href="https://www.linkedin.com/in/iamgodwinubani"
+                      target="_blank"
+                      rel="noopener"
+                      >Available for consulting</a
+                    >
+                  </div>
+                  <div
+                    class="footer-three-top-info tw-p-705 tw-rounded-lg d-flex tw-gap-6"
+                  >
+                    <div class="footer-three-top-thumb tw-w-160-px">
+                      <img
+                        class="tw-rounded-lg w-100 gu-shot gu-shot-dark"
+                        src="assets/images/thumbs/headshot.png"
+                        alt="Godwin Ubani"
+                      />
+                    </div>
+                    <div
+                      class="footer-three-top-content d-flex justify-content-between flex-column"
+                    >
+                      <div>
+                        <h3 class="tw-text-xl text-white tw-mb-2">Godwin Ubani</h3>
+                        <p class="text-white">
+                          Technopreneur &amp; Software Engineer
+                        </p>
+                      </div>
+                      <div class="footer-three-social">
+                        <ul class="d-flex align-items-center flex-wrap tw-gap-1">
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://www.linkedin.com/in/iamgodwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="LinkedIn"
+                              ><i class="ph ph-linkedin-logo"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://x.com/iamgodwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="X"
+                              ><i class="ph ph-x-logo"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://github.com/godwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="GitHub"
+                              ><i class="ph ph-github-logo"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://www.instagram.com/iamgodwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="Instagram"
+                              ><i class="ph ph-instagram-logo"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://www.youtube.com/@iamgodwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="YouTube"
+                              ><i class="ph ph-youtube-logo"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://www.tiktok.com/@iamgodwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="TikTok"
+                              ><i class="ph ph-tiktok-logo"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://medium.com/@iamgodwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="Medium"
+                              ><i class="ph ph-medium-logo"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading"
+                              href="https://dev.to/godwinubani"
+                              target="_blank"
+                              rel="noopener"
+                              aria-label="Dev.to"
+                              ><i class="ph ph-dev-to-logo"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                <div
+                  class="footer-three-form"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <form
+                    id="gu-contact-form"
+                    action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST"
+                  >
+                    <div class="row">
+                      <div class="col-xl-12">
+                        <div class="position-relative tw-mb-7">
+                          <input
+                            type="text"
+                            name="name"
+                            required
+                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-7 tw-pe-13 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-18 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
+                            placeholder="Your Name"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <div class="position-relative tw-mb-7">
+                          <input
+                            type="email"
+                            name="email"
+                            required
+                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-7 tw-pe-13 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-18 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
+                            placeholder="Email Address"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <div class="position-relative tw-mb-7">
+                          <textarea
+                            name="message"
+                            required
+                            class="form-control bg-transparent shadow-none tw-h-196-px tw-rounded-lg text-white tw-ps-7 tw-pe-13 tw-placeholder-text-neutral-100 focus-border-main-600 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
+                            placeholder="Message"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <div class="contact-button">
+                          <button
+                            id="gu-contact-submit"
+                            type="submit"
+                            class="tw-hover-btn bg-main-600 text-heading tw-text-xl fw-bold tw-py-4 tw-px-10 d-inline-flex justify-content-center w-100 hover-text-heading hover-bg-white tw-transition-3 tw-rounded-lg"
+                          >
+                            send message
+                          </button>
+                          <p
+                            id="gu-contact-status"
+                            class="gu-form-status tw-mt-4 tw-text-lg"
+                            role="status"
+                            aria-live="polite"
+                          ></p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-three-border tw-px-18 tw-mb-10">
+            <div class="container-fluid gx-0">
+              <div class="row">
+                <div class="col-xl-12">
+                  <div
+                    class="footer-three-middile d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="200"
+                    >
+                      <h4 class="tw-text-2xl text-white tw-mb-2">
+                        Quick Links
+                      </h4>
+                      <ul class="d-flex tw-gap-2 flex-wrap">
+                        <li>
+                          <a class="tw-text-lg text-white" href="#home"
+                            >Home,</a
+                          >
+                        </li>
+                        <li>
+                          <a class="tw-text-lg text-white" href="#about"
+                            >About,
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tw-text-lg text-white" href="#expertise"
+                            >Expertise,
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tw-text-lg text-white" href="#work"
+                            >Work,
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tw-text-lg text-white" href="#milestones"
+                            >Milestones,
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tw-text-lg text-white" href="#book"
+                            >Book,
+                          </a>
+                        </li>
+                        <li>
+                          <a class="tw-text-lg text-white" href="#contact"
+                            >Contact
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="300"
+                    >
+                      <a
+                        class="footer-three-back-to-top tw-w-170 tw-h-170 lh-1 d-inline-flex justify-content-center align-items-center bg-main-two-600 text-white tw-text-3xl rounded-circle"
+                        href="#home"
+                        ><i class="ph ph-arrow-up"></i
+                      ></a>
+                    </div>
+                    <div
+                      class="text-lg-end"
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay="400"
+                    >
+                      <h4 class="tw-text-2xl text-white tw-mb-2">Godwin Ubani</h4>
+                      <p class="tw-text-lg text-white">
+                        © 2026 Godwin Ubani. All rights reserved
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="container tw-container-1800-px">
+              <div class="row">
+                <div class="col-xl-12">
+                  <div class="footer-three-bottom">
+                    <h5 class="footer-three-bottom-title text-white">Godwin Ubani</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              class="position-absolute top-0 start-0 z-n1"
+              src="assets/images/shapes/footer-three-bg-shape.png"
+              alt="shape"
+            />
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Jquery js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- phosphor Js -->
+    <script src="assets/js/phosphor-icon.js"></script>
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+    <!-- aos -->
+    <script src="assets/js/aos.js"></script>
+    <!-- magnific popup js -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- marquee -->
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <!-- counterup js -->
+    <script src="assets/js/purecounter.js"></script>
+    <!-- swiper bundle js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- gsap js -->
+    <script src="assets/js/gsap/gsap.js"></script>
+    <!-- Scroll plugin -->
+    <script src="assets/js/gsap/gsap-scroll-to-plugin.js"></script>
+    <!-- Scroll smoother -->
+    <script src="assets/js/gsap/gsap-scroll-smoother.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/gsap/gsap-scroll-trigger.js"></script>
+    <!-- split text -->
+    <script src="assets/js/gsap/gsap-split-text.js"></script>
+    <!-- chroma js -->
+    <script src="assets/js/gsap/chroma.min.js"></script>
+
+    <!-- custom GSAP -->
+    <script src="assets/js/slider-active.js"></script>
+    <!-- custom GSAP -->
+    <script src="assets/js/custom-gsap.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>    <!-- cursor js -->
+    <script src="assets/js/tw-cursor.js"></script>    <!-- Contact form submission -->
+    <script>
+      (function () {
+        var form = document.getElementById("gu-contact-form");
+        if (!form) return;
+        var button = document.getElementById("gu-contact-submit");
+        var status = document.getElementById("gu-contact-status");
+        var label = button ? button.innerHTML : "";
+
+        function say(message, ok) {
+          status.textContent = message;
+          status.classList.add("is-visible");
+          status.classList.toggle("is-ok", ok);
+          status.classList.toggle("is-error", !ok);
+        }
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (form.action.indexOf("YOUR_FORM_ID") !== -1) {
+            say(
+              "This form is not connected yet — add your Formspree form id.",
+              false
+            );
+            return;
+          }
+
+          if (button) {
+            button.disabled = true;
+            button.innerHTML = "sending…";
+          }
+
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          })
+            .then(function (response) {
+              if (response.ok) {
+                form.reset();
+                say("Thanks — your message is on its way.", true);
+              } else {
+                say(
+                  "Something went wrong. Email hello@godwinubani.com instead.",
+                  false
+                );
+              }
+            })
+            .catch(function () {
+              say(
+                "Network error. Email hello@godwinubani.com instead.",
+                false
+              );
+            })
+            .finally(function () {
+              if (button) {
+                button.disabled = false;
+                button.innerHTML = label;
+              }
+            });
+        });
+      })();
+    </script>
+
+    <!-- In-page anchor navigation (GSAP ScrollSmoother aware) -->
+    <script>
+      (function () {
+        document.addEventListener("click", function (event) {
+          var link = event.target.closest('a[href^="#"]');
+          if (!link) return;
+          var hash = link.getAttribute("href");
+          if (!hash || hash.length < 2) return;
+          var target = document.querySelector(hash);
+          if (!target) return;
+          event.preventDefault();
+
+          var smoother =
+            window.ScrollSmoother && window.ScrollSmoother.get
+              ? window.ScrollSmoother.get()
+              : null;
+          if (smoother) {
+            smoother.scrollTo(target, true, "top 100px");
+          } else {
+            window.scrollTo({
+              top:
+                target.getBoundingClientRect().top + window.pageYOffset - 100,
+              behavior: "smooth",
+            });
+          }
+
+          // Close the offcanvas menu when a link inside it is used.
+          var offcanvas = document.querySelector(".tw-offcanvas-2-area");
+          if (offcanvas) offcanvas.classList.remove("opened");
+        });
+      })();
+    </script>
+  </body>
+</html>

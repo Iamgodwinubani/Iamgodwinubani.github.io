@@ -1,0 +1,8 @@
+# Local preview tooling (not part of the site)
+server.js
+.claude/
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+*.bak
