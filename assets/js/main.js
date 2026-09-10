@@ -146,14 +146,6 @@
     $(".body-overlay").removeClass("apply");
   });
 
-  ////////////////////////////////////////////////////
-  // 07. AOS Js
-  AOS.init({
-    once: false, // animation will happen every time you scroll
-    offset: 0, // start animation when element enters the viewport
-    anchorPlacement: "top-bottom", // when the bottom of the element hits the bottom of the screen
-  });
-
   // 08. Backtotop Js
   function back_to_top() {
     var btn = $("#back_to_top");
