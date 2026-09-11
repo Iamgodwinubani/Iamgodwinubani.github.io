@@ -1,0 +1,538 @@
+/* ============================================================
+   Godwin Ubani — black & white. No frameworks, no animation.
+   ============================================================ */
+
+:root {
+  --bg: #0f0f0f;
+  --bar: #262626;
+  --panel: #1a1a1a;
+  --panel-2: #111111;
+  --line: #333333;
+  --text: #ffffff;
+  --muted: #b4b4b4;
+  --btn: #2a2a2a;
+  --btn-hover: #3a3a3a;
+  --max: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  z-index: 100;
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 16px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--bar);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+}
+
+.brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav a {
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Dropdown — CSS only, opens on hover and on keyboard focus. */
+.menu {
+  position: relative;
+}
+
+.menu > .menu-btn {
+  display: inline-block;
+  border: 1px solid #6b6b6b;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 0.9375rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  background: transparent;
+}
+
+.menu > .menu-btn::after {
+  content: " \25BE";
+}
+
+.menu-list {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 290px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  display: none;
+  z-index: 50;
+}
+
+.menu:hover .menu-list,
+.menu:focus-within .menu-list {
+  display: block;
+}
+
+.menu-list a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.9375rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.menu-list a:hover {
+  color: var(--text);
+  background: #232323;
+  text-decoration: none;
+}
+
+/* Mobile nav — checkbox toggle, still no JavaScript. */
+.nav-toggle,
+.nav-toggle-label {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle-label {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--bar);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 24px 20px;
+    z-index: 40;
+  }
+  .nav a {
+    padding: 12px 0;
+  }
+  .nav-toggle:checked ~ .nav {
+    display: flex;
+  }
+  .site-header .wrap {
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .menu-list {
+    position: static;
+    display: block;
+    border: 0;
+    background: transparent;
+    padding: 0 0 0 14px;
+    min-width: 0;
+  }
+  .menu > .menu-btn {
+    border: 0;
+    padding: 12px 0;
+  }
+}
+
+/* ---------- Page furniture ---------- */
+
+.page {
+  padding-block: 72px 96px;
+}
+
+.page-title {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.page-sub {
+  text-align: center;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 64px;
+}
+
+.page-title + .block,
+.page-title + .grid {
+  margin-top: 56px;
+}
+
+/* ---------- Home ---------- */
+
+.home {
+  text-align: center;
+  padding-block: 84px 96px;
+}
+
+.greeting {
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-weight: 400;
+  margin: 0 0 44px;
+}
+
+.avatar {
+  /* The source file has a blue ring and backdrop baked in; this keeps the
+     hero monochrome. Delete this one line to show it in colour. */
+  filter: grayscale(1);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0 auto 40px;
+  background: var(--panel);
+}
+
+.role {
+  font-size: 1.125rem;
+  margin: 0 0 6px;
+}
+
+.creds {
+  font-size: 1.125rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.featured {
+  margin-top: 96px;
+}
+
+.featured h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.featured-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 56px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featured-row li {
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 575px) {
+  .avatar {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ---------- Story grid ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.card {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--panel);
+}
+
+.card p {
+  text-align: center;
+  margin: 22px 0 0;
+  color: var(--text);
+}
+
+/* ---------- Two-column block ---------- */
+
+.block {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 56px;
+  align-items: start;
+  padding-block: 56px;
+  border-top: 1px solid var(--line);
+}
+
+.block:first-of-type {
+  border-top: 0;
+}
+
+@media (max-width: 860px) {
+  .block {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+
+.block-media img {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+/* Text stand-in where no screenshot exists — never a fake one. */
+.wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-size: 1.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 24px;
+}
+
+.block-body h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 400;
+  margin: 0 0 18px;
+  line-height: 1.25;
+}
+
+.block-body .meta {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
+.block-body p {
+  margin: 0 0 18px;
+}
+
+.block-body ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+  color: var(--text);
+}
+
+.block-body li {
+  margin-bottom: 8px;
+}
+
+blockquote {
+  margin: 26px 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--line);
+  font-style: italic;
+  color: var(--muted);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  color: var(--text);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  background: var(--btn);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 18px 54px;
+  font-size: 1.0625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  text-decoration: none;
+}
+
+.btn-wide {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 48px 64px;
+  color: var(--muted);
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px 40px;
+  margin-bottom: 26px;
+}
+
+.footer-brand {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.footer-links,
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li:not(:last-child)::after,
+.footer-social li:not(:last-child)::after {
+  content: " |";
+  color: var(--line);
+}
+
+.site-footer a {
+  color: var(--text);
+}
+
+.footer-mail {
+  margin: 0 0 18px;
+}
+
+.footer-mail span {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 10px;
+}
+
+/* ---------- Accessibility ---------- */
+
+a:focus-visible,
+.nav-toggle-label:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
