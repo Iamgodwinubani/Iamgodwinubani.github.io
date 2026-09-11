@@ -343,6 +343,99 @@
         border: 0;
       }
 
+      /* The hero's decorative line shape is a fixed-width image wider than the
+         viewport. ScrollSmoother used to clip it; with that gone it caused a
+         horizontal scrollbar. Constrain the image itself rather than clipping
+         the section — overflow-x: clip forces overflow-y to auto, which cut off
+         the portrait where it rises behind the header. */
+      .banner-three-line-shape {
+        max-width: 100%;
+      }
+      .banner-three-line-shape img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* ---- Writing / blog ---- */
+      .gu-blog-area {
+        background: #f2f5f8;
+      }
+      .gu-blog-intro {
+        max-width: 60ch;
+        color: hsl(var(--body-color));
+      }
+      /* Five posts: three across, then two. Separate bordered cards rather
+         than a gap-and-background grid, so the empty sixth cell stays invisible. */
+      .gu-post-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      @media screen and (max-width: 1199px) {
+        .gu-post-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .gu-post-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .gu-post {
+        background: hsl(var(--white));
+        border: 1px solid rgba(5, 18, 34, 0.1);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          border-color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+      }
+      .gu-post:hover {
+        border-color: var(--main-two-600);
+      }
+      .gu-post-read {
+        align-self: center;
+        font-size: 0.8125rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: hsl(var(--body-color));
+        opacity: 0.75;
+      }
+      .gu-post-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+      }
+      .gu-post-title a {
+        color: hsl(var(--heading-color));
+      }
+      .gu-post-sub {
+        font-size: 1.0625rem;
+        line-height: 1.5;
+        color: var(--main-two-600);
+        font-weight: 500;
+      }
+      .gu-post-excerpt {
+        color: hsl(var(--body-color));
+        line-height: 1.65;
+      }
+      .gu-post-more {
+        color: var(--main-two-600);
+        margin-top: auto;
+      }
+      .gu-post-more:hover {
+        color: hsl(var(--heading-color));
+      }
+      @media screen and (max-width: 575px) {
+        .gu-post {
+          padding: 28px 24px;
+        }
+        .gu-post-title {
+          font-size: 1.5rem;
+        }
+      }
+
       /* Contact form status message */
       .gu-form-status {
         display: none;
@@ -793,6 +886,7 @@
                   <li><a href="#work">Work</a></li>
                   <li><a href="#milestones">Milestones</a></li>
                   <li><a href="#book">Book</a></li>
+                  <li><a href="#writing">Writing</a></li>
                   <li><a href="#community">Community</a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -2136,6 +2230,205 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="gu-blog-area py-120" id="writing">
+          <div class="container tw-container-1800-px">
+            <div class="row tw-mb-21">
+              <div class="col-xl-8">
+                <h2 class="gu-blog-title text-heading tw-text-15 tw-mb-6">
+                  Writing
+                </h2>
+                <p class="gu-blog-intro tw-text-xl">
+                  Notes on cross-border trade, renewable energy and the security
+                  of the systems we are all quietly depending on. Published on
+                  Medium.
+                </p>
+              </div>
+            </div>
+            <div class="gu-post-grid">
+              <article class="gu-post">
+                <div class="portfolio-three-list portfolio-list tw-mb-6">
+                  <ul class="d-flex tw-gap-205 flex-wrap">
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">TRADE</a>
+                    </li>
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">CHINA</a>
+                    </li>
+                    <li class="gu-post-read">6 min read</li>
+                  </ul>
+                </div>
+                <h3 class="gu-post-title tw-mb-4">
+                  <!-- TODO: Medium URL — replace once post 1 is published -->
+                  <a
+                    class="hover-text-main-two-600"
+                    href="https://medium.com/@iamgodwinubani"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >What a supplier's video actually proves</a
+                  >
+                </h3>
+                <p class="gu-post-sub tw-mb-5">Nothing. It proves nothing. Here is what to ask for instead.</p>
+                <p class="gu-post-excerpt tw-mb-7">A supplier sends you a video. Good lighting, someone's hand turning the product over, the factory floor humming behind them. It looks like proof. It isn't — and the part people miss is that the video is real.</p>
+                <!-- TODO: Medium URL — replace once post 1 is published -->
+                <a
+                  class="gu-post-more d-inline-flex align-items-center tw-gap-2 fw-semibold"
+                  href="https://medium.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read on Medium
+                  <i class="ph ph-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </article>
+              <article class="gu-post">
+                <div class="portfolio-three-list portfolio-list tw-mb-6">
+                  <ul class="d-flex tw-gap-205 flex-wrap">
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">ENERGY</a>
+                    </li>
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">AFRICA</a>
+                    </li>
+                    <li class="gu-post-read">6 min read</li>
+                  </ul>
+                </div>
+                <h3 class="gu-post-title tw-mb-4">
+                  <!-- TODO: Medium URL — replace once post 2 is published -->
+                  <a
+                    class="hover-text-main-two-600"
+                    href="https://medium.com/@iamgodwinubani"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Solar in Africa doesn't have a hardware problem</a
+                  >
+                </h3>
+                <p class="gu-post-sub tw-mb-5">The panels work fine. It's everything around them that breaks.</p>
+                <p class="gu-post-excerpt tw-mb-7">Panel prices have fallen off a cliff. The hardware is solved. So why is there still a village two hours from a city centre running on a generator? Because the panel was never the constraint.</p>
+                <!-- TODO: Medium URL — replace once post 2 is published -->
+                <a
+                  class="gu-post-more d-inline-flex align-items-center tw-gap-2 fw-semibold"
+                  href="https://medium.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read on Medium
+                  <i class="ph ph-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </article>
+              <article class="gu-post">
+                <div class="portfolio-three-list portfolio-list tw-mb-6">
+                  <ul class="d-flex tw-gap-205 flex-wrap">
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">AI</a>
+                    </li>
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">SECURITY</a>
+                    </li>
+                    <li class="gu-post-read">8 min read</li>
+                  </ul>
+                </div>
+                <h3 class="gu-post-title tw-mb-4">
+                  <!-- TODO: Medium URL — replace once post 3 is published -->
+                  <a
+                    class="hover-text-main-two-600"
+                    href="https://medium.com/@iamgodwinubani"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Your prompt is an input field</a
+                  >
+                </h3>
+                <p class="gu-post-sub tw-mb-5">Prompt injection is the same bug we've been shipping since 1998, wearing a hat.</p>
+                <p class="gu-post-excerpt tw-mb-7">If you've written any backend code you already understand prompt injection — you just haven't been told that's what it is. SQL injection happened because a query was a string. Now look at how you're calling an LLM.</p>
+                <!-- TODO: Medium URL — replace once post 3 is published -->
+                <a
+                  class="gu-post-more d-inline-flex align-items-center tw-gap-2 fw-semibold"
+                  href="https://medium.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read on Medium
+                  <i class="ph ph-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </article>
+              <article class="gu-post">
+                <div class="portfolio-three-list portfolio-list tw-mb-6">
+                  <ul class="d-flex tw-gap-205 flex-wrap">
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">CHINA</a>
+                    </li>
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">NOTES</a>
+                    </li>
+                    <li class="gu-post-read">7 min read</li>
+                  </ul>
+                </div>
+                <h3 class="gu-post-title tw-mb-4">
+                  <!-- TODO: Medium URL — replace once post 4 is published -->
+                  <a
+                    class="hover-text-main-two-600"
+                    href="https://medium.com/@iamgodwinubani"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >What I got wrong about studying in China</a
+                  >
+                </h3>
+                <p class="gu-post-sub tw-mb-5">Notes from Ganzhou, and one conference that rearranged how I think about the gap.</p>
+                <p class="gu-post-excerpt tw-mb-7">I expected the technology to be ahead. It's true in a narrow sense and misleading in a broad one. What's ahead isn't the knowledge — it's the distance between having an idea and holding the object.</p>
+                <!-- TODO: Medium URL — replace once post 4 is published -->
+                <a
+                  class="gu-post-more d-inline-flex align-items-center tw-gap-2 fw-semibold"
+                  href="https://medium.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read on Medium
+                  <i class="ph ph-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </article>
+              <article class="gu-post">
+                <div class="portfolio-three-list portfolio-list tw-mb-6">
+                  <ul class="d-flex tw-gap-205 flex-wrap">
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">SECURITY</a>
+                    </li>
+                    <li>
+                      <a class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3" href="#">WRITING</a>
+                    </li>
+                    <li class="gu-post-read">7 min read</li>
+                  </ul>
+                </div>
+                <h3 class="gu-post-title tw-mb-4">
+                  <!-- TODO: Medium URL — replace once post 5 is published -->
+                  <a
+                    class="hover-text-main-two-600"
+                    href="https://medium.com/@iamgodwinubani"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Nobody reads your security advice</a
+                  >
+                </h3>
+                <p class="gu-post-sub tw-mb-5">What I learned writing a cybersecurity book for people who don't care about cybersecurity.</p>
+                <p class="gu-post-excerpt tw-mb-7">Use a password manager. Enable two-factor. Don't reuse passwords. You've read it before and you know it's correct. Check honestly whether you've done all five. That gap is the entire problem.</p>
+                <!-- TODO: Medium URL — replace once post 5 is published -->
+                <a
+                  class="gu-post-more d-inline-flex align-items-center tw-gap-2 fw-semibold"
+                  href="https://medium.com/@iamgodwinubani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read on Medium
+                  <i class="ph ph-arrow-up-right" aria-hidden="true"></i
+                ></a>
+              </article>
+            </div>
+            <div class="tw-mt-16">
+              <a
+                class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md"
+                href="https://medium.com/@iamgodwinubani"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                all writing on medium
+                <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
+              </a>
             </div>
           </div>
         </section>
