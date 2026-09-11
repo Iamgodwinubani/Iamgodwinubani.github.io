@@ -174,15 +174,6 @@
   });
 
   ////////////////////////////////////////////////////
-  // 10. Counter Js
-  new PureCounter();
-  new PureCounter({
-    filesizing: true,
-    selector: ".filesizecount",
-    pulse: 2,
-  });
-
-  ////////////////////////////////////////////////////
   // 11. Feature Widget Animation Js
   function service_animation() {
     var active_bg = $(".feature-widget .active-bg");
