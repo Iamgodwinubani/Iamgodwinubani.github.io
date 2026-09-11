@@ -14,7 +14,7 @@
       name="googlebot"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="theme-color" content="#ed5a2f" />
+    <meta name="theme-color" content="#1258c2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Self-referencing canonical -->
@@ -185,6 +185,63 @@
 
     <!-- ===== Godwin Ubani — content overrides ===== -->
     <style>
+      /* ================================================================
+         BRAND PALETTE — two solid colours
+         Ink   #051222  hsl(213 74% 8%)   dark surfaces, headings
+         Blue  #1258c2  hsl(216 83% 42%)  the single accent
+         Both sampled from the Shield Up cover so the site matches the book.
+         The whole theme derives every shade from these HSL components, so
+         re-tuning them here re-colours the site coherently.
+         ================================================================ */
+      :root {
+        /* Accent for dark surfaces: same hue, lifted for legibility on ink
+           (5.4:1) — blue at 42% on ink would only reach 2.9:1. */
+        --main-h: 216;
+        --main-s: 83%;
+        --main-l: 62%;
+
+        /* Accent for light surfaces (6.5:1 on white). */
+        --main-two-h: 216;
+        --main-two-s: 83%;
+        --main-two-l: 42%;
+
+        /* Ink replaces the theme's near-black; body text warms off it. */
+        --black: 213 74% 8%;
+        --body: 213 14% 30%;
+      }
+
+      /* Bootstrap's .text-black is pure #000; pull it onto the ink navy so
+         the palette stays at two colours. */
+      .text-black {
+        color: #051222 !important;
+      }
+
+      /* Dark surfaces. Bootstrap's .bg-black ships !important, so match it. */
+      .bg-black,
+      .footer-three-area,
+      .feature-three-area,
+      .header.fixed-header {
+        background: #051222 !important;
+      }
+
+      /* Light grounds: the theme's warm beige clashes with a cool navy, so
+         these move to a neutral that shares the blue's hue family. */
+      .banner-three-area,
+      .header-three-logo,
+      .banner-three-left,
+      .portfolio-wrapper,
+      .brand-area {
+        background: #f2f5f8;
+      }
+
+      /* Preloader curtain and its pulsing hero ring. */
+      .preloader svg {
+        fill: #051222;
+      }
+      .banner-three-carcel-shape div span::before,
+      .banner-three-carcel-shape div span::after {
+        border-color: rgba(18, 88, 194, 0.45);
+      }
       /* Wordmark used in place of the template's logo image */
       .gu-wordmark {
         font-size: 30px;
@@ -244,13 +301,13 @@
       /* The cutout is transparent, so the framed slots need their own ground
          or the section colour shows straight through the portrait. */
       .gu-portrait {
-        background: #efedea;
+        background: #e9eef4;
       }
       .gu-shot-light {
-        background: #efedea;
+        background: #e9eef4;
       }
       .gu-shot-dark {
-        background: #171717;
+        background: #051222;
       }
 
       /* Book section */
@@ -2501,7 +2558,7 @@
                           <button
                             id="gu-contact-submit"
                             type="submit"
-                            class="tw-hover-btn bg-main-600 text-heading tw-text-xl fw-bold tw-py-4 tw-px-10 d-inline-flex justify-content-center w-100 hover-text-heading hover-bg-white tw-transition-3 tw-rounded-lg"
+                            class="tw-hover-btn bg-main-two-600 text-white tw-text-xl fw-bold tw-py-4 tw-px-10 d-inline-flex justify-content-center w-100 hover-text-heading hover-bg-white tw-transition-3 tw-rounded-lg"
                           >
                             send message
                           </button>
