@@ -518,6 +518,60 @@ a:hover {
   color: var(--blue-bright);
 }
 
+/* ---------- Venture actions + store badges ---------- */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* Plain text badges in the site's own style. Apple and Google require their
+   official artwork for the real badges — drop those in here when ready. */
+.store {
+  display: inline-block;
+  min-width: 210px;
+  padding: 10px 22px;
+  border: 1px solid var(--blue);
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.store:hover {
+  background: var(--blue-deep);
+  text-decoration: none;
+}
+
+.store small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.store b {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 420px) {
+  .store {
+    min-width: 100%;
+  }
+}
+
 /* ---------- Writing ---------- */
 
 .posts {
