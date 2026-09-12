@@ -1,0 +1,44 @@
+[
+  {
+    "title": "What a supplier's video actually proves",
+    "sub": "Nothing. It proves nothing. Here is what to ask for instead.",
+    "slug": "what-a-suppliers-video-actually-proves",
+    "excerpt": "A supplier sends you a video. Good lighting, someone's hand turning the product over, the factory floor humming behind them. It looks like proof.",
+    "minutes": 4
+  },
+  {
+    "title": "Solar in Africa doesn't have a hardware problem",
+    "sub": "The panels work fine. It's everything around them that breaks.",
+    "slug": "solar-in-africa-doesnt-have-a-hardware-problem",
+    "excerpt": "Panel prices have fallen off a cliff. A watt of solar costs a fraction of what it did a decade ago, the efficiency is fine, the manufacturing is mature and boring. The hardware is solved.",
+    "minutes": 3
+  },
+  {
+    "title": "Your prompt is an input field",
+    "sub": "Prompt injection is the same bug we've been shipping since 1998, wearing a hat.",
+    "slug": "your-prompt-is-an-input-field",
+    "excerpt": "If you've written any backend code you already understand prompt injection. You just haven't been told that's what it is.",
+    "minutes": 4
+  },
+  {
+    "title": "What I got wrong about studying in China",
+    "sub": "Notes from Ganzhou, and one conference that rearranged how I think about the gap.",
+    "slug": "what-i-got-wrong-about-studying-in-china",
+    "excerpt": "I came to Jiangxi University of Science and Technology expecting to learn computer science. I did learn computer science. That turned out to be the least interesting thing I learned.",
+    "minutes": 3
+  },
+  {
+    "title": "Nobody reads your security advice",
+    "sub": "What I learned writing a cybersecurity book for people who don't care about cybersecurity.",
+    "slug": "nobody-reads-your-security-advice",
+    "excerpt": "Here's the advice: use a password manager, enable two-factor authentication, don't reuse passwords, keep your software updated, be careful what you click.",
+    "minutes": 4
+  },
+  {
+    "title": "The exchange rate is not the hard part",
+    "sub": "Everyone asks what the naira buys today. Almost nobody asks the question that actually costs them money.",
+    "slug": "the-exchange-rate-is-not-the-hard-part",
+    "excerpt": "Ask an importer in Lagos what makes buying from China difficult and the answer comes back immediately: the rate. The naira moved again. The rate is the thing everyone watches, quotes at each other, and…",
+    "minutes": 4
+  }
+]

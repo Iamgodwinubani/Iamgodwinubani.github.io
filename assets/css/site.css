@@ -635,6 +635,134 @@ a:hover {
   text-transform: uppercase;
 }
 
+/* ---------- Expertise blocks with no media ---------- */
+
+.block-plain {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.block-plain .block-body {
+  max-width: 78ch;
+}
+
+/* ---------- Post pages ---------- */
+
+.wrap-reading {
+  max-width: 760px;
+}
+
+.back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.post-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  margin: 0 0 18px;
+}
+
+.post-standfirst {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--blue-bright);
+  margin: 0 0 20px;
+}
+
+.post-meta {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 48px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.post-page p {
+  color: #c8d5e8;
+  margin: 0 0 24px;
+  font-size: 1.0625rem;
+}
+
+.post-page h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 46px 0 18px;
+  color: var(--text);
+}
+
+.post-page strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.post-page code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--panel-2);
+  border: 1px solid var(--line-soft);
+  padding: 2px 6px;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 72px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.post-nav a {
+  border: 1px solid var(--line-soft);
+  padding: 20px 22px;
+  color: var(--text);
+}
+
+.post-nav a:hover {
+  border-color: var(--blue);
+  text-decoration: none;
+}
+
+.post-nav small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.post-nav a:last-child {
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .post-nav {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .post-nav a:last-child {
+    text-align: left;
+  }
+}
+
+.post-read {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
 /* ---------- Contact ---------- */
 
 .contact {

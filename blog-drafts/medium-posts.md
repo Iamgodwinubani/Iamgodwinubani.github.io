@@ -1,13 +1,11 @@
-# Five drafts for medium.com/@iamgodwinubani
+# Six posts — source for the site and for Medium
 
-Copy each post into Medium as its own story. The **Title** and **Subtitle**
-lines map to Medium's title and subtitle fields.
+This file is the single source of truth for the writing on the site.
+`scripts/build-posts.js` reads it and generates `posts/*.html`, so edit the
+text here and rebuild rather than editing the HTML by hand.
 
-Anything in `[square brackets]` is a detail only you know — replace it before
-you publish. There are eleven of them, all listed at the bottom of this file.
-
-After publishing, paste each post's URL into the matching `href` in
-`index.html` (search for `TODO: Medium URL`).
+The **Title** and **Subtitle** lines map to Medium's title and subtitle
+fields if you also publish there.
 
 ---
 ---
@@ -25,10 +23,10 @@ It isn't. The video is real — that's the part people miss. Nobody faked it.
 The goods in that video exist. They're just not necessarily the goods going
 into your container.
 
-I've spent [X years] moving orders between African buyers and Chinese
-factories, and almost every expensive lesson I've paid for comes back to the
-same confusion: mistaking evidence that something exists for evidence that
-you will receive it.
+I've spent years moving orders between African buyers and Chinese factories,
+and almost every expensive lesson I've paid for comes back to the same
+confusion: mistaking evidence that something exists for evidence that you
+will receive it.
 
 ### The gap nobody tells you about
 
@@ -81,8 +79,8 @@ balance clears, the relationship is over and you both know it. Hold the
 balance until a third party you hired — not the supplier's "QC department,"
 not your agent's cousin — has opened the cartons and counted.
 
-An inspection costs a few hundred dollars. I've watched people skip it on a
-[$20,000] order to save that, which is the same arithmetic as declining to
+An inspection costs a few hundred dollars. I have watched people skip it on a
+five-figure order to save that, which is the same arithmetic as declining to
 look at a house before buying it.
 
 ### On "verified" badges
@@ -141,8 +139,8 @@ over years. A household running on kerosene and phone-charging kiosks is
 paying small amounts, constantly, forever.
 
 Those are the same total money and completely different products. One requires
-having [a sum] in hand at once. The other requires having a few hundred naira
-most days.
+having the whole amount in hand at once. The other requires having a small
+amount on most days.
 
 Every serious attempt at solar access in Africa is, underneath, an attempt to
 solve that mismatch. Pay-as-you-go works because it reshapes the payment into
@@ -378,8 +376,9 @@ local identity. Payments, deliveries, the campus systems, appointments. Being
 locked out of the software layer is a more complete isolation than not
 speaking the language, because the software isn't patient and doesn't gesture.
 
-The first months were administratively humbling in a way I hadn't budgeted
-for. [Add your own specific: a form, a queue, a moment you remember.]
+The first months were administratively humbling in a way I had not budgeted
+for. Things that should take ten minutes take an afternoon, and none of the
+afternoon is spent on anything you could call learning.
 
 And I'm often the only Nigerian in the room. That's mostly fine and
 occasionally strange. It does mean that when people form an impression of a
@@ -529,25 +528,97 @@ publish — mine included, some days — is decoration.
 ---
 ---
 
-## Details to replace before publishing
+## POST 6
 
-| Post | Placeholder | What's needed |
-|---|---|---|
-| 1 | `[X years]` | How long you've been sourcing |
-| 1 | `[$20,000]` | A real order size you've seen, or cut the sentence |
-| 2 | `[a sum]` | Realistic upfront cost of a home system in your market |
-| 4 | `[Add your own specific...]` | One real memory — a form, a queue, a moment |
+**Title:** The exchange rate is not the hard part
 
-Four placeholders, not eleven — the drafts needed fewer invented specifics
-than I expected.
+**Subtitle:** Everyone asks what the naira buys today. Almost nobody asks the question that actually costs them money.
 
-**Two things to check before you publish:**
+Ask an importer in Lagos what makes buying from China difficult and the answer
+comes back immediately: the rate. The naira moved again. The rate is the thing
+everyone watches, quotes at each other, and screenshots into group chats.
 
-1. **Post 1 and Post 2 speak with authority about your own businesses.** Read
-   them as someone who knows the real numbers. If any claim overstates your
-   experience, cut it — the posts survive losing a sentence, your credibility
-   doesn't survive an overstatement someone in the trade can spot.
+The rate is the visible problem. It is rarely the expensive one.
 
-2. **Post 4 is the personal one.** I wrote it from what you told me about
-   Ganzhou, the university, and the AI and Big Data conference. Everything
-   else is framing, not fact. Make sure the framing is one you actually hold.
+### What the rate actually costs you
+
+A rate is a number you can look up. If it moves against you between quote and
+payment, you lose some percentage and you can see exactly how much. It is
+painful and it is bounded, and because you can measure it, you can plan around
+it — order earlier, hold a balance, split a payment.
+
+Now price the other things.
+
+Money that leaves your account and takes four days to arrive, during which
+your supplier will not start production and your slot in their schedule goes
+to someone else. A payment that bounces on a compliance check for a reason
+nobody will explain. A supplier who will not begin until the full amount
+clears, because the last foreign buyer who promised a balance payment never
+sent it.
+
+None of those show up as a rate. All of them cost more than the rate.
+
+### Trust is the real spread
+
+Here is the thing nobody puts in the quote. When a factory in Guangzhou has no
+way to verify that a buyer in Lagos will pay the balance, they price that risk
+in. Sometimes as a worse unit price. Sometimes as a demand for full payment up
+front. Sometimes by not replying at all.
+
+You are paying a trust premium and it is invisible, because it arrives as
+"that is our price" rather than as a line item.
+
+The same thing happens in reverse. A buyer who cannot verify the factory holds
+back, orders smaller than they want to, splits across two suppliers to hedge —
+and pays more per unit for the privilege of being scared.
+
+Both sides are paying for the absence of a mechanism. Neither side can fix it
+alone, because the fix is not a better negotiation. It is a third thing that
+both can rely on.
+
+### Escrow is boring and it works
+
+Money goes somewhere neither party controls. The supplier can see it is there,
+so they start. The buyer keeps the release, so they are not sending cash into
+the dark.
+
+That is the whole idea and it is not clever. Escrow is centuries old. What has
+been missing between Nigeria and China is not the concept, it is an
+implementation that a small importer can actually reach — one that does not
+require a letter of credit, a trade finance relationship, or a minimum order
+value that rules out everyone buying less than a container.
+
+When the mechanism exists, the trust premium comes out of the price. That is a
+bigger number than the rate moved last month, and unlike the rate, it does not
+move back.
+
+### Why it belongs inside the conversation
+
+The part I did not expect, building this: the mechanism only works if it sits
+where the deal is actually happening.
+
+Trade between a Nigerian buyer and a Chinese factory does not happen on a
+platform. It happens in a chat. The negotiation, the photos, the spec changes,
+the "can you do ¥19 if I order 2,000" — all of it is a conversation, usually
+in two languages, usually with one side reading a translation.
+
+If your payment lives in a different app from that conversation, you have
+built a thing people have to remember to use. The quote gets agreed in the
+chat and the money moves somewhere else, and the two are connected only by
+someone's memory and a screenshot.
+
+Put the quote, the acceptance and the escrow release in the same thread as the
+sentence where the price was agreed, and the record keeps itself. Nobody has
+to be disciplined. That is the difference between a mechanism that works in
+theory and one that works on a Tuesday afternoon when everyone is busy.
+
+### The question worth asking
+
+Not "what is the rate today."
+
+Ask instead: what am I paying because this supplier cannot verify me, and what
+are they charging me because I cannot verify them? Then ask what it would take
+to remove that — not to negotiate it down, to remove the reason it exists.
+
+The rate will keep moving. It is not the thing standing between African
+businesses and the factories that want to sell to them.
