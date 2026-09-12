@@ -5,8 +5,8 @@ const ROOT = process.argv[2];
 const NAV = [
   ["#home", "Home"],
   ["#story", "Story"],
-  ["#book", "Book"],
   ["#ventures", "Ventures"],
+  ["#book", "Book"],
   ["#expertise", "Expertise"],
   ["#writing", "Writing"],
 ];
@@ -25,12 +25,21 @@ const STORY = [
 
 const ext = ` target="_blank" rel="noopener noreferrer"`;
 
+/* Vector renditions of the two store marks. Apple and Google both publish
+   official badge artwork under their brand guidelines — swap these for the
+   downloaded assets when you have them. */
+const PLAY_SVG = `<svg class="store-logo" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path fill="#00D7FE" d="M35.3 18.3C29.4 24.5 26 34.1 26 46.6v418.8c0 12.5 3.4 22.1 9.3 28.3l1.4 1.4 234.6-234.6v-5.5L36.7 20.4z"/><path fill="#FFBC00" d="M349.5 349.9l-78.2-78.2v-5.5l78.2-78.3 1.8 1 92.7 52.7c26.5 15 26.5 39.6 0 54.7l-92.7 52.6z"/><path fill="#FF3A44" d="M351.3 348.9L271.3 269 35.3 505c8.7 9.2 23.2 10.4 39.4 1.2l276.6-157.3"/><path fill="#00C853" d="M351.3 163.1L74.7 5.8C58.5-3.4 44-2.2 35.3 7L271.3 243z"/></svg>`;
+
+const APPLE_SVG = `<svg class="store-logo" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="#ffffff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>`;
+
 const stores = `              <div class="stores">
                 <a class="store" href="https://korvanta.vercel.app"${ext}>
-                  <small>Get it on</small><b>Google Play</b>
+                  ${PLAY_SVG}
+                  <span><small>Get it on</small><b>Google Play</b></span>
                 </a>
                 <a class="store" href="https://korvanta.vercel.app"${ext}>
-                  <small>Download on the</small><b>App Store</b>
+                  ${APPLE_SVG}
+                  <span><small>Download on the</small><b>App Store</b></span>
                 </a>
               </div>`;
 
@@ -56,17 +65,24 @@ const VENTURES = [
 ${stores}`,
   },
   {
-    media: `<img src="assets/img/k-app-s.png" alt="Korvanta app screens" loading="lazy" />`,
+    media: `<img src="assets/img/k-app-s2.png" alt="Korvanta Business app screens — supplier dashboard, escrow earnings and payout history" loading="lazy" />`,
     title: "Korvanta Business",
-    meta: "For Suppliers &amp; Growing Importers",
+    meta: "Korvanta for Suppliers · 中国工厂对接尼日利亚买家平台",
     body: [
-      "The business side of the same rails — built for verified suppliers and for importers buying at volume rather than one carton at a time.",
-      "Team accounts, bulk order management and the reconciliation trail that a growing import business needs once a spreadsheet stops being enough.",
+      "The factory side of the same rails. Chinese suppliers get direct, recurring orders from verified Nigerian importers — no agent in the middle taking a cut of a relationship they did not build.",
+      "Inquiries, chats and orders in one dashboard, in English and Chinese. Money sits in escrow where both sides can see it, and payouts settle to a local bank account.",
     ],
-    list: ["Verified supplier accounts", "Bulk orders and team access", "Invoices, escrow and reconciliation"],
+    list: [
+      "New inquiries and unread chats at a glance",
+      "Orders in progress, end to end",
+      "Escrow balance and released-to-date earnings",
+      "Payouts to a local bank account",
+      "Bilingual throughout, EN ⇄ 中文",
+    ],
     actions: `              <div class="actions">
-                <a class="btn" href="https://korvanta.vercel.app"${ext}>Visit the website</a>
-              </div>`,
+                <a class="btn btn-solid" href="https://korvanta.vercel.app"${ext}>Visit the website</a>
+              </div>
+${stores}`,
   },
 ];
 
@@ -317,10 +333,20 @@ ${STORY.map(
         </div>
       </section>
 
+      <!-- ===================== VENTURES ===================== -->
+      <section class="section" id="ventures">
+        <div class="wrap">
+          <span class="eyebrow">02 / Work</span>
+          <h2 class="section-title">Ventures</h2>
+          <p class="section-sub">Companies and products, built and building.</p>
+${blocks(VENTURES)}
+        </div>
+      </section>
+
       <!-- ===================== BOOK ===================== -->
       <section class="section" id="book">
         <div class="wrap">
-          <span class="eyebrow">02 / Published</span>
+          <span class="eyebrow">03 / Published</span>
           <h2 class="section-title">Book</h2>
           <p class="section-sub">
             A cybersecurity book written for people who do not care about
@@ -362,16 +388,6 @@ ${STORY.map(
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- ===================== VENTURES ===================== -->
-      <section class="section" id="ventures">
-        <div class="wrap">
-          <span class="eyebrow">03 / Work</span>
-          <h2 class="section-title">Ventures</h2>
-          <p class="section-sub">Companies and products, built and building.</p>
-${blocks(VENTURES)}
         </div>
       </section>
 

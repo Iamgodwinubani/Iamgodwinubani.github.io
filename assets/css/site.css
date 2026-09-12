@@ -537,12 +537,20 @@ a:hover {
 /* Plain text badges in the site's own style. Apple and Google require their
    official artwork for the real badges — drop those in here when ready. */
 .store {
-  display: inline-block;
-  min-width: 210px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 220px;
   padding: 10px 22px;
   border: 1px solid var(--blue);
   color: var(--text);
   line-height: 1.25;
+}
+
+.store-logo {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
 }
 
 .store:hover {
