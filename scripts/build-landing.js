@@ -5,7 +5,7 @@ const ROOT = process.argv[2];
 const NAV = [
   ["#home", "Home"],
   ["#story", "Story"],
-  ["#ventures", "Ventures"],
+  ["#app", "App"],
   ["#book", "Book"],
   ["#expertise", "Expertise"],
   ["#writing", "Writing"],
@@ -41,6 +41,19 @@ const stores = `              <div class="stores">
                   ${APPLE_SVG}
                   <span><small>Download on the</small><b>App Store</b></span>
                 </a>
+              </div>`;
+
+/* Korvanta Business is not listed yet, so its badges are inert spans rather
+   than links that would take someone to a store page that does not exist. */
+const storesSoon = `              <div class="stores">
+                <span class="store is-soon">
+                  ${PLAY_SVG}
+                  <span><small>Coming soon on</small><b>Google Play</b></span>
+                </span>
+                <span class="store is-soon">
+                  ${APPLE_SVG}
+                  <span><small>Coming soon on</small><b>App Store</b></span>
+                </span>
               </div>`;
 
 const VENTURES = [
@@ -82,7 +95,7 @@ ${stores}`,
     actions: `              <div class="actions">
                 <a class="btn btn-solid" href="https://korvanta.vercel.app"${ext}>Visit the website</a>
               </div>
-${stores}`,
+${storesSoon}`,
   },
 ];
 
@@ -221,7 +234,7 @@ const html = `<!doctype html>
             "url": "https://godwinubani.com/",
             "image": "https://godwinubani.com/assets/img/headshot.png",
             "jobTitle": "Technopreneur & Software Engineer",
-            "email": "mailto:hello@godwinubani.com",
+            "email": "mailto:iamgodwinubani@gmail.com",
             "alumniOf": [
               {
                 "@type": "CollegeOrUniversity",
@@ -297,7 +310,7 @@ ${NAV.map(([h, l]) => `          <a href="${h}">${l}</a>`).join("\n")}
           Renewable Energy
         </p>
         <div class="hero-actions">
-          <a class="btn btn-solid" href="#ventures">Explore my work</a>
+          <a class="btn btn-solid" href="#app">Explore my work</a>
           <a class="btn" href="#contact">Let&rsquo;s talk</a>
         </div>
 
@@ -305,10 +318,7 @@ ${NAV.map(([h, l]) => `          <a href="${h}">${l}</a>`).join("\n")}
           <h2>Building</h2>
           <ul>
             <li>Korvanta</li>
-            <li>Vokra Solar</li>
-            <li>AfroBridge AI</li>
-            <li>WebZap</li>
-            <li>SafePrompt</li>
+            <li>Korvanta Business</li>
           </ul>
         </div>
       </section>
@@ -334,11 +344,11 @@ ${STORY.map(
       </section>
 
       <!-- ===================== VENTURES ===================== -->
-      <section class="section" id="ventures">
+      <section class="section" id="app">
         <div class="wrap">
-          <span class="eyebrow">02 / Work</span>
-          <h2 class="section-title">Ventures</h2>
-          <p class="section-sub">Companies and products, built and building.</p>
+          <span class="eyebrow">02 / App</span>
+          <h2 class="section-title">App</h2>
+          <p class="section-sub">The apps I am building, and where to get them.</p>
 ${blocks(VENTURES)}
         </div>
       </section>
@@ -434,13 +444,8 @@ ${POSTS.map(
             ideas and meaningful collaborations.
           </p>
           <p class="mail">
-            <a href="mailto:hello@godwinubani.com">hello@godwinubani.com</a>
+            <a href="mailto:iamgodwinubani@gmail.com">iamgodwinubani@gmail.com</a>
           </p>
-          <div class="hero-actions">
-${SOCIAL.slice(0, 4)
-  .map(([n, u]) => `            <a class="btn" href="${u}"${ext}>${n}</a>`)
-  .join("\n")}
-          </div>
         </div>
       </section>
     </main>

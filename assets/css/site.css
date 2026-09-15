@@ -653,6 +653,21 @@ a:hover {
   max-width: 78ch;
 }
 
+/* Not listed yet: same badge, visibly inert. */
+.store.is-soon {
+  border-color: var(--line-soft);
+  color: var(--muted);
+  cursor: default;
+}
+
+.store.is-soon .store-logo {
+  opacity: 0.45;
+}
+
+.store.is-soon b {
+  color: var(--muted);
+}
+
 /* ---------- Post pages ---------- */
 
 .wrap-reading {
