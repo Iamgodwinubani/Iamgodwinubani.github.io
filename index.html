@@ -32,6 +32,7 @@
     <link rel="icon" href="assets/img/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/img/favicon.png" />
     <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/3d.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -121,33 +122,52 @@
 
     <main id="main">
       <!-- ===================== HERO ===================== -->
-      <section class="section hero wrap" id="home">
-        <h1 class="greeting">&gt;Hi, I am <b>Godwin</b>!_</h1>
-        <div class="avatar-ring">
-          <img
-            class="avatar"
-            src="assets/img/headshot.png"
-            alt="Godwin Ubani"
-            width="300"
-            height="300"
-          />
-        </div>
-        <p class="role">Technopreneur | Software Engineer</p>
-        <p class="creds">
-          Software Engineering | AI | Cybersecurity | Cross-Border Commerce |
-          Renewable Energy
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-solid" href="#app">Explore my work</a>
-          <a class="btn" href="#contact">Let&rsquo;s talk</a>
-        </div>
+      <section class="section hero" id="home">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <div class="avatar-ring">
+              <img
+                class="avatar"
+                src="assets/img/headshot.png"
+                alt="Godwin Ubani"
+                width="300"
+                height="300"
+              />
+            </div>
+            <h1 class="greeting">&gt;Hi, I am <b>Godwin</b>!_</h1>
+            <p class="role">Technopreneur | Software Engineer</p>
+            <p class="creds">
+              Software Engineering | AI | Cybersecurity | Cross&#8209;Border Commerce
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-solid" href="#app">Explore my work</a>
+              <a class="btn" href="#contact">Let&rsquo;s talk</a>
+            </div>
 
-        <div class="building">
-          <h2>Building</h2>
-          <ul>
-            <li>Korvanta</li>
-            <li>Korvanta Business</li>
-          </ul>
+            <div class="building">
+              <h2>Building</h2>
+              <ul>
+                <li>Korvanta</li>
+                <li>Korvanta Business</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="globe" data-globe>
+            <canvas
+              role="img"
+              aria-label="Rotating globe tracing a trade route from Abia, Nigeria to Shenzhen, China. Drag to rotate."
+            ></canvas>
+            <span class="globe-label" data-globe-label="origin"
+              ><b>Abia</b>Nigeria</span
+            >
+            <span class="globe-label" data-globe-label="destination"
+              ><b>Shenzhen</b>China</span
+            >
+            <p class="globe-caption">
+              <span>Abia &rarr; Shenzhen</span> the route Korvanta is built on
+            </p>
+          </div>
         </div>
       </section>
 
@@ -209,7 +229,22 @@
           <p class="section-sub">The apps I am building, and where to get them.</p>
           <div class="block">
             <div class="block-media">
-              <img src="assets/img/k-app-s.png" alt="Korvanta app screens — onboarding, RMB wallet and auto-translating supplier chat" loading="lazy" />
+              <div class="phone3d" data-phone3d>
+                <div class="phone3d-body" data-3d-body>
+                  <div class="phone3d-face phone3d-front">
+                    <img src="assets/img/screen-korvanta.png" alt="Korvanta app home screen — RMB wallet, live rate and recent suppliers" loading="lazy" draggable="false" />
+                  </div>
+                  <div class="phone3d-face phone3d-back">
+                    <span class="phone3d-camera"></span>
+                    <span class="phone3d-brand">Korvanta</span>
+                  </div>
+                  <div class="phone3d-edge phone3d-right"></div>
+                  <div class="phone3d-edge phone3d-left"></div>
+                  <div class="phone3d-edge phone3d-top"></div>
+                  <div class="phone3d-edge phone3d-bottom"></div>
+                </div>
+                <div class="phone3d-shadow"></div>
+              </div>
             </div>
             <div class="block-body">
               <h3>Korvanta</h3>
@@ -240,7 +275,22 @@
           </div>
           <div class="block">
             <div class="block-media">
-              <img src="assets/img/k-app-s2.png" alt="Korvanta Business app screens — supplier dashboard, escrow earnings and payout history" loading="lazy" />
+              <div class="phone3d" data-phone3d>
+                <div class="phone3d-body" data-3d-body>
+                  <div class="phone3d-face phone3d-front">
+                    <img src="assets/img/screen-korvanta-business.png" alt="Korvanta Business app earnings screen — escrow balance and payout history" loading="lazy" draggable="false" />
+                  </div>
+                  <div class="phone3d-face phone3d-back">
+                    <span class="phone3d-camera"></span>
+                    <span class="phone3d-brand">Korvanta Business</span>
+                  </div>
+                  <div class="phone3d-edge phone3d-right"></div>
+                  <div class="phone3d-edge phone3d-left"></div>
+                  <div class="phone3d-edge phone3d-top"></div>
+                  <div class="phone3d-edge phone3d-bottom"></div>
+                </div>
+                <div class="phone3d-shadow"></div>
+              </div>
             </div>
             <div class="block-body">
               <h3>Korvanta Business</h3>
@@ -283,11 +333,32 @@
           </p>
           <div class="block">
             <div class="block-media">
-              <img
-                src="assets/img/shield-up-cover.png"
-                alt="Shield Up: Defending Your Digital World — book cover"
-                loading="lazy"
-              />
+              <div class="book3d" data-book3d>
+                <div class="book3d-body" data-3d-body>
+                  <div class="book3d-face book3d-front">
+                    <img
+                      src="assets/img/shield-up-cover.png"
+                      alt="Shield Up: Defending Your Digital World — book cover"
+                      loading="lazy"
+                      draggable="false"
+                    />
+                  </div>
+                  <div class="book3d-face book3d-back">
+                    <p class="book3d-back-kicker">Shield Up</p>
+                    <p class="book3d-back-quote">
+                      Most security advice is written for people who already
+                      agree with it. This book is for everyone else.
+                    </p>
+                    <p class="book3d-back-author">Godwin Ubani</p>
+                  </div>
+                  <div class="book3d-spine">
+                    <span>Shield Up</span><span>Godwin Ubani</span>
+                  </div>
+                  <div class="book3d-pages"></div>
+                  <div class="book3d-edge book3d-top"></div>
+                  <div class="book3d-edge book3d-bottom"></div>
+                </div>
+              </div>
               <a
                 class="btn btn-solid btn-wide"
                 href="assets/files/shield-up-defending-your-digital-world.pdf"
@@ -326,61 +397,68 @@
           <span class="eyebrow">04 / Capability</span>
           <h2 class="section-title">Expertise</h2>
           <p class="section-sub">Skills, training and the work behind them.</p>
-          <div class="block block-plain">
-            <div class="block-body">
-              <h3>Software Engineering</h3>
-              <p>Full-stack product development in TypeScript, React and Next.js, Node.js and Python, with the cloud infrastructure underneath it.</p>
-              <ul>
-                <li>TypeScript · React · Next.js</li>
-                <li>Node.js · Python</li>
-                <li>Cloud infrastructure and deployment</li>
-              </ul>
+          <div class="cards3d">
+            <article class="card3d" data-card3d>
+              <div class="card3d-body" data-3d-body>
+                <span class="card3d-index">01</span>
+                <h3 class="card3d-title">Software Engineering</h3>
+                <p class="card3d-text">Full-stack product development in TypeScript, React and Next.js, Node.js and Python, with the cloud infrastructure underneath it.</p>
+                <ul class="card3d-tags">
+                  <li>TypeScript · React · Next.js</li>
+                  <li>Node.js · Python</li>
+                  <li>Cloud infrastructure and deployment</li>
+                </ul>
+                <span class="card3d-glare" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article class="card3d" data-card3d>
+              <div class="card3d-body" data-3d-body>
+                <span class="card3d-index">02</span>
+                <h3 class="card3d-title">Artificial Intelligence</h3>
+                <p class="card3d-text">AI products and LLM integration, with a working interest in where these systems break — prompt injection, tool permissions, and the gap between what a model is told and what it does.</p>
+                <ul class="card3d-tags">
+                  <li>AI product development</li>
+                  <li>LLM integration and tooling</li>
+                  <li>Prompt security and agent safety</li>
+                </ul>
+                <span class="card3d-glare" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article class="card3d" data-card3d>
+              <div class="card3d-body" data-3d-body>
+                <span class="card3d-index">03</span>
+                <h3 class="card3d-title">Cybersecurity</h3>
+                <p class="card3d-text">Network architecture and security protocols studied formally at Aptech, applied since to secure architecture, zero-trust thinking and the security writing that became Shield Up.</p>
+                <ul class="card3d-tags">
+                  <li>Network architecture and protocols</li>
+                  <li>Zero-trust and secure architecture</li>
+                  <li>Security awareness and education</li>
+                </ul>
+                <span class="card3d-glare" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article class="card3d" data-card3d>
+              <div class="card3d-body" data-3d-body>
+                <span class="card3d-index">04</span>
+                <h3 class="card3d-title">Web Development</h3>
+                <p class="card3d-text">Where it started — WordPress, HTML, CSS and JavaScript at Mobile Tech Hub, and the first websites that turned an interest into a profession.</p>
 
-            </div>
-          </div>
-          <div class="block block-plain">
-            <div class="block-body">
-              <h3>Artificial Intelligence</h3>
-              <p>AI products and LLM integration, with a working interest in where these systems break — prompt injection, tool permissions, and the gap between what a model is told and what it does.</p>
-              <ul>
-                <li>AI product development</li>
-                <li>LLM integration and tooling</li>
-                <li>Prompt security and agent safety</li>
-              </ul>
-
-            </div>
-          </div>
-          <div class="block block-plain">
-            <div class="block-body">
-              <h3>Cybersecurity</h3>
-              <p>Network architecture and security protocols studied formally at Aptech, applied since to secure architecture, zero-trust thinking and the security writing that became Shield Up.</p>
-              <ul>
-                <li>Network architecture and protocols</li>
-                <li>Zero-trust and secure architecture</li>
-                <li>Security awareness and education</li>
-              </ul>
-
-            </div>
-          </div>
-          <div class="block block-plain">
-            <div class="block-body">
-              <h3>Web Development</h3>
-              <p>Where it started — WordPress, HTML, CSS and JavaScript at Mobile Tech Hub, and the first websites that turned an interest into a profession.</p>
-
-
-            </div>
-          </div>
-          <div class="block block-plain">
-            <div class="block-body">
-              <h3>Venture Building</h3>
-              <p>Product strategy and company building across cross-border commerce and renewable energy — the parts that are hard to copy: financing structure, distribution, and being willing to specify the component that costs more and lasts.</p>
-              <ul>
-                <li>Product strategy and go-to-market</li>
-                <li>Cross-border commerce</li>
-                <li>Renewable energy distribution</li>
-              </ul>
-
-            </div>
+                <span class="card3d-glare" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article class="card3d" data-card3d>
+              <div class="card3d-body" data-3d-body>
+                <span class="card3d-index">05</span>
+                <h3 class="card3d-title">Venture Building</h3>
+                <p class="card3d-text">Product strategy and company building across cross-border commerce and renewable energy — the parts that are hard to copy: financing structure, distribution, and being willing to specify the component that costs more and lasts.</p>
+                <ul class="card3d-tags">
+                  <li>Product strategy and go-to-market</li>
+                  <li>Cross-border commerce</li>
+                  <li>Renewable energy distribution</li>
+                </ul>
+                <span class="card3d-glare" aria-hidden="true"></span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -491,5 +569,7 @@
         <p class="copyright">© 2026 Godwin Ubani. All rights reserved.</p>
       </div>
     </footer>
+    <script type="module" src="assets/js/objects.min.js"></script>
+    <script type="module" src="assets/js/globe.min.js"></script>
   </body>
 </html>

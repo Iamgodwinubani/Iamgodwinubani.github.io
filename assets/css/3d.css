@@ -1,0 +1,539 @@
+/* ============================================================
+   3D LAYER
+   Globe: WebGL          -> assets/js/globe.min.js
+   Phones, book, cards:  CSS 3D faces -> assets/js/objects.min.js
+   Motion stops under prefers-reduced-motion; dragging still works.
+   ============================================================ */
+
+/* ---------- Hero: copy + globe ---------- */
+
+.hero {
+  text-align: left;
+  padding-block: 64px 96px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.hero .avatar-ring {
+  width: 132px;
+  height: 132px;
+  margin: 0 0 28px;
+  padding: 4px;
+}
+
+.hero .greeting {
+  margin-bottom: 18px;
+}
+
+.hero .creds {
+  margin-bottom: 34px;
+}
+
+.hero .hero-actions {
+  justify-content: flex-start;
+}
+
+.hero .building {
+  margin-top: 54px;
+}
+
+.hero .building ul {
+  justify-content: flex-start;
+  gap: 10px 32px;
+}
+
+.globe {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 640px;
+  justify-self: center;
+  cursor: grab;
+  touch-action: pan-y;
+  /* Visible until WebGL paints, and kept if WebGL is unavailable. */
+  background: radial-gradient(
+    circle at 50% 48%,
+    rgba(22, 104, 255, 0.28) 0%,
+    rgba(0, 57, 149, 0.16) 36%,
+    transparent 62%
+  );
+}
+
+.globe.globe-ready {
+  background: none;
+}
+
+.globe.is-dragging {
+  cursor: grabbing;
+}
+
+.globe canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.globe-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: -52px 0 0 14px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.globe-label b {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.globe-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.globe-caption span {
+  color: var(--blue-bright);
+  margin-right: 10px;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    text-align: center;
+    padding-block: 48px 72px;
+  }
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero .avatar-ring {
+    margin: 0 auto 24px;
+  }
+  .hero .hero-actions,
+  .hero .building ul {
+    justify-content: center;
+  }
+  .globe {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 575px) {
+  .globe-caption {
+    font-size: 0.6rem;
+    white-space: normal;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+/* ---------- 3D phone ---------- */
+
+.phone3d {
+  --w: 272px;
+  --h: 590px;
+  --t: 22px;
+  --r: 46px;
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  margin: 12px auto 40px;
+  perspective: 1500px;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.phone3d.is-dragging {
+  cursor: grabbing;
+}
+
+.phone3d-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.phone3d-face {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r);
+  backface-visibility: hidden;
+}
+
+.phone3d-front {
+  transform: translateZ(calc(var(--t) / 2));
+  padding: 9px;
+  background: linear-gradient(145deg, #1b2336, #05070d 60%);
+  box-shadow:
+    inset 0 0 0 1.5px rgba(160, 190, 255, 0.28),
+    0 0 60px rgba(0, 57, 149, 0.35);
+}
+
+.phone3d-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: calc(var(--r) - 9px);
+  pointer-events: none;
+}
+
+.phone3d-back {
+  transform: rotateY(180deg) translateZ(calc(var(--t) / 2));
+  background: radial-gradient(circle at 30% 20%, #16264a, #04070f 70%);
+  box-shadow: inset 0 0 0 1.5px rgba(160, 190, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone3d-camera {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  width: 78px;
+  height: 78px;
+  border-radius: 22px;
+  background: #070b14;
+  box-shadow:
+    inset 0 0 0 1px rgba(160, 190, 255, 0.25),
+    inset 14px 14px 0 -4px #0d1424,
+    inset -14px -14px 0 -4px #0d1424;
+}
+
+.phone3d-brand {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.phone3d-edge {
+  position: absolute;
+  background: linear-gradient(90deg, #0a0f1c, #2a3550 50%, #0a0f1c);
+}
+
+.phone3d-right,
+.phone3d-left {
+  top: var(--r);
+  width: var(--t);
+  height: calc(var(--h) - var(--r) * 2);
+  left: calc(50% - var(--t) / 2);
+}
+
+.phone3d-right {
+  transform: rotateY(90deg) translateZ(calc(var(--w) / 2 - 0.5px));
+}
+
+.phone3d-left {
+  transform: rotateY(-90deg) translateZ(calc(var(--w) / 2 - 0.5px));
+}
+
+.phone3d-top,
+.phone3d-bottom {
+  left: var(--r);
+  width: calc(var(--w) - var(--r) * 2);
+  height: var(--t);
+  top: calc(50% - var(--t) / 2);
+  background: linear-gradient(180deg, #0a0f1c, #2a3550 50%, #0a0f1c);
+}
+
+.phone3d-top {
+  transform: rotateX(90deg) translateZ(calc(var(--h) / 2 - 0.5px));
+}
+
+.phone3d-bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--h) / 2 - 0.5px));
+}
+
+.phone3d-shadow {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -34px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(22, 104, 255, 0.35), transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+@media (max-width: 575px) {
+  .phone3d {
+    --w: 236px;
+    --h: 512px;
+    --t: 18px;
+    --r: 40px;
+  }
+}
+
+/* ---------- 3D book ---------- */
+
+.book3d {
+  --w: 300px;
+  --h: 450px;
+  --t: 44px;
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  margin: 20px auto 32px;
+  perspective: 1600px;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.book3d.is-dragging {
+  cursor: grabbing;
+}
+
+.book3d-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.book3d-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.book3d-front {
+  transform: translateZ(calc(var(--t) / 2));
+  box-shadow: 0 0 70px rgba(0, 57, 149, 0.45);
+}
+
+.book3d-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 2px 6px 6px 2px;
+}
+
+.book3d-back {
+  transform: rotateY(180deg) translateZ(calc(var(--t) / 2));
+  background: linear-gradient(160deg, #0b1a36, #04070f 70%);
+  border: 1px solid var(--line);
+  border-radius: 6px 2px 2px 6px;
+  padding: 44px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book3d-back-kicker {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+}
+
+.book3d-back-quote {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.book3d-back-author {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.book3d-spine {
+  position: absolute;
+  top: 0;
+  width: var(--t);
+  height: var(--h);
+  left: calc(50% - var(--t) / 2);
+  transform: rotateY(-90deg) translateZ(calc(var(--w) / 2));
+  background: linear-gradient(90deg, #0a1428, #1b3a78 50%, #0a1428);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.book3d-spine span {
+  writing-mode: vertical-rl;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #e6eeff;
+}
+
+.book3d-pages {
+  position: absolute;
+  top: 5px;
+  width: calc(var(--t) - 4px);
+  height: calc(var(--h) - 10px);
+  left: calc(50% - var(--t) / 2 + 2px);
+  transform: rotateY(90deg) translateZ(calc(var(--w) / 2 - 5px));
+  background: repeating-linear-gradient(90deg, #eef2f8 0 2px, #cfd8e6 2px 3px);
+}
+
+.book3d-edge {
+  position: absolute;
+  left: 0;
+  width: calc(var(--w) - 5px);
+  height: var(--t);
+  top: calc(50% - var(--t) / 2);
+  background: repeating-linear-gradient(180deg, #eef2f8 0 2px, #cfd8e6 2px 3px);
+}
+
+.book3d-top {
+  transform: rotateX(90deg) translateZ(calc(var(--h) / 2 - 3px));
+}
+
+.book3d-bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--h) / 2 - 3px));
+}
+
+@media (max-width: 575px) {
+  .book3d {
+    --w: 236px;
+    --h: 354px;
+    --t: 36px;
+  }
+}
+
+/* ---------- 3D skill cards ---------- */
+
+.cards3d {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+@media (max-width: 991px) {
+  .cards3d {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .cards3d {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.card3d {
+  perspective: 1000px;
+}
+
+.card3d-body {
+  position: relative;
+  height: 100%;
+  padding: 34px 30px 30px;
+  background: linear-gradient(160deg, #081226, #04070f 70%);
+  border: 1px solid var(--line);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card3d:hover .card3d-body {
+  border-color: var(--blue);
+  box-shadow: 0 20px 60px rgba(0, 57, 149, 0.35);
+}
+
+/* Layers sit at different depths, so tilting reveals parallax. */
+.card3d-index {
+  display: block;
+  font-family: var(--mono);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--blue-bright);
+  margin-bottom: 18px;
+  transform: translateZ(50px);
+}
+
+.card3d-title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0 0 12px;
+  transform: translateZ(40px);
+}
+
+.card3d-text {
+  color: var(--muted);
+  font-size: 0.97rem;
+  margin: 0 0 18px;
+  transform: translateZ(24px);
+}
+
+.card3d-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translateZ(30px);
+}
+
+.card3d-tags li {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  border: 1px solid var(--line);
+  padding: 5px 9px;
+}
+
+.card3d-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 0%),
+    rgba(92, 157, 255, 0.18),
+    transparent 55%
+  );
+}

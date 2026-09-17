@@ -58,7 +58,22 @@ const storesSoon = `              <div class="stores">
 
 const VENTURES = [
   {
-    media: `<img src="assets/img/k-app-s.png" alt="Korvanta app screens — onboarding, RMB wallet and auto-translating supplier chat" loading="lazy" />`,
+    media: `<div class="phone3d" data-phone3d>
+                <div class="phone3d-body" data-3d-body>
+                  <div class="phone3d-face phone3d-front">
+                    <img src="assets/img/screen-korvanta.png" alt="Korvanta app home screen — RMB wallet, live rate and recent suppliers" loading="lazy" draggable="false" />
+                  </div>
+                  <div class="phone3d-face phone3d-back">
+                    <span class="phone3d-camera"></span>
+                    <span class="phone3d-brand">Korvanta</span>
+                  </div>
+                  <div class="phone3d-edge phone3d-right"></div>
+                  <div class="phone3d-edge phone3d-left"></div>
+                  <div class="phone3d-edge phone3d-top"></div>
+                  <div class="phone3d-edge phone3d-bottom"></div>
+                </div>
+                <div class="phone3d-shadow"></div>
+              </div>`,
     title: "Korvanta",
     meta: "The Import Super-App",
     body: [
@@ -78,7 +93,22 @@ const VENTURES = [
 ${stores}`,
   },
   {
-    media: `<img src="assets/img/k-app-s2.png" alt="Korvanta Business app screens — supplier dashboard, escrow earnings and payout history" loading="lazy" />`,
+    media: `<div class="phone3d" data-phone3d>
+                <div class="phone3d-body" data-3d-body>
+                  <div class="phone3d-face phone3d-front">
+                    <img src="assets/img/screen-korvanta-business.png" alt="Korvanta Business app earnings screen — escrow balance and payout history" loading="lazy" draggable="false" />
+                  </div>
+                  <div class="phone3d-face phone3d-back">
+                    <span class="phone3d-camera"></span>
+                    <span class="phone3d-brand">Korvanta Business</span>
+                  </div>
+                  <div class="phone3d-edge phone3d-right"></div>
+                  <div class="phone3d-edge phone3d-left"></div>
+                  <div class="phone3d-edge phone3d-top"></div>
+                  <div class="phone3d-edge phone3d-bottom"></div>
+                </div>
+                <div class="phone3d-shadow"></div>
+              </div>`,
     title: "Korvanta Business",
     meta: "Korvanta for Suppliers · 中国工厂对接尼日利亚买家平台",
     body: [
@@ -160,6 +190,26 @@ const SOCIAL = [
   ["Dev.to", "https://dev.to/godwinubani"],
 ];
 
+function cards(items) {
+  return items
+    .map(
+      (v, i) => `            <article class="card3d" data-card3d>
+              <div class="card3d-body" data-3d-body>
+                <span class="card3d-index">${String(i + 1).padStart(2, "0")}</span>
+                <h3 class="card3d-title">${v.title}</h3>
+                <p class="card3d-text">${Array.isArray(v.body) ? v.body.join(" ") : v.body}</p>
+${
+  v.list && v.list.length
+    ? `                <ul class="card3d-tags">\n${v.list.map((l) => `                  <li>${l}</li>`).join("\n")}\n                </ul>`
+    : ""
+}
+                <span class="card3d-glare" aria-hidden="true"></span>
+              </div>
+            </article>`
+    )
+    .join("\n");
+}
+
 function blocks(items) {
   return items
     .map(
@@ -223,6 +273,7 @@ const html = `<!doctype html>
     <link rel="icon" href="assets/img/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/img/favicon.png" />
     <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/3d.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -293,33 +344,52 @@ ${NAV.map(([h, l]) => `          <a href="${h}">${l}</a>`).join("\n")}
 
     <main id="main">
       <!-- ===================== HERO ===================== -->
-      <section class="section hero wrap" id="home">
-        <h1 class="greeting">&gt;Hi, I am <b>Godwin</b>!_</h1>
-        <div class="avatar-ring">
-          <img
-            class="avatar"
-            src="assets/img/headshot.png"
-            alt="Godwin Ubani"
-            width="300"
-            height="300"
-          />
-        </div>
-        <p class="role">Technopreneur | Software Engineer</p>
-        <p class="creds">
-          Software Engineering | AI | Cybersecurity | Cross-Border Commerce |
-          Renewable Energy
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-solid" href="#app">Explore my work</a>
-          <a class="btn" href="#contact">Let&rsquo;s talk</a>
-        </div>
+      <section class="section hero" id="home">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <div class="avatar-ring">
+              <img
+                class="avatar"
+                src="assets/img/headshot.png"
+                alt="Godwin Ubani"
+                width="300"
+                height="300"
+              />
+            </div>
+            <h1 class="greeting">&gt;Hi, I am <b>Godwin</b>!_</h1>
+            <p class="role">Technopreneur | Software Engineer</p>
+            <p class="creds">
+              Software Engineering | AI | Cybersecurity | Cross&#8209;Border Commerce
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-solid" href="#app">Explore my work</a>
+              <a class="btn" href="#contact">Let&rsquo;s talk</a>
+            </div>
 
-        <div class="building">
-          <h2>Building</h2>
-          <ul>
-            <li>Korvanta</li>
-            <li>Korvanta Business</li>
-          </ul>
+            <div class="building">
+              <h2>Building</h2>
+              <ul>
+                <li>Korvanta</li>
+                <li>Korvanta Business</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="globe" data-globe>
+            <canvas
+              role="img"
+              aria-label="Rotating globe tracing a trade route from Abia, Nigeria to Shenzhen, China. Drag to rotate."
+            ></canvas>
+            <span class="globe-label" data-globe-label="origin"
+              ><b>Abia</b>Nigeria</span
+            >
+            <span class="globe-label" data-globe-label="destination"
+              ><b>Shenzhen</b>China</span
+            >
+            <p class="globe-caption">
+              <span>Abia &rarr; Shenzhen</span> the route Korvanta is built on
+            </p>
+          </div>
         </div>
       </section>
 
@@ -364,11 +434,32 @@ ${blocks(VENTURES)}
           </p>
           <div class="block">
             <div class="block-media">
-              <img
-                src="assets/img/shield-up-cover.png"
-                alt="Shield Up: Defending Your Digital World — book cover"
-                loading="lazy"
-              />
+              <div class="book3d" data-book3d>
+                <div class="book3d-body" data-3d-body>
+                  <div class="book3d-face book3d-front">
+                    <img
+                      src="assets/img/shield-up-cover.png"
+                      alt="Shield Up: Defending Your Digital World — book cover"
+                      loading="lazy"
+                      draggable="false"
+                    />
+                  </div>
+                  <div class="book3d-face book3d-back">
+                    <p class="book3d-back-kicker">Shield Up</p>
+                    <p class="book3d-back-quote">
+                      Most security advice is written for people who already
+                      agree with it. This book is for everyone else.
+                    </p>
+                    <p class="book3d-back-author">Godwin Ubani</p>
+                  </div>
+                  <div class="book3d-spine">
+                    <span>Shield Up</span><span>Godwin Ubani</span>
+                  </div>
+                  <div class="book3d-pages"></div>
+                  <div class="book3d-edge book3d-top"></div>
+                  <div class="book3d-edge book3d-bottom"></div>
+                </div>
+              </div>
               <a
                 class="btn btn-solid btn-wide"
                 href="assets/files/shield-up-defending-your-digital-world.pdf"
@@ -407,7 +498,9 @@ ${blocks(VENTURES)}
           <span class="eyebrow">04 / Capability</span>
           <h2 class="section-title">Expertise</h2>
           <p class="section-sub">Skills, training and the work behind them.</p>
-${blocks(EXPERTISE)}
+          <div class="cards3d">
+${cards(EXPERTISE)}
+          </div>
         </div>
       </section>
 
@@ -465,6 +558,8 @@ ${SOCIAL.map(([n, u]) => `          <li><a href="${u}"${ext}>${n}</a></li>`).joi
         <p class="copyright">© 2026 Godwin Ubani. All rights reserved.</p>
       </div>
     </footer>
+    <script type="module" src="assets/js/objects.min.js"></script>
+    <script type="module" src="assets/js/globe.min.js"></script>
   </body>
 </html>
 `;
