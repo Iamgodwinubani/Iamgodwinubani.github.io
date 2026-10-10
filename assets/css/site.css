@@ -57,11 +57,25 @@ h1::first-line { font-family: var(--serif); font-style: italic; font-weight: 400
 .portrait-caption { display: flex; justify-content: space-between; gap: 12px; margin: 14px 0 0; font-size: .76rem; color: var(--muted); }
 .portrait-caption strong { color: var(--ink); font-weight: 600; }
 
+.signal-strip { border-bottom: 1px solid var(--line); background: var(--ink); color: white; }
+.signal-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.signal-grid > div { display: flex; min-height: 92px; flex-direction: column; justify-content: center; gap: 7px; padding: 0 22px; border-left: 1px solid #41413f; }
+.signal-grid > div:first-child { border-left: 0; padding-left: 0; }
+.signal-grid span, .now-list > article > span, .approach-grid span { color: var(--orange); font: .72rem var(--display); }
+.signal-grid strong { font: 500 1.05rem var(--display); }
+
 .section { padding: 126px 0; border-bottom: 1px solid var(--line); }
 .section-heading { max-width: 700px; margin-bottom: 58px; }
 .section-heading h2, .about-section h2 { margin-bottom: 0; font-size: clamp(2.4rem, 5vw, 4.7rem); font-weight: 500; line-height: 1.02; }
 .section-heading h2::first-line, .about-section h2::first-line { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .section-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 28px; max-width: none; }
+.now-section { background: #e9e6de; }
+.now-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; }
+.now-list { border-top: 1px solid var(--line); }
+.now-list > article { display: grid; grid-template-columns: 38px 1fr auto; gap: 16px; align-items: start; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.now-list h3 { margin-bottom: 7px; font-size: 1.35rem; }
+.now-list p { max-width: 48ch; margin: 0; color: var(--muted); font-size: .92rem; }
+.now-list b { padding-top: 5px; color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .work-card { display: flex; flex-direction: column; min-width: 0; border: 0; background: transparent; }
 .work-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr .9fr; }
@@ -101,6 +115,23 @@ h1::first-line { font-family: var(--serif); font-style: italic; font-weight: 400
 .client-card .card-kicker { margin-bottom: 18px; color: var(--muted); }
 .client-card h3 { margin-bottom: 10px; font-size: 1.55rem; }
 .client-card p:not(.card-kicker) { margin-bottom: 24px; color: var(--muted); font-size: .9rem; }
+
+.approach-section { background: var(--paper); }
+.approach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.approach-grid article { min-height: 250px; padding: 25px 24px 28px 0; border-right: 1px solid var(--line); }
+.approach-grid article:not(:first-child) { padding-left: 24px; }
+.approach-grid article:last-child { border-right: 0; }
+.approach-grid h3 { margin: 48px 0 13px; max-width: 15ch; font-size: 1.35rem; line-height: 1.08; }
+.approach-grid p { max-width: 25ch; margin: 0; color: var(--muted); font-size: .9rem; }
+
+.journey-section { background: var(--paper-deep); }
+.journey-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.journey-grid article { background: var(--paper); }
+.journey-grid img { width: 100%; height: 230px; object-fit: cover; filter: saturate(.75); }
+.journey-grid article > div { padding: 22px 24px 25px; }
+.journey-grid span { color: var(--blue); font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.journey-grid h3 { margin: 12px 0 8px; font-size: 1.5rem; }
+.journey-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
 
 .book-section { background: #e2e7ec; }
 .book-layout { display: grid; grid-template-columns: minmax(260px, .7fr) minmax(0, 1.3fr); gap: 100px; align-items: center; }
@@ -165,9 +196,14 @@ h1::first-line { font-family: var(--serif); font-style: italic; font-weight: 400
   .hero { padding: 76px 0 90px; }
   .hero-layout, .about-layout { grid-template-columns: 1fr; gap: 56px; }
   .hero-portrait { justify-self: start; max-width: 360px; }
+  .now-layout { grid-template-columns: 1fr; gap: 48px; }
   .work-card-featured { grid-template-columns: 1fr; }
   .work-card-featured .work-image { min-height: 300px; }
   .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .approach-grid { grid-template-columns: repeat(2, 1fr); }
+  .approach-grid article:nth-child(2) { border-right: 0; }
+  .approach-grid article:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+  .journey-grid { grid-template-columns: repeat(2, 1fr); }
   .book-layout { gap: 56px; }
   .writing-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
@@ -184,12 +220,22 @@ h1::first-line { font-family: var(--serif); font-style: italic; font-weight: 400
   .nav-toggle:checked ~ .nav { display: flex; }
   .hero { padding: 64px 0 76px; }
   h1 { font-size: clamp(3rem, 15vw, 5rem); }
+  .signal-grid { grid-template-columns: repeat(2, 1fr); }
+  .signal-grid > div, .signal-grid > div:first-child { min-height: 76px; padding: 0 14px; border-left: 1px solid #41413f; }
+  .signal-grid > div:nth-child(-n + 2) { border-bottom: 1px solid #41413f; }
+  .signal-grid > div:nth-child(odd) { border-left: 0; padding-left: 0; }
   .section { padding: 82px 0; }
   .section-heading { margin-bottom: 38px; }
   .section-heading-row { display: block; }
   .section-heading-row .text-link { margin-top: 24px; }
   .work-grid, .writing-grid { grid-template-columns: 1fr; }
   .client-grid { grid-template-columns: 1fr; }
+  .now-list > article { grid-template-columns: 30px 1fr; }
+  .now-list b { grid-column: 2; padding-top: 0; }
+  .approach-grid, .journey-grid { grid-template-columns: 1fr; }
+  .approach-grid article, .approach-grid article:nth-child(2), .approach-grid article:nth-child(-n + 2) { min-height: auto; padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .approach-grid article:last-child { border-bottom: 0; }
+  .approach-grid h3 { margin-top: 26px; }
   .work-content { padding: 24px; }
   .work-image, .work-card-featured .work-image { min-height: 260px; }
   .about-layout { gap: 36px; }
