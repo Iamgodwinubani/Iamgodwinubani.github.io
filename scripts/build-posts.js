@@ -120,14 +120,14 @@ function shell({ title, desc, canonical, main }) {
     <meta name="description" content="${esc(desc)}" />
     <meta name="author" content="Godwin Ubani" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://godwinubani.com/posts/${canonical}" />
+    <link rel="canonical" href="https://godwinubani.me/posts/${canonical}" />
     <meta name="theme-color" content="#003995" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Godwin Ubani" />
-    <meta property="og:url" content="https://godwinubani.com/posts/${canonical}" />
+    <meta property="og:url" content="https://godwinubani.me/posts/${canonical}" />
     <meta property="og:title" content="${esc(title)}" />
     <meta property="og:description" content="${esc(desc)}" />
-    <meta property="og:image" content="https://godwinubani.com/assets/img/headshot.png" />
+    <meta property="og:image" content="https://godwinubani.me/assets/img/headshot.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@iamgodwinubani" />
     <link rel="icon" href="../assets/img/favicon.png" type="image/png" />

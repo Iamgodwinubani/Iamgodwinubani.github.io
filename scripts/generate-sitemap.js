@@ -12,7 +12,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const ORIGIN = "https://godwinubani.com";
+const ORIGIN = "https://godwinubani.me";
 const ROOT = path.resolve(__dirname, "..");
 
 /* Files that must never be indexed: build helpers, previews, drafts. */
