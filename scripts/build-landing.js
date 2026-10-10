@@ -7,7 +7,7 @@ const POSTS = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/posts.json"), 
 const EXT = ' target="_blank" rel="noopener noreferrer"';
 const NAV = [
   ["#assistant", "AI assistant"],
-  ["#client-work", "Client work"],
+  ["#client-work", "Work"],
   ["#book", "Book"],
   ["#about", "About"],
   ["#writing", "Writing"],
@@ -21,6 +21,13 @@ const SOCIAL = [
   ["Instagram", "https://www.instagram.com/iamgodwinubani"],
   ["Telegram", "https://t.me/iamgodwinubani"],
   ["Dev.to", "https://dev.to/godwinubani"],
+  ["TikTok", "https://www.tiktok.com/@iamgodwinubani"],
+  ["Facebook", "https://www.facebook.com/iamgodwinubani"],
+  ["Threads", "https://www.threads.net/@iamgodwinubani"],
+  ["Pinterest", "https://www.pinterest.com/iamgodwinubani"],
+  ["Twitch", "https://www.twitch.tv/iamgodwinubani"],
+  ["Hashnode", "https://hashnode.com/@iamgodwinubani"],
+  ["Reddit", "https://www.reddit.com/user/iamgodwinubani"],
 ];
 
 function esc(value) {
@@ -66,11 +73,11 @@ const html = `<!doctype html>
         "url": "https://godwinubani.me/",
         "image": "https://godwinubani.me/assets/img/headshot.jpg",
         "jobTitle": "Software Engineer and Entrepreneur",
-        "email": "mailto:iamgodwinubani@gmail.com",
         "knowsAbout": ["Software Engineering", "Artificial Intelligence", "Cybersecurity", "Cross-Border Commerce"],
         "sameAs": [${SOCIAL.map(([, url]) => `"${url}"`).join(", ")}]
       }
     </script>
+    <script type="module" src="assets/js/assistant.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -115,12 +122,12 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
       </section>
 
       <section class="section assistant-section" id="assistant">
-        <div class="wrap assistant-layout"><div class="assistant-mark" aria-hidden="true"><span>AI</span><i></i><i></i><i></i></div><div class="assistant-copy"><p class="eyebrow">New venture · AI assistant</p><h2>A calmer way to think with AI.</h2><p class="assistant-lede">An intelligent working partner for research, writing and decisions, built around context instead of noise.</p><p>The assistant is being shaped to help people move from a vague question to a useful next step. It brings structure to messy ideas, keeps the important context close and makes the work feel more human.</p><a class="button button-primary" href="#contact">Talk about the assistant <span aria-hidden="true">↗</span></a></div></div>
+        <div class="wrap assistant-layout"><div class="assistant-mark" aria-hidden="true"><span>AI</span><i></i><i></i><i></i></div><div class="assistant-copy"><p class="eyebrow">Personal AI guide</p><h2>Ask about Godwin.</h2><p class="assistant-lede">A focused assistant that helps visitors understand my work, experience, writing and ways to connect.</p><p>Ask it about my background, projects, technical strengths, book or public work. It is designed to stay on-topic and guide serious inquiries to the right place.</p><div class="assistant-chat" data-assistant><div class="assistant-messages" data-assistant-messages><div class="assistant-message assistant-message-bot">Hi. I can answer questions about Godwin Ubani, his work, experience, writing and current projects.</div></div><form class="assistant-form" data-assistant-form><label class="sr-only" for="assistant-question">Ask about Godwin</label><input id="assistant-question" name="question" type="text" placeholder="Ask about Godwin's work..." maxlength="500" autocomplete="off" required /><button type="submit" aria-label="Send question">↗</button></form><p class="assistant-status" data-assistant-status aria-live="polite"></p></div></div></div>
       </section>
 
       <section class="section client-section" id="client-work">
         <div class="wrap">
-          <div class="section-heading section-heading-row"><div><p class="eyebrow">Client work</p><h2>Digital products built for real businesses.</h2></div><p class="section-note">Five selected builds will live here. Each project opens its own case study when the final screenshots and links are added.</p></div>
+          <div class="section-heading section-heading-row"><div><p class="eyebrow">Work</p><h2>Digital products built for real businesses.</h2></div><p class="section-note">Selected builds and concept case studies. Each project opens its own brief when the final screenshots and links are added.</p></div>
           <div class="client-grid">
             <article class="client-card"><div class="client-placeholder"><span>01</span><strong>Naya Foods</strong><small>Demo client · Lagos, Nigeria</small></div><div><p class="card-kicker">E-commerce · Demo case study</p><h3>Naya Foods</h3><p>A warm, conversion-focused storefront for a growing food brand moving from social orders to a dependable online shop.</p><a class="text-link" href="#contact">View the demo brief <span aria-hidden="true">↗</span></a></div></article>
             <article class="client-card"><div class="client-placeholder client-placeholder-blue"><span>02</span><strong>Helio Health</strong><small>Demo client · Accra, Ghana</small></div><div><p class="card-kicker">Healthcare · Demo case study</p><h3>Helio Health</h3><p>A calm patient experience that explains services clearly, builds trust quickly and makes appointment requests feel effortless.</p><a class="text-link" href="#contact">View the demo brief <span aria-hidden="true">↗</span></a></div></article>

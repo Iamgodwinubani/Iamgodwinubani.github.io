@@ -9,3 +9,8 @@ Thumbs.db
 
 # npm
 node_modules/
+
+# Deployment secrets
+.env
+.env.*
+!.env.example
