@@ -76,21 +76,6 @@ h1::first-line { font-family: var(--serif); font-style: italic; font-weight: 400
 .now-list h3 { margin-bottom: 7px; font-size: 1.35rem; }
 .now-list p { max-width: 48ch; margin: 0; color: var(--muted); font-size: .92rem; }
 .now-list b { padding-top: 5px; color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-.assistant-section { background: var(--blue); color: white; }
-.assistant-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; align-items: center; }
-.assistant-section .eyebrow { color: #c7d7ff; }
-.assistant-section h2 { max-width: 720px; margin-bottom: 22px; font-size: clamp(3rem, 6vw, 6.5rem); line-height: .92; }
-.assistant-copy { max-width: 650px; }
-.assistant-copy p { max-width: 58ch; color: #dce6ff; }
-.assistant-copy .assistant-lede { color: white; font: 500 clamp(1.3rem, 2.5vw, 1.9rem)/1.2 var(--display); }
-.assistant-copy .button-primary { margin-top: 16px; background: white; color: var(--ink); border-color: white; }
-.assistant-copy .button-primary:hover { background: var(--orange); border-color: var(--orange); }
-.assistant-mark { display: grid; width: min(100%, 360px); aspect-ratio: 1; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 10px; transform: rotate(-8deg); }
-.assistant-mark span { grid-column: 1 / -1; grid-row: 1 / -1; z-index: 1; align-self: center; color: white; font: 600 clamp(4rem, 9vw, 8rem)/1 var(--display); letter-spacing: -.12em; text-align: center; }
-.assistant-mark i { display: block; border: 1px solid rgba(255,255,255,.5); }
-.assistant-mark i:nth-of-type(1) { grid-column: 1; grid-row: 1; background: rgba(255,255,255,.18); }
-.assistant-mark i:nth-of-type(2) { grid-column: 3; grid-row: 2; background: var(--orange); border-color: var(--orange); }
-.assistant-mark i:nth-of-type(3) { grid-column: 2; grid-row: 3; background: rgba(255,255,255,.18); }
 .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .work-card { display: flex; flex-direction: column; min-width: 0; border: 0; background: transparent; }
 .work-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr .9fr; }
@@ -214,8 +199,6 @@ h1::first-line { font-family: var(--serif); font-style: italic; font-weight: 400
   .hero-layout, .about-layout { grid-template-columns: 1fr; gap: 56px; }
   .hero-portrait { justify-self: start; max-width: 360px; }
   .now-layout { grid-template-columns: 1fr; gap: 48px; }
-  .assistant-layout { grid-template-columns: 1fr; gap: 52px; }
-  .assistant-mark { width: min(100%, 260px); }
   .work-card-featured { grid-template-columns: 1fr; }
   .work-card-featured .work-image { min-height: 300px; }
   .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -258,7 +241,6 @@ h1::first-line { font-family: var(--serif); font-style: italic; font-weight: 400
   .work-content { padding: 24px; }
   .work-image, .work-card-featured .work-image { min-height: 260px; }
   .about-layout { gap: 36px; }
-  .assistant-layout { gap: 38px; }
   .book-layout { grid-template-columns: 1fr; gap: 38px; }
   .book-cover { max-width: 260px; }
   .capability-list { margin-top: 38px; }
