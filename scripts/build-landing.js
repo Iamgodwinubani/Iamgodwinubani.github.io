@@ -7,6 +7,8 @@ const POSTS = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/posts.json"), 
 const EXT = ' target="_blank" rel="noopener noreferrer"';
 const NAV = [
   ["#work", "Work"],
+  ["#client-work", "Client work"],
+  ["#book", "Book"],
   ["#about", "About"],
   ["#writing", "Writing"],
 ];
@@ -107,22 +109,31 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
               <div class="work-image"><img src="assets/img/screen-korvanta.png" alt="Korvanta app interface showing a renminbi wallet and live exchange rate" loading="lazy" /></div>
               <div class="work-content"><p class="card-kicker">01 / Product · Fintech</p><h3>Korvanta</h3><p>A simpler way for Nigerian importers to source from China. Payments, verified suppliers, translation and order tracking in one place.</p><a class="text-link" href="https://korvanta.vercel.app"${EXT}>Visit Korvanta <span aria-hidden="true">↗</span></a></div>
             </article>
-            <article class="work-card">
-              <div class="work-image work-image-dark"><img src="assets/img/screen-korvanta-business.png" alt="Korvanta Business interface showing supplier earnings and escrow balance" loading="lazy" /></div>
-              <div class="work-content"><p class="card-kicker">02 / Platform · B2B</p><h3>Korvanta Business</h3><p>The supplier-side platform connecting Chinese factories with serious Nigerian buyers, with bilingual communication and visible escrow.</p><a class="text-link" href="https://korvanta.vercel.app"${EXT}>Explore the platform <span aria-hidden="true">↗</span></a></div>
-            </article>
-            <article class="work-card work-card-book">
-              <div class="work-image"><img src="assets/img/shield-up-cover.png" alt="Shield Up book cover" loading="lazy" /></div>
-              <div class="work-content"><p class="card-kicker">03 / Author · Cybersecurity</p><h3>Shield Up</h3><p>A practical guide to digital safety for people who do not consider themselves security experts.</p><a class="text-link" href="assets/files/shield-up-defending-your-digital-world.pdf" download>Download the book <span aria-hidden="true">↘</span></a></div>
-            </article>
           </div>
         </div>
       </section>
 
+      <section class="section client-section" id="client-work">
+        <div class="wrap">
+          <div class="section-heading section-heading-row"><div><p class="eyebrow">Client work</p><h2>Digital products built for real businesses.</h2></div><p class="section-note">Five selected builds will live here. Each project opens its own case study when the final screenshots and links are added.</p></div>
+          <div class="client-grid">
+            <article class="client-card"><div class="client-placeholder"><span>01</span><strong>Client project</strong><small>Screenshot coming soon</small></div><div><p class="card-kicker">Web product · Case study</p><h3>Project one</h3><p>Strategy, design and engineering for a business that needs a clearer digital presence.</p><a class="text-link" href="#contact">Request the case study <span aria-hidden="true">↗</span></a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-blue"><span>02</span><strong>Client project</strong><small>Screenshot coming soon</small></div><div><p class="card-kicker">Website · Case study</p><h3>Project two</h3><p>A focused website designed to make a strong offer easier to understand and act on.</p><a class="text-link" href="#contact">Request the case study <span aria-hidden="true">↗</span></a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-orange"><span>03</span><strong>Client project</strong><small>Screenshot coming soon</small></div><div><p class="card-kicker">Platform · Case study</p><h3>Project three</h3><p>Product thinking and reliable engineering brought together around a clear customer journey.</p><a class="text-link" href="#contact">Request the case study <span aria-hidden="true">↗</span></a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-dark"><span>04</span><strong>Client project</strong><small>Screenshot coming soon</small></div><div><p class="card-kicker">Web application · Case study</p><h3>Project four</h3><p>A practical digital tool built to reduce friction for teams and the people they serve.</p><a class="text-link" href="#contact">Request the case study <span aria-hidden="true">↗</span></a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-lime"><span>05</span><strong>Client project</strong><small>Screenshot coming soon</small></div><div><p class="card-kicker">Digital experience · Case study</p><h3>Project five</h3><p>A considered experience that gives a growing business the confidence to look its size.</p><a class="text-link" href="#contact">Request the case study <span aria-hidden="true">↗</span></a></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section book-section" id="book">
+        <div class="wrap book-layout"><div class="book-cover"><img src="assets/img/shield-up-cover.png" alt="Shield Up book cover" loading="lazy" /></div><div class="book-copy"><p class="eyebrow">Author · Cybersecurity</p><h2>Shield Up</h2><p class="book-lede">A practical guide to digital safety for people who do not consider themselves security experts.</p><p>Most security advice is written for people who already agree with it. Shield Up makes security useful, human and possible to act on, covering digital identity, threat modelling and the habits that actually survive real life.</p><a class="button button-primary" href="assets/files/shield-up-defending-your-digital-world.pdf" download>Download the book <span aria-hidden="true">↘</span></a></div></div>
+      </section>
+
       <section class="section about-section" id="about">
         <div class="wrap about-layout">
-          <div class="section-heading"><p class="eyebrow">About</p><h2>Technical enough to ship. Curious enough to ask why.</h2></div>
-          <div class="about-copy"><p>I care about the space where a strong technical foundation meets a real-world constraint. My work moves between writing software, understanding systems and building the companies around them.</p><p>That means thinking about the user, the infrastructure, the business model and the last mile with equal seriousness.</p><div class="capability-list"><div><span>01</span><strong>Software engineering</strong><p>TypeScript, React, Next.js, Node.js, Python and cloud infrastructure.</p></div><div><span>02</span><strong>AI &amp; security</strong><p>LLM products, secure architecture, prompt security and practical education.</p></div><div><span>03</span><strong>Venture building</strong><p>Product strategy and go-to-market for ambitious, useful businesses.</p></div></div></div>
+          <div class="section-heading"><p class="eyebrow">About Godwin</p><h2>Technical enough to ship. Curious enough to ask why.</h2></div>
+          <div class="about-copy"><p>Godwin Ubani is a software engineer, entrepreneur and author building at the intersection of technology, commerce and everyday life. He is interested in the difficult middle: the place where a promising idea has to become a reliable product, a sustainable business and a useful part of somebody’s day.</p><p>His work spans full-stack product engineering, artificial intelligence, cybersecurity and cross-border commerce. He has built from Nigeria and China, bringing together technical depth, first-hand market context and a practical understanding of what it takes to move from concept to launch.</p><p>Godwin is the founder of Korvanta, a cross-border commerce product helping Nigerian importers work more directly with Chinese suppliers. He is also the author of <em>Shield Up: Defending Your Digital World</em>, a cybersecurity guide written for people who do not want to become security experts before protecting themselves.</p><p>Whether he is writing software, explaining a security problem or shaping a new venture, his approach is consistent: understand the real constraint, remove unnecessary complexity and build something people can trust.</p><div class="capability-list"><div><span>01</span><strong>Software engineering</strong><p>TypeScript, React, Next.js, Node.js, Python and cloud infrastructure.</p></div><div><span>02</span><strong>AI &amp; security</strong><p>LLM products, secure architecture, prompt security and practical education.</p></div><div><span>03</span><strong>Venture building</strong><p>Product strategy and go-to-market for ambitious, useful businesses.</p></div></div></div>
         </div>
       </section>
 
