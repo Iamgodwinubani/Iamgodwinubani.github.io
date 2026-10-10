@@ -77,7 +77,6 @@ const html = `<!doctype html>
         "sameAs": [${SOCIAL.map(([, url]) => `"${url}"`).join(", ")}]
       }
     </script>
-    <script type="module" src="assets/js/assistant.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -122,7 +121,7 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
       </section>
 
       <section class="section assistant-section" id="assistant">
-        <div class="wrap assistant-layout"><div class="assistant-mark" aria-hidden="true"><span>AI</span><i></i><i></i><i></i></div><div class="assistant-copy"><p class="eyebrow">Personal AI guide</p><h2>Ask about Godwin.</h2><p class="assistant-lede">A focused assistant that helps visitors understand my work, experience, writing and ways to connect.</p><p>Ask it about my background, projects, technical strengths, book or public work. It is designed to stay on-topic and guide serious inquiries to the right place.</p><div class="assistant-chat" data-assistant><div class="assistant-messages" data-assistant-messages><div class="assistant-message assistant-message-bot">Hi. I can answer questions about Godwin Ubani, his work, experience, writing and current projects.</div></div><form class="assistant-form" data-assistant-form><label class="sr-only" for="assistant-question">Ask about Godwin</label><input id="assistant-question" name="question" type="text" placeholder="Ask about Godwin's work..." maxlength="500" autocomplete="off" required /><button type="submit" aria-label="Send question">↗</button></form><p class="assistant-status" data-assistant-status aria-live="polite"></p></div></div></div>
+        <div class="wrap assistant-layout"><div class="assistant-mark" aria-hidden="true"><span>AI</span><i></i><i></i><i></i></div><div class="assistant-copy"><p class="eyebrow">AI product research</p><h2>Building calmer tools for complex work.</h2><p class="assistant-lede">Exploring how thoughtful AI can make research, writing and decisions clearer without adding more noise.</p><p>This is an active area of product research: useful systems, strong context and security designed in from the beginning.</p><a class="button button-primary" href="#contact">Discuss an idea <span aria-hidden="true">↗</span></a></div></div>
       </section>
 
       <section class="section client-section" id="client-work">
