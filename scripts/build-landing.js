@@ -18,15 +18,9 @@ const SOCIAL = [
   ["Medium", "https://medium.com/@iamgodwinubani"],
   ["YouTube", "https://www.youtube.com/@iamgodwinubani"],
   ["Instagram", "https://www.instagram.com/iamgodwinubani"],
-  ["Telegram", "https://t.me/iamgodwinubani"],
-  ["Dev.to", "https://dev.to/godwinubani"],
   ["TikTok", "https://www.tiktok.com/@iamgodwinubani"],
   ["Facebook", "https://www.facebook.com/iamgodwinubani"],
   ["Threads", "https://www.threads.net/@iamgodwinubani"],
-  ["Pinterest", "https://www.pinterest.com/iamgodwinubani"],
-  ["Twitch", "https://www.twitch.tv/iamgodwinubani"],
-  ["Hashnode", "https://hashnode.com/@iamgodwinubani"],
-  ["Reddit", "https://www.reddit.com/user/iamgodwinubani"],
 ];
 
 const ICONS = {
@@ -40,15 +34,9 @@ const SOCIAL_SLUGS = {
   Medium: "medium",
   YouTube: "youtube",
   Instagram: "instagram",
-  Telegram: "telegram",
-  "Dev.to": "devdotto",
   TikTok: "tiktok",
   Facebook: "facebook",
   Threads: "threads",
-  Pinterest: "pinterest",
-  Twitch: "twitch",
-  Hashnode: "hashnode",
-  Reddit: "reddit",
 };
 
 function socialMark(name) {
@@ -196,7 +184,7 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <div><a class="brand" href="#home">GU<span>.</span></a><p>Software engineer &amp; entrepreneur.</p></div>
-        <div class="footer-links"><p class="footer-label">Find me online</p><ul>${SOCIAL.map(([name, url]) => `<li><a href="${url}"${EXT} aria-label="${name}">${socialMark(name)}<span class="sr-only">${name}</span></a></li>`).join("")}<li><a href="mailto:iamgodwinubani@gmail.com" aria-label="Email Godwin Ubani">${ICONS.mail}<span class="sr-only">Email</span></a></li></ul></div>
+        <div class="footer-links"><p class="footer-label">Find me online</p><ul>${SOCIAL.map(([name, url]) => `<li><a href="${url}"${EXT} aria-label="${name}">${socialMark(name)}</a></li>`).join("")}</ul></div>
         <p class="copyright">© 2026 Godwin Ubani</p>
       </div>
     </footer>
