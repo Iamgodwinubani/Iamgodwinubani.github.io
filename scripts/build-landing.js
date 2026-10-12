@@ -29,6 +29,32 @@ const SOCIAL = [
   ["Reddit", "https://www.reddit.com/user/iamgodwinubani"],
 ];
 
+const ICONS = {
+  mail: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 6l8 6 8-6" /></svg>',
+};
+
+const SOCIAL_SLUGS = {
+  LinkedIn: "linkedin",
+  GitHub: "github",
+  X: "x",
+  Medium: "medium",
+  YouTube: "youtube",
+  Instagram: "instagram",
+  Telegram: "telegram",
+  "Dev.to": "devdotto",
+  TikTok: "tiktok",
+  Facebook: "facebook",
+  Threads: "threads",
+  Pinterest: "pinterest",
+  Twitch: "twitch",
+  Hashnode: "hashnode",
+  Reddit: "reddit",
+};
+
+function socialMark(name) {
+  return `<img class="social-mark" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${SOCIAL_SLUGS[name]}.svg" alt="" aria-hidden="true" loading="lazy" />`;
+}
+
 function esc(value) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
@@ -38,7 +64,7 @@ const postCards = POSTS.map(
               <p class="card-kicker">${post.minutes} min read</p>
               <h3><a href="posts/${post.slug}.html">${esc(post.title)}</a></h3>
               <p>${esc(post.sub)}</p>
-              <a class="text-link" href="posts/${post.slug}.html">Read the essay <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="posts/${post.slug}.html">Read the essay</a>
             </article>`
 ).join("\n");
 
@@ -86,7 +112,7 @@ const html = `<!doctype html>
         <label class="nav-toggle-label" for="nav-toggle" tabindex="0" aria-label="Open menu"><span></span><span></span></label>
         <nav class="nav" aria-label="Main navigation">
 ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\n")}
-          <a class="nav-cta" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+          <a class="nav-cta" href="#contact">Start a conversation</a>
         </nav>
       </div>
     </header>
@@ -99,14 +125,13 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
             <h1>I build products that make difficult things feel simple.</h1>
             <p class="hero-lede">I’m Godwin Ubani, a software engineer and entrepreneur working across AI, cybersecurity and cross-border commerce.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#client-work">See selected work <span aria-hidden="true">↘</span></a>
-              <a class="button button-quiet" href="mailto:iamgodwinubani@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+              <a class="button button-primary" href="#client-work">See selected work</a>
+              <a class="button button-quiet" href="mailto:iamgodwinubani@gmail.com">Get in touch</a>
             </div>
             <div class="hero-note"><span class="status-dot"></span> Building globally across software, AI and venture.</div>
           </div>
           <div class="hero-portrait">
             <div class="portrait-frame"><img src="assets/img/headshot.jpg" alt="Godwin Ubani" width="560" height="700" /></div>
-            <p class="portrait-caption"><span>Working across</span><strong>Markets &amp; disciplines</strong></p>
           </div>
         </div>
       </section>
@@ -119,15 +144,19 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
         <div class="wrap now-layout"><div class="section-heading"><p class="eyebrow">Now</p><h2>The work in front of me.</h2></div><div class="now-list"><article><span>01</span><div><h3>Exploring useful AI</h3><p>Studying where language models become products, and where security has to be designed into the product from day one.</p></div><b>Research</b></article><article><span>02</span><div><h3>Building for clarity</h3><p>Designing thoughtful software that helps people move from a difficult question to a useful next step.</p></div><b>In progress</b></article><article><span>03</span><div><h3>Writing in public</h3><p>Turning lessons from trade, security and building into clear ideas other people can use.</p></div><b>Ongoing</b></article></div></div>
       </section>
 
+      <section class="section questions-section" id="questions">
+        <div class="wrap questions-layout"><div class="section-heading"><p class="eyebrow">Field notes</p><h2>The questions I keep returning to.</h2></div><div class="question-list"><article><span>01</span><div><h3>What makes technology useful?</h3><p>Not novelty. A clear job, a real person and enough care in the details to earn a place in their day.</p></div></article><article><span>02</span><div><h3>How do we build trust into the product?</h3><p>Security and good communication are both forms of respect. People should understand what they are using and what it asks of them.</p></div></article><article><span>03</span><div><h3>What happens between the idea and the launch?</h3><p>That difficult middle is where strategy, engineering and context have to work together. It is where I do my best work.</p></div></article></div></div>
+      </section>
+
       <section class="section client-section" id="client-work">
         <div class="wrap">
           <div class="section-heading section-heading-row"><div><p class="eyebrow">Work</p><h2>Digital products built for real businesses.</h2></div><p class="section-note">Selected builds and concept case studies. Each project opens its own brief when the final screenshots and links are added.</p></div>
           <div class="client-grid">
-            <article class="client-card"><div class="client-placeholder"><span>01</span><strong>Naya Foods</strong><small>Demo client · Lagos, Nigeria</small></div><div><p class="card-kicker">E-commerce · Demo case study</p><h3>Naya Foods</h3><p>A warm, conversion-focused storefront for a growing food brand moving from social orders to a dependable online shop.</p><a class="text-link" href="#contact">View the demo brief <span aria-hidden="true">↗</span></a></div></article>
-            <article class="client-card"><div class="client-placeholder client-placeholder-blue"><span>02</span><strong>Helio Health</strong><small>Demo client · Accra, Ghana</small></div><div><p class="card-kicker">Healthcare · Demo case study</p><h3>Helio Health</h3><p>A calm patient experience that explains services clearly, builds trust quickly and makes appointment requests feel effortless.</p><a class="text-link" href="#contact">View the demo brief <span aria-hidden="true">↗</span></a></div></article>
-            <article class="client-card"><div class="client-placeholder client-placeholder-orange"><span>03</span><strong>Northstar Capital</strong><small>Demo client · Nairobi, Kenya</small></div><div><p class="card-kicker">Finance · Demo case study</p><h3>Northstar Capital</h3><p>A sharp investor-facing website translating complex financial services into a clearer story for founders and partners.</p><a class="text-link" href="#contact">View the demo brief <span aria-hidden="true">↗</span></a></div></article>
-            <article class="client-card"><div class="client-placeholder client-placeholder-dark"><span>04</span><strong>Route 9 Logistics</strong><small>Demo client · Singapore</small></div><div><p class="card-kicker">Logistics · Demo case study</p><h3>Route 9 Logistics</h3><p>A practical web application concept for tracking shipments, surfacing exceptions and keeping customers informed across borders.</p><a class="text-link" href="#contact">View the demo brief <span aria-hidden="true">↗</span></a></div></article>
-            <article class="client-card"><div class="client-placeholder client-placeholder-lime"><span>05</span><strong>Aster Studio</strong><small>Demo client · Johannesburg, South Africa</small></div><div><p class="card-kicker">Creative studio · Demo case study</p><h3>Aster Studio</h3><p>An editorial portfolio experience giving an independent studio a distinctive point of view and a more confident way to win work.</p><a class="text-link" href="#contact">View the demo brief <span aria-hidden="true">↗</span></a></div></article>
+            <article class="client-card"><div class="client-placeholder"><span>01</span><strong>Naya Foods</strong><small>Demo client · Lagos, Nigeria</small></div><div><p class="card-kicker">E-commerce · Demo case study</p><h3>Naya Foods</h3><p>A warm, conversion-focused storefront for a growing food brand moving from social orders to a dependable online shop.</p><a class="text-link" href="#contact">View the demo brief</a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-blue"><span>02</span><strong>Helio Health</strong><small>Demo client · Accra, Ghana</small></div><div><p class="card-kicker">Healthcare · Demo case study</p><h3>Helio Health</h3><p>A calm patient experience that explains services clearly, builds trust quickly and makes appointment requests feel effortless.</p><a class="text-link" href="#contact">View the demo brief</a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-orange"><span>03</span><strong>Northstar Capital</strong><small>Demo client · Nairobi, Kenya</small></div><div><p class="card-kicker">Finance · Demo case study</p><h3>Northstar Capital</h3><p>A sharp investor-facing website translating complex financial services into a clearer story for founders and partners.</p><a class="text-link" href="#contact">View the demo brief</a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-dark"><span>04</span><strong>Route 9 Logistics</strong><small>Demo client · Singapore</small></div><div><p class="card-kicker">Logistics · Demo case study</p><h3>Route 9 Logistics</h3><p>A practical web application concept for tracking shipments, surfacing exceptions and keeping customers informed across borders.</p><a class="text-link" href="#contact">View the demo brief</a></div></article>
+            <article class="client-card"><div class="client-placeholder client-placeholder-lime"><span>05</span><strong>Aster Studio</strong><small>Demo client · Johannesburg, South Africa</small></div><div><p class="card-kicker">Creative studio · Demo case study</p><h3>Aster Studio</h3><p>An editorial portfolio experience giving an independent studio a distinctive point of view and a more confident way to win work.</p><a class="text-link" href="#contact">View the demo brief</a></div></article>
           </div>
         </div>
       </section>
@@ -136,12 +165,16 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
         <div class="wrap"><div class="section-heading"><p class="eyebrow">How I work</p><h2>Clear thinking before clever execution.</h2></div><div class="approach-grid"><article><span>01</span><h3>Understand the constraint</h3><p>Start with the real user, market and operational problem, not the feature list.</p></article><article><span>02</span><h3>Make the complex legible</h3><p>Give people a simple path through complicated systems, decisions and information.</p></article><article><span>03</span><h3>Build the smallest useful thing</h3><p>Ship an honest first version, learn from reality and keep the product moving.</p></article><article><span>04</span><h3>Design for trust</h3><p>Make security, clarity and reliability part of the experience rather than afterthoughts.</p></article></div></div>
       </section>
 
+      <section class="section intersection-section" id="intersection">
+        <div class="wrap intersection-layout"><div><p class="eyebrow">The intersection</p><h2>One practice. Four lenses.</h2></div><div class="intersection-grid"><article><span>01</span><h3>Engineer</h3><p>Turn an idea into a product people can actually use.</p></article><article><span>02</span><h3>Secure</h3><p>Make trust, privacy and resilience part of the experience.</p></article><article><span>03</span><h3>Explain</h3><p>Translate hard ideas into language that helps people act.</p></article><article><span>04</span><h3>Build</h3><p>Connect product decisions to markets, momentum and meaning.</p></article></div></div>
+      </section>
+
       <section class="section journey-section" id="journey">
         <div class="wrap"><div class="section-heading section-heading-row"><div><p class="eyebrow">The journey</p><h2>Curiosity became a way of working.</h2></div><p class="section-note">A few of the places and practices that shaped how I build today.</p></div><div class="journey-grid"><article><img src="assets/img/mobile-tech-hub-1.jpeg" alt="Godwin's early web development work at Mobile Tech Hub" loading="lazy" /><div><span>Where it started</span><h3>Web development</h3><p>WordPress, HTML, CSS and JavaScript turned curiosity into a profession.</p></div></article><article><img src="assets/img/networking-lab.jpg" alt="Networking lab work" loading="lazy" /><div><span>Systems thinking</span><h3>Networks &amp; security</h3><p>Studying infrastructure and security made the invisible parts of technology impossible to ignore.</p></div></article><article><img src="assets/img/cisco-training.jpg" alt="Technology and infrastructure training" loading="lazy" /><div><span>Wider context</span><h3>Building globally</h3><p>Working across disciplines and markets keeps the work grounded in real people and real systems.</p></div></article></div></div>
       </section>
 
       <section class="section book-section" id="book">
-        <div class="wrap book-layout"><div class="book-cover"><img src="assets/img/shield-up-cover.png" alt="Shield Up book cover" loading="lazy" /></div><div class="book-copy"><p class="eyebrow">Author · Cybersecurity</p><h2>Shield Up</h2><p class="book-lede">A practical guide to digital safety for people who do not consider themselves security experts.</p><p>Most security advice is written for people who already agree with it. Shield Up makes security useful, human and possible to act on, covering digital identity, threat modelling and the habits that actually survive real life.</p><a class="button button-primary" href="assets/files/shield-up-defending-your-digital-world.pdf" download>Download the book <span aria-hidden="true">↘</span></a></div></div>
+        <div class="wrap book-layout"><div class="book-cover"><img src="assets/img/shield-up-cover.png" alt="Shield Up book cover" loading="lazy" /></div><div class="book-copy"><p class="eyebrow">Author · Cybersecurity</p><h2>Shield Up</h2><p class="book-lede">A practical guide to digital safety for people who do not consider themselves security experts.</p><p>Most security advice is written for people who already agree with it. Shield Up makes security useful, human and possible to act on, covering digital identity, threat modelling and the habits that actually survive real life.</p><a class="button button-primary" href="assets/files/shield-up-defending-your-digital-world.pdf" download>Download the book</a></div></div>
       </section>
 
       <section class="section about-section" id="about">
@@ -152,18 +185,18 @@ ${NAV.map(([href, label]) => `          <a href="${href}">${label}</a>`).join("\
       </section>
 
       <section class="section writing-section" id="writing">
-        <div class="wrap"><div class="section-heading section-heading-row"><div><p class="eyebrow">Writing</p><h2>Notes from the work.</h2></div><a class="text-link" href="https://medium.com/@iamgodwinubani"${EXT}>More on Medium <span aria-hidden="true">↗</span></a></div><div class="writing-grid">${postCards}</div></div>
+        <div class="wrap"><div class="section-heading section-heading-row"><div><p class="eyebrow">Writing</p><h2>Notes from the work.</h2></div><a class="text-link" href="https://medium.com/@iamgodwinubani"${EXT}>More on Medium</a></div><div class="writing-grid">${postCards}</div></div>
       </section>
 
       <section class="contact-section" id="contact">
-        <div class="wrap contact-inner"><p class="eyebrow">Have something worth building?</p><h2>Let’s make it real.</h2><a class="contact-email" href="mailto:iamgodwinubani@gmail.com" aria-label="Email Godwin Ubani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7" /></svg><span>Send a message</span><span aria-hidden="true">↗</span></a></div>
+        <div class="wrap contact-inner"><p class="eyebrow">Have something worth building?</p><h2>Let’s make it real.</h2><a class="contact-email" href="mailto:iamgodwinubani@gmail.com" aria-label="Email Godwin Ubani">${ICONS.mail}<span>Send a message</span></a></div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <div><a class="brand" href="#home">GU<span>.</span></a><p>Software engineer &amp; entrepreneur.</p></div>
-        <div class="footer-links"><p class="footer-label">Find me online</p><ul>${SOCIAL.map(([name, url]) => `<li><a href="${url}"${EXT}>${name} <span aria-hidden="true">↗</span></a></li>`).join("")}<li><a href="mailto:iamgodwinubani@gmail.com" aria-label="Email Godwin Ubani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7" /></svg><span class="sr-only">Email</span></a></li></ul></div>
+        <div class="footer-links"><p class="footer-label">Find me online</p><ul>${SOCIAL.map(([name, url]) => `<li><a href="${url}"${EXT} aria-label="${name}">${socialMark(name)}<span class="sr-only">${name}</span></a></li>`).join("")}<li><a href="mailto:iamgodwinubani@gmail.com" aria-label="Email Godwin Ubani">${ICONS.mail}<span class="sr-only">Email</span></a></li></ul></div>
         <p class="copyright">© 2026 Godwin Ubani</p>
       </div>
     </footer>
