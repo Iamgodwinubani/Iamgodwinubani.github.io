@@ -1,8 +1,0 @@
-node_modules
-src
-scripts
-blog-drafts
-
-# Source mockups for scripts/crop-phone-screens.js — not requested by any page
-assets/img/k-app-s.png
-assets/img/k-app-s2.png
