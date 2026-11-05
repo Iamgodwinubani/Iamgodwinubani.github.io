@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://godwinubani.me/sitemap.xml
