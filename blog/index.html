@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Godwin Ubani</title>
+  <meta name="description" content="Notes from Godwin Ubani on being a Fractional CTO, building AI products, cross-border trade infrastructure, and cybersecurity for Gen Z builders." />
+  <meta name="keywords" content="Godwin Ubani blog, Fractional CTO blog, Korvanta, cybersecurity for Gen Z, AI product building" />
+  <meta name="author" content="Godwin Ubani" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://godwinubani.me/blog/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Godwin Ubani" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Blog | Godwin Ubani" />
+  <meta property="og:description" content="Notes on Fractional CTO work, AI products, cross-border trade infrastructure, and cybersecurity for Gen Z builders." />
+  <meta property="og:image" content="https://godwinubani.me/assets/godwin-ubani.jpg" />
+  <meta property="og:image:alt" content="Godwin Ubani" />
+  <meta property="og:url" content="https://godwinubani.me/blog/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@iamgodwinubani" />
+  <meta name="twitter:creator" content="@iamgodwinubani" />
+  <meta name="twitter:title" content="Blog | Godwin Ubani" />
+  <meta name="twitter:description" content="Notes on Fractional CTO work, AI products, cross-border trade infrastructure, and cybersecurity for Gen Z builders." />
+  <meta name="twitter:image" content="https://godwinubani.me/assets/godwin-ubani.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="/assets/favicon.jpg" />
+  <link rel="apple-touch-icon" href="/assets/favicon.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#FAFAFA',
+            surface: '#FFFFFF',
+            border: '#E2E8F0',
+            primary: '#0F172A',
+            secondary: '#475569',
+            accent: '#2563EB',
+            accentDark: '#1D4ED8',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            heading: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui'],
+          },
+          boxShadow: {
+            card: '0 1px 2px 0 rgba(15,23,42,0.04), 0 1px 3px 0 rgba(15,23,42,0.06)',
+            cardHover: '0 12px 24px -8px rgba(15,23,42,0.12), 0 4px 8px -4px rgba(15,23,42,0.06)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://godwinubani.me/blog/#blog",
+        "url": "https://godwinubani.me/blog/",
+        "name": "Godwin Ubani's Blog",
+        "publisher": { "@id": "https://godwinubani.me/#person" },
+        "blogPost": [
+          { "@id": "https://godwinubani.me/blog/why-i-became-a-fractional-cto.html" },
+          { "@id": "https://godwinubani.me/blog/lessons-from-building-korvanta.html" },
+          { "@id": "https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders.html" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://godwinubani.me/blog/#webpage",
+        "url": "https://godwinubani.me/blog/",
+        "name": "Blog | Godwin Ubani",
+        "isPartOf": { "@id": "https://godwinubani.me/#website" },
+        "about": { "@id": "https://godwinubani.me/#person" },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #FAFAFA; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; }
+    .reveal.reveal-visible { animation: fadeInUp 0.7s ease-out forwards; }
+    .no-js .reveal { opacity: 1; }
+    ::selection { background-color: #2563EB; color: #fff; }
+  </style>
+</head>
+<body class="font-sans text-primary antialiased">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/70 bg-white/70 backdrop-blur-xl">
+    <nav class="max-w-[1000px] mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-heading font-bold text-lg text-primary tracking-tight">Godwin Ubani</a>
+      <div class="hidden sm:flex items-center gap-8">
+        <a href="/about.html" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
+        <a href="/blog/" class="text-sm font-medium text-primary">Blog</a>
+        <a href="/#book" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Book</a>
+        <a href="/#research" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Research</a>
+        <a href="/#contact" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">Contact</a>
+      </div>
+      <button id="menuBtn" class="sm:hidden p-2 -mr-2 text-primary" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden sm:hidden border-t border-border bg-white/95 backdrop-blur-xl">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="/about.html" class="text-sm font-medium text-secondary">About Me</a>
+        <a href="/blog/" class="text-sm font-medium text-primary">Blog</a>
+        <a href="/#book" class="text-sm font-medium text-secondary">Book</a>
+        <a href="/#research" class="text-sm font-medium text-secondary">Research</a>
+        <a href="/#contact" class="inline-flex items-center justify-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <section class="max-w-[1000px] mx-auto px-6 pt-20 sm:pt-28 pb-14 text-center">
+      <p class="reveal text-xs font-semibold uppercase tracking-widest text-accent mb-4">Blog</p>
+      <h1 class="reveal font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl" style="animation-delay:80ms">
+        Notes on building
+      </h1>
+      <p class="reveal mt-5 max-w-xl mx-auto text-secondary leading-relaxed" style="animation-delay:140ms">
+        Fractional CTO work, AI products, cross-border trade infrastructure, and the cybersecurity habits every young builder should have.
+      </p>
+    </section>
+
+    <section class="max-w-[1000px] mx-auto px-6 pb-20 sm:pb-28">
+      <div class="space-y-5">
+
+        <a href="/blog/why-i-became-a-fractional-cto.html"
+           class="reveal group block rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Career</p>
+          <h2 class="font-heading font-bold text-lg sm:text-xl text-primary group-hover:text-accent transition-colors">Why I Chose to Be a Fractional CTO Instead of Chasing a Full-Time Title</h2>
+          <p class="mt-3 text-sm sm:text-base text-secondary leading-relaxed">On trading one big title for several real problems — and why the fractional model fits how early-stage technical work actually gets done.</p>
+          <p class="mt-4 text-xs font-medium text-secondary">November 2026 · 6 min read</p>
+        </a>
+
+        <a href="/blog/lessons-from-building-korvanta.html"
+           class="reveal group block rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300" style="animation-delay:80ms">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Building Korvanta</p>
+          <h2 class="font-heading font-bold text-lg sm:text-xl text-primary group-hover:text-accent transition-colors">What Building Korvanta Taught Me About Cross-Border Trade Infrastructure</h2>
+          <p class="mt-3 text-sm sm:text-base text-secondary leading-relaxed">Payments between Africa and China look simple from the outside. Here's what actually makes the problem hard, and why we started with Nigeria.</p>
+          <p class="mt-4 text-xs font-medium text-secondary">November 2026 · 7 min read</p>
+        </a>
+
+        <a href="/blog/cybersecurity-habits-for-gen-z-builders.html"
+           class="reveal group block rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300" style="animation-delay:160ms">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Cybersecurity</p>
+          <h2 class="font-heading font-bold text-lg sm:text-xl text-primary group-hover:text-accent transition-colors">5 Cybersecurity Habits Every Gen Z Builder Needs</h2>
+          <p class="mt-3 text-sm sm:text-base text-secondary leading-relaxed">The habits I kept coming back to while writing Shield Up — none of them require being technical, all of them require being consistent.</p>
+          <p class="mt-4 text-xs font-medium text-secondary">November 2026 · 5 min read</p>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-[1000px] mx-auto px-6 pb-10">
+    <p class="text-center text-xs text-secondary">© <span id="year"></span> Godwin Ubani. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+</body>
+</html>
