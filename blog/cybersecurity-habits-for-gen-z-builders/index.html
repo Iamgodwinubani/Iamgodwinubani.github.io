@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What Building Korvanta Taught Me About Cross-Border Trade Infrastructure | Godwin Ubani</title>
-  <meta name="description" content="Godwin Ubani on building Korvanta, cross-border trade infrastructure between Africa and China, and why they started with Nigeria." />
-  <meta name="keywords" content="Korvanta, cross-border trade Africa China, Godwin Ubani, fintech infrastructure Nigeria" />
+  <title>5 Cybersecurity Habits Every Gen Z Builder Needs | Godwin Ubani</title>
+  <meta name="description" content="Godwin Ubani, author of Shield Up: Defending Your Digital World, on five practical cybersecurity habits every Gen Z builder should have." />
+  <meta name="keywords" content="Shield Up book, cybersecurity for Gen Z, Godwin Ubani, digital identity, online safety habits" />
   <meta name="author" content="Godwin Ubani" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://godwinubani.me/blog/lessons-from-building-korvanta.html" />
+  <link rel="canonical" href="https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders/" />
 
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Godwin Ubani" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="What Building Korvanta Taught Me About Cross-Border Trade Infrastructure" />
-  <meta property="og:description" content="Payments between Africa and China look simple from the outside. Here's what actually makes the problem hard, and why we started with Nigeria." />
-  <meta property="og:image" content="https://godwinubani.me/assets/godwin-ubani.jpg" />
-  <meta property="og:image:alt" content="Godwin Ubani" />
-  <meta property="og:url" content="https://godwinubani.me/blog/lessons-from-building-korvanta.html" />
+  <meta property="og:title" content="5 Cybersecurity Habits Every Gen Z Builder Needs" />
+  <meta property="og:description" content="The habits I kept coming back to while writing Shield Up — none of them require being technical, all of them require being consistent." />
+  <meta property="og:image" content="https://godwinubani.me/assets/book-cover.png" />
+  <meta property="og:image:alt" content="Shield Up: Defending Your Digital World — book cover" />
+  <meta property="og:url" content="https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@iamgodwinubani" />
   <meta name="twitter:creator" content="@iamgodwinubani" />
-  <meta name="twitter:title" content="What Building Korvanta Taught Me About Cross-Border Trade Infrastructure" />
-  <meta name="twitter:description" content="Payments between Africa and China look simple from the outside. Here's what actually makes the problem hard, and why we started with Nigeria." />
-  <meta name="twitter:image" content="https://godwinubani.me/assets/godwin-ubani.jpg" />
+  <meta name="twitter:title" content="5 Cybersecurity Habits Every Gen Z Builder Needs" />
+  <meta name="twitter:description" content="The habits I kept coming back to while writing Shield Up — none of them require being technical, all of them require being consistent." />
+  <meta name="twitter:image" content="https://godwinubani.me/assets/book-cover.png" />
 
   <link rel="icon" type="image/jpeg" href="/assets/favicon.jpg" />
   <link rel="apple-touch-icon" href="/assets/favicon.jpg" />
@@ -59,17 +59,18 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "What Building Korvanta Taught Me About Cross-Border Trade Infrastructure",
-    "description": "Payments between Africa and China look simple from the outside. Here's what actually makes the problem hard, and why we started with Nigeria.",
+    "headline": "5 Cybersecurity Habits Every Gen Z Builder Needs",
+    "description": "The habits I kept coming back to while writing Shield Up — none of them require being technical, all of them require being consistent.",
     "author": { "@id": "https://godwinubani.me/#person" },
     "publisher": { "@id": "https://godwinubani.me/#person" },
-    "mainEntityOfPage": "https://godwinubani.me/blog/lessons-from-building-korvanta.html",
-    "url": "https://godwinubani.me/blog/lessons-from-building-korvanta.html",
+    "mainEntityOfPage": "https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders/",
+    "url": "https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders/",
     "datePublished": "2026-11-05",
     "dateModified": "2026-11-05",
-    "image": "https://godwinubani.me/assets/godwin-ubani.jpg",
+    "image": "https://godwinubani.me/assets/book-cover.png",
     "inLanguage": "en",
-    "isPartOf": { "@id": "https://godwinubani.me/blog/#blog" }
+    "isPartOf": { "@id": "https://godwinubani.me/blog/#blog" },
+    "about": { "@id": "https://godwinubani.me/#book" }
   }
   </script>
 
@@ -87,9 +88,9 @@
     .prose p { margin-top: 1.5rem; }
     .prose p:first-child { margin-top: 0; }
     .prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
-    .prose ul { margin-top: 1.5rem; margin-bottom: 1.5rem; padding-left: 1.25rem; list-style: disc; }
+    .prose ol { margin-top: 1.5rem; margin-bottom: 1.5rem; padding-left: 1.25rem; list-style: decimal; }
     .prose li { margin-top: 0.5rem; }
-    .prose li::marker { color: #2563EB; }
+    .prose li::marker { color: #2563EB; font-weight: 700; }
   </style>
 </head>
 <body class="font-sans text-primary antialiased">
@@ -99,7 +100,7 @@
     <nav class="max-w-[1000px] mx-auto px-6 h-16 flex items-center justify-between">
       <a href="/" class="font-heading font-bold text-lg text-primary tracking-tight">Godwin Ubani</a>
       <div class="hidden sm:flex items-center gap-8">
-        <a href="/about.html" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
+        <a href="/about/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
         <a href="/blog/" class="text-sm font-medium text-primary">Blog</a>
         <a href="/#book" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Book</a>
         <a href="/#research" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Research</a>
@@ -111,7 +112,7 @@
     </nav>
     <div id="mobileMenu" class="hidden sm:hidden border-t border-border bg-white/95 backdrop-blur-xl">
       <div class="px-6 py-4 flex flex-col gap-4">
-        <a href="/about.html" class="text-sm font-medium text-secondary">About Me</a>
+        <a href="/about/" class="text-sm font-medium text-secondary">About Me</a>
         <a href="/blog/" class="text-sm font-medium text-primary">Blog</a>
         <a href="/#book" class="text-sm font-medium text-secondary">Book</a>
         <a href="/#research" class="text-sm font-medium text-secondary">Research</a>
@@ -128,43 +129,40 @@
       </a>
 
       <div class="reveal mt-8 max-w-2xl" style="animation-delay:60ms">
-        <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Building Korvanta</p>
+        <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Cybersecurity</p>
         <h1 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-4xl leading-tight">
-          What Building Korvanta Taught Me About Cross-Border Trade Infrastructure
+          5 Cybersecurity Habits Every Gen Z Builder Needs
         </h1>
-        <p class="mt-5 text-sm font-medium text-secondary">By Godwin Ubani · November 2026 · 7 min read</p>
+        <p class="mt-5 text-sm font-medium text-secondary">By Godwin Ubani · November 2026 · 5 min read</p>
       </div>
 
       <div class="reveal prose mt-12 max-w-2xl text-base sm:text-lg text-secondary leading-relaxed" style="animation-delay:120ms">
-        <p>"Just build a payment app" is the kind of sentence that sounds reasonable until you actually try to move money between Africa and China. The idea behind Korvanta is simple to say out loud: make it easier for businesses trading between the two regions to pay, get paid, and trust that the other side will hold up their end. Building the thing underneath that sentence is where it gets hard.</p>
+        <p>Most cybersecurity advice is written for people who already think they're a target — IT departments, executives, people with something obvious to protect. Writing <a href="/#book" class="text-accent hover:underline font-medium">Shield Up</a> pushed me to think about the much larger group that doesn't: students, young builders, anyone whose entire digital identity — school accounts, side projects, DMs, the apps they've built — sits across a dozen logins they've never really audited.</p>
 
-        <h2 class="font-heading font-bold text-primary text-xl sm:text-2xl">The problem isn't the payment rail</h2>
-        <p>When people hear "cross-border trade infrastructure," they assume the bottleneck is technical — which gateway to integrate, which API to call. In practice, the rails exist. What's missing is trust at the edges: a buyer in Lagos and a supplier in Guangzhou who have never met, operating under different banking systems, different regulatory regimes, and different defaults for what "proof of delivery" even means. The software has to encode trust that doesn't exist yet between the two parties, not just move numbers from one account to another.</p>
+        <p>You don't need to be technical to close most of the gaps. You need five habits, done consistently, more than you need any tool.</p>
 
-        <p>That reframes the whole engineering problem. It's not "how do we process a transaction," it's "how do we make each side comfortable enough to initiate one." Every feature decision gets filtered through that — verification flows, status visibility, dispute handling — before it gets filtered through anything about throughput or latency.</p>
+        <h2 class="font-heading font-bold text-primary text-xl sm:text-2xl">The five habits</h2>
+        <ol>
+          <li><strong class="text-primary">Use a password manager, not a pattern.</strong> If your passwords share a root word with numbers swapped in, one breach anywhere unlocks everything else. A password manager removes the need to remember, which removes the temptation to reuse.</li>
+          <li><strong class="text-primary">Turn on two-factor authentication everywhere it's offered — especially email.</strong> Your email is the recovery path for almost every other account you own. If it's only protected by a password, it's the single point of failure for your entire digital identity.</li>
+          <li><strong class="text-primary">Treat urgency as a red flag, not a reason to move fast.</strong> Almost every phishing attempt and scam is built around urgency — "your account will be suspended," "confirm now." The instinct to act fast is exactly what the message is designed to trigger. Slow down whenever a message is trying to speed you up.</li>
+          <li><strong class="text-primary">Separate your identities on purpose.</strong> The email you use for banking shouldn't be the one you signed up for a random app with five years ago. Compartmentalizing means a breach in one low-stakes place doesn't cascade into your highest-stakes accounts.</li>
+          <li><strong class="text-primary">Back up anything you couldn't afford to lose — before you need to.</strong> Ransomware, a dead phone, a wiped laptop: the failure mode doesn't matter if you have a backup. Most people only learn this habit after losing something irreplaceable once.</li>
+        </ol>
 
-        <h2 class="font-heading font-bold text-primary text-xl sm:text-2xl">Why we started with Nigeria</h2>
-        <p>Building for "Africa" as a single market is a mistake I watched other teams make before I started Korvanta. Regulatory environments, banking infrastructure, and trade volumes vary enormously country to country. Starting narrow — with Nigeria specifically — meant we could get the compliance and banking relationships right for one jurisdiction instead of building a lowest-common-denominator product that worked adequately everywhere and well nowhere.</p>
+        <h2 class="font-heading font-bold text-primary text-xl sm:text-2xl">Why this matters more for builders specifically</h2>
+        <p>If you're writing code, shipping products, or managing a growing footprint of accounts and API keys, your attack surface is larger than the average user's — and often less protected, because "I'll secure it properly later" is one of the most common lies developers tell themselves. The habits above aren't a checklist you do once. They're defaults you set up now, while the stakes are still manageable, so you're not retrofitting security onto a business or a reputation that's already been built.</p>
 
-        <p>It also meant faster feedback. A narrower starting market gets you in front of real buyers and suppliers faster, which matters more than any architecture decision early on — you cannot design trust-building flows from a whiteboard, you have to watch where real transactions actually create friction.</p>
-
-        <h2 class="font-heading font-bold text-primary text-xl sm:text-2xl">What this means for how we build</h2>
-        <p>On the technical side, that pushed us toward a few consistent choices: treat compliance and verification as core product surfaces, not backend checkboxes; make transaction status and documentation visible to both sides instead of locked inside one party's dashboard; and build for auditability from day one, because in cross-border trade, the question "can you prove this happened?" comes up far more often than "how fast was it?"</p>
-
-        <ul>
-          <li>Trust infrastructure comes before payment infrastructure — the second is useless without the first.</li>
-          <li>Depth in one market beats breadth across many, especially before you have the compliance relationships to support breadth.</li>
-          <li>Build for the audit trail from the start; retrofitting it later is far more expensive than the API integration itself.</li>
-        </ul>
-
-        <p>None of this is unique to trade finance — it's the same lesson that shows up anywhere software is trying to replace a handshake. The code is the easy part. Earning the right for two strangers to trust a system enough to move real money through it is the actual product.</p>
+        <p>None of this requires being a security expert. It requires deciding, today, that your digital identity is worth the same five minutes of setup you'd give anything else you intend to keep.</p>
       </div>
 
       <div class="reveal mt-16 rounded-3xl border border-border bg-white px-8 sm:px-12 py-10 text-center shadow-card" style="animation-delay:160ms">
-        <h3 class="font-heading font-bold text-primary text-xl sm:text-2xl">Need a Fractional CTO or dev help?</h3>
-        <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
+        <h3 class="font-heading font-bold text-primary text-xl sm:text-2xl">Want the full guide?</h3>
+        <p class="mt-3 text-secondary">Shield Up: Defending Your Digital World — free to download.</p>
+        <a href="/assets/shield-up-defending-your-digital-world.pdf" download="Shield Up - Defending Your Digital World.pdf"
            class="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
-          Book a Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free Book
         </a>
       </div>
     </article>

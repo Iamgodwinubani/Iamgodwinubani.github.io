@@ -6,7 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://godwinubani.me/about.html</loc>
+    <loc>https://godwinubani.me/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -16,17 +16,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://godwinubani.me/blog/why-i-became-a-fractional-cto.html</loc>
+    <loc>https://godwinubani.me/blog/why-i-became-a-fractional-cto/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://godwinubani.me/blog/lessons-from-building-korvanta.html</loc>
+    <loc>https://godwinubani.me/blog/lessons-from-building-korvanta/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders.html</loc>
+    <loc>https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
