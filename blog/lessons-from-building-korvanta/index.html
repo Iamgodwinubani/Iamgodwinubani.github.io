@@ -15,45 +15,29 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="What Building Korvanta Taught Me About Cross-Border Trade Infrastructure" />
   <meta property="og:description" content="Payments between Africa and China look simple from the outside. Here's what actually makes the problem hard, and why we started with Nigeria." />
-  <meta property="og:image" content="https://godwinubani.me/assets/godwin-ubani.jpg" />
-  <meta property="og:image:alt" content="Godwin Ubani" />
+  <meta property="og:image" content="https://godwinubani.me/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Godwin Ubani — Fractional CTO, AI Product Builder & Author" />
   <meta property="og:url" content="https://godwinubani.me/blog/lessons-from-building-korvanta/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@iamgodwinubani" />
   <meta name="twitter:creator" content="@iamgodwinubani" />
   <meta name="twitter:title" content="What Building Korvanta Taught Me About Cross-Border Trade Infrastructure" />
   <meta name="twitter:description" content="Payments between Africa and China look simple from the outside. Here's what actually makes the problem hard, and why we started with Nigeria." />
-  <meta name="twitter:image" content="https://godwinubani.me/assets/godwin-ubani.jpg" />
+  <meta name="twitter:image" content="https://godwinubani.me/assets/og-image.png" />
 
-  <link rel="icon" type="image/jpeg" href="/assets/favicon.jpg" />
-  <link rel="apple-touch-icon" href="/assets/favicon.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
+  <meta name="theme-color" content="#2563EB" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: '#FAFAFA', surface: '#FFFFFF', border: '#E2E8F0',
-            primary: '#0F172A', secondary: '#475569',
-            accent: '#2563EB', accentDark: '#1D4ED8',
-          },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-            heading: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui'],
-          },
-          boxShadow: {
-            card: '0 1px 2px 0 rgba(15,23,42,0.04), 0 1px 3px 0 rgba(15,23,42,0.06)',
-            cardHover: '0 12px 24px -8px rgba(15,23,42,0.12), 0 4px 8px -4px rgba(15,23,42,0.06)',
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="/assets/style.css" />
 
   <script type="application/ld+json">
   {
@@ -73,24 +57,6 @@
   }
   </script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-    body { background-color: #FAFAFA; }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .reveal { opacity: 0; }
-    .reveal.reveal-visible { animation: fadeInUp 0.7s ease-out forwards; }
-    .no-js .reveal { opacity: 1; }
-    ::selection { background-color: #2563EB; color: #fff; }
-    .prose p { margin-top: 1.5rem; }
-    .prose p:first-child { margin-top: 0; }
-    .prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
-    .prose ul { margin-top: 1.5rem; margin-bottom: 1.5rem; padding-left: 1.25rem; list-style: disc; }
-    .prose li { margin-top: 0.5rem; }
-    .prose li::marker { color: #2563EB; }
-  </style>
 </head>
 <body class="font-sans text-primary antialiased">
 
@@ -160,7 +126,21 @@
         <p>None of this is unique to trade finance — it's the same lesson that shows up anywhere software is trying to replace a handshake. The code is the easy part. Earning the right for two strangers to trust a system enough to move real money through it is the actual product.</p>
       </div>
 
-      <div class="reveal mt-16 rounded-3xl border border-border bg-white px-8 sm:px-12 py-10 text-center shadow-card" style="animation-delay:160ms">
+      <div class="reveal mt-16 max-w-2xl" style="animation-delay:140ms">
+        <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Continue Reading</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="/blog/why-i-became-a-fractional-cto/" class="group block rounded-2xl border border-border bg-white p-5 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
+            <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Career</p>
+            <p class="font-heading font-bold text-sm text-primary leading-snug group-hover:text-accent transition-colors">Why I Chose to Be a Fractional CTO Instead of Chasing a Full-Time Title</p>
+          </a>
+          <a href="/blog/cybersecurity-habits-for-gen-z-builders/" class="group block rounded-2xl border border-border bg-white p-5 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
+            <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Cybersecurity</p>
+            <p class="font-heading font-bold text-sm text-primary leading-snug group-hover:text-accent transition-colors">5 Cybersecurity Habits Every Gen Z Builder Needs</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal mt-10 rounded-3xl border border-border bg-white px-8 sm:px-12 py-10 text-center shadow-card" style="animation-delay:160ms">
         <h3 class="font-heading font-bold text-primary text-xl sm:text-2xl">Need a Fractional CTO or dev help?</h3>
         <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
            class="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">

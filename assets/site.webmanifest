@@ -1,0 +1,13 @@
+{
+  "name": "Godwin Ubani",
+  "short_name": "Godwin Ubani",
+  "description": "Fractional CTO, AI Product Builder & Author of Shield Up",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#2563EB",
+  "icons": [
+    { "src": "/assets/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
