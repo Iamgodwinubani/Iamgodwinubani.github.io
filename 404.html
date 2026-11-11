@@ -2,6 +2,7 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found | Godwin Ubani</title>
   <meta name="description" content="This page doesn't exist on Godwin Ubani's site. Head back to the homepage, blog, or about page." />
@@ -21,13 +22,19 @@
 </head>
 <body class="font-sans text-primary antialiased">
 
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/70 bg-white/70 backdrop-blur-xl">
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/70 bg-surface/70 backdrop-blur-xl">
     <nav class="max-w-[1000px] mx-auto px-6 h-16 flex items-center justify-between">
       <a href="/" class="font-heading font-bold text-lg text-primary tracking-tight">Godwin Ubani</a>
-      <div class="hidden sm:flex items-center gap-8">
-        <a href="/about/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
-        <a href="/blog/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Blog</a>
-        <a href="/#contact" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">Contact</a>
+      <div class="flex items-center gap-3 sm:gap-6">
+        <div class="hidden sm:flex items-center gap-8">
+          <a href="/about/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
+          <a href="/blog/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Blog</a>
+          <a href="/#contact" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">Contact</a>
+        </div>
+        <button id="themeToggle" class="theme-toggle inline-flex items-center justify-center w-9 h-9 rounded-full border border-border text-secondary hover:text-primary hover:border-primary transition-colors" aria-label="Toggle dark mode">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        </button>
       </div>
     </nav>
   </header>
@@ -48,7 +55,7 @@
           Back to Home
         </a>
         <a href="/blog/"
-           class="inline-flex items-center gap-2 rounded-full border border-border bg-white px-6 py-3 text-sm font-semibold text-primary hover:border-primary hover:scale-[1.03] transition-all">
+           class="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-primary hover:border-primary hover:scale-[1.03] transition-all">
           Read the Blog
         </a>
       </div>
@@ -62,6 +69,15 @@
   <script>
     document.documentElement.classList.remove('no-js');
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

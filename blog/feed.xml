@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Godwin Ubani's Blog</title>
+  <link>https://godwinubani.me/blog/</link>
+  <description>Notes from Godwin Ubani on being a Fractional CTO, building AI products, cross-border trade infrastructure, and cybersecurity for Gen Z builders.</description>
+  <language>en-us</language>
+  <atom:link href="https://godwinubani.me/blog/feed.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>Why I Chose to Be a Fractional CTO Instead of Chasing a Full-Time Title</title>
+    <link>https://godwinubani.me/blog/why-i-became-a-fractional-cto/</link>
+    <guid isPermaLink="true">https://godwinubani.me/blog/why-i-became-a-fractional-cto/</guid>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[On trading one big title for several real problems — and why the fractional model fits how early-stage technical work actually gets done.]]></description>
+  </item>
+
+  <item>
+    <title>What Building Korvanta Taught Me About Cross-Border Trade Infrastructure</title>
+    <link>https://godwinubani.me/blog/lessons-from-building-korvanta/</link>
+    <guid isPermaLink="true">https://godwinubani.me/blog/lessons-from-building-korvanta/</guid>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Payments between Africa and China look simple from the outside. Here's what actually makes the problem hard, and why we started with Nigeria.]]></description>
+  </item>
+
+  <item>
+    <title>5 Cybersecurity Habits Every Gen Z Builder Needs</title>
+    <link>https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders/</link>
+    <guid isPermaLink="true">https://godwinubani.me/blog/cybersecurity-habits-for-gen-z-builders/</guid>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[The habits I kept coming back to while writing Shield Up — none of them require being technical, all of them require being consistent.]]></description>
+  </item>
+
+</channel>
+</rss>

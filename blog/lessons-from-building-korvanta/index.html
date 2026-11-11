@@ -2,6 +2,7 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What Building Korvanta Taught Me About Cross-Border Trade Infrastructure | Godwin Ubani</title>
   <meta name="description" content="Godwin Ubani on building Korvanta, cross-border trade infrastructure between Africa and China, and why they started with Nigeria." />
@@ -61,21 +62,27 @@
 <body class="font-sans text-primary antialiased">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/70 bg-white/70 backdrop-blur-xl">
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/70 bg-surface/70 backdrop-blur-xl">
     <nav class="max-w-[1000px] mx-auto px-6 h-16 flex items-center justify-between">
       <a href="/" class="font-heading font-bold text-lg text-primary tracking-tight">Godwin Ubani</a>
-      <div class="hidden sm:flex items-center gap-8">
-        <a href="/about/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
-        <a href="/blog/" class="text-sm font-medium text-primary">Blog</a>
-        <a href="/#book" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Book</a>
-        <a href="/#research" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Research</a>
-        <a href="/#contact" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">Contact</a>
+      <div class="flex items-center gap-3 sm:gap-6">
+        <div class="hidden sm:flex items-center gap-8">
+          <a href="/about/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
+          <a href="/blog/" class="text-sm font-medium text-primary">Blog</a>
+          <a href="/#book" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Book</a>
+          <a href="/#research" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Research</a>
+          <a href="/#contact" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">Contact</a>
+        </div>
+        <button id="themeToggle" class="theme-toggle inline-flex items-center justify-center w-9 h-9 rounded-full border border-border text-secondary hover:text-primary hover:border-primary transition-colors" aria-label="Toggle dark mode">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        </button>
+        <button id="menuBtn" class="sm:hidden p-2 text-primary" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
-      <button id="menuBtn" class="sm:hidden p-2 -mr-2 text-primary" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
     </nav>
-    <div id="mobileMenu" class="hidden sm:hidden border-t border-border bg-white/95 backdrop-blur-xl">
+    <div id="mobileMenu" class="hidden sm:hidden border-t border-border bg-surface/95 backdrop-blur-xl">
       <div class="px-6 py-4 flex flex-col gap-4">
         <a href="/about/" class="text-sm font-medium text-secondary">About Me</a>
         <a href="/blog/" class="text-sm font-medium text-primary">Blog</a>
@@ -99,6 +106,18 @@
           What Building Korvanta Taught Me About Cross-Border Trade Infrastructure
         </h1>
         <p class="mt-5 text-sm font-medium text-secondary">By Godwin Ubani · November 2026 · 7 min read</p>
+
+        <div class="mt-6 flex items-center gap-2">
+          <a id="shareX" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-secondary hover:text-accent hover:border-accent transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+          </a>
+          <a id="shareLinkedIn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-secondary hover:text-accent hover:border-accent transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <button id="copyLinkBtn" type="button" aria-label="Copy link" class="w-9 h-9 rounded-full border border-border flex items-center justify-center text-secondary hover:text-accent hover:border-accent transition-colors">
+            <svg id="copyIcon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-2.83 2.83a5 5 0 0 0 7.07 7.07L12.5 19.5"/></svg>
+          </button>
+        </div>
       </div>
 
       <div class="reveal prose mt-12 max-w-2xl text-base sm:text-lg text-secondary leading-relaxed" style="animation-delay:120ms">
@@ -129,18 +148,18 @@
       <div class="reveal mt-16 max-w-2xl" style="animation-delay:140ms">
         <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Continue Reading</p>
         <div class="grid sm:grid-cols-2 gap-4">
-          <a href="/blog/why-i-became-a-fractional-cto/" class="group block rounded-2xl border border-border bg-white p-5 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
+          <a href="/blog/why-i-became-a-fractional-cto/" class="group block rounded-2xl border border-border bg-surface p-5 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
             <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Career</p>
             <p class="font-heading font-bold text-sm text-primary leading-snug group-hover:text-accent transition-colors">Why I Chose to Be a Fractional CTO Instead of Chasing a Full-Time Title</p>
           </a>
-          <a href="/blog/cybersecurity-habits-for-gen-z-builders/" class="group block rounded-2xl border border-border bg-white p-5 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
+          <a href="/blog/cybersecurity-habits-for-gen-z-builders/" class="group block rounded-2xl border border-border bg-surface p-5 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
             <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Cybersecurity</p>
             <p class="font-heading font-bold text-sm text-primary leading-snug group-hover:text-accent transition-colors">5 Cybersecurity Habits Every Gen Z Builder Needs</p>
           </a>
         </div>
       </div>
 
-      <div class="reveal mt-10 rounded-3xl border border-border bg-white px-8 sm:px-12 py-10 text-center shadow-card" style="animation-delay:160ms">
+      <div class="reveal mt-10 rounded-3xl border border-border bg-surface px-8 sm:px-12 py-10 text-center shadow-card" style="animation-delay:160ms">
         <h3 class="font-heading font-bold text-primary text-xl sm:text-2xl">Need a Fractional CTO or dev help?</h3>
         <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
            class="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
@@ -162,6 +181,44 @@
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+
+    (function () {
+      const shareTitle = 'What Building Korvanta Taught Me About Cross-Border Trade Infrastructure';
+      const shareUrl = location.href;
+      document.getElementById('shareX').href = 'https://x.com/intent/tweet?url=' + encodeURIComponent(shareUrl) + '&text=' + encodeURIComponent(shareTitle);
+      document.getElementById('shareLinkedIn').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+      const copyBtn = document.getElementById('copyLinkBtn');
+      const copyIcon = document.getElementById('copyIcon');
+      const checkIcon = 'M20 6 9 17l-5-5';
+      const linkIcon = copyIcon.innerHTML;
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+        } catch (e) {
+          const ta = document.createElement('textarea');
+          ta.value = shareUrl;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        copyIcon.innerHTML = '<path d="' + checkIcon + '"/>';
+        copyBtn.setAttribute('aria-label', 'Link copied');
+        setTimeout(() => {
+          copyIcon.innerHTML = linkIcon;
+          copyBtn.setAttribute('aria-label', 'Copy link');
+        }, 2000);
+      });
+    })();
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
