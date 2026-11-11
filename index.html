@@ -2,7 +2,6 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
-  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Godwin Ubani | Fractional CTO, AI Product Builder & Author of Shield Up</title>
   <meta name="description" content="Godwin Ubani (Godwin Ubani Onyemuwa) is a Fractional CTO and software engineer who builds AI-powered products, provides senior technical leadership, and designs cross-border trade infrastructure between Africa and Asia. Author of Shield Up: Defending Your Digital World." />
@@ -36,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
   <link rel="manifest" href="assets/site.webmanifest" />
-  <meta name="theme-color" content="#2563EB" />
+  <meta name="theme-color" content="#020617" />
 
   <link rel="me" href="https://github.com/Onyemuwa" />
   <link rel="me" href="https://x.com/iamgodwinubani" />
@@ -44,7 +43,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/assets/style.css" />
 
@@ -132,168 +131,212 @@
 <body class="font-sans text-primary antialiased">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-border/70 bg-surface/70 backdrop-blur-xl">
-    <nav class="max-w-[1000px] mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="font-heading font-bold text-lg text-primary tracking-tight">Godwin Ubani</a>
-      <div class="flex items-center gap-3 sm:gap-6">
-        <div class="hidden sm:flex items-center gap-8">
-          <a href="/about/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About Me</a>
-          <a href="/blog/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Blog</a>
-          <a href="#book" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Book</a>
-          <a href="#research" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Research</a>
-          <a href="#contact" class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">Contact</a>
-        </div>
-        <button id="themeToggle" class="theme-toggle inline-flex items-center justify-center w-9 h-9 rounded-full border border-border text-secondary hover:text-primary hover:border-primary transition-colors" aria-label="Toggle dark mode">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-        </button>
-        <!-- mobile menu button -->
-        <button id="menuBtn" class="sm:hidden p-2 text-primary" aria-label="Open menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
+  <header class="fixed top-0 inset-x-0 z-50 bg-bg/60 backdrop-blur-md">
+    <nav class="max-w-[1200px] mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+      <a href="/" class="font-heading font-extrabold text-base sm:text-lg tracking-[0.08em] text-primary uppercase">Godwin Ubani</a>
+      <button id="menuBtn" class="menu-btn relative z-[110] w-11 h-11 rounded-full border border-border bg-bg/40 backdrop-blur-xl flex items-center justify-center text-primary hover:border-accent transition-colors" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </nav>
-    <div id="mobileMenu" class="hidden sm:hidden border-t border-border bg-surface/95 backdrop-blur-xl">
-      <div class="px-6 py-4 flex flex-col gap-4">
-        <a href="/about/" class="text-sm font-medium text-secondary">About Me</a>
-        <a href="/blog/" class="text-sm font-medium text-secondary">Blog</a>
-        <a href="#book" class="text-sm font-medium text-secondary">Book</a>
-        <a href="#research" class="text-sm font-medium text-secondary">Research</a>
-        <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white">Contact</a>
-      </div>
-    </div>
   </header>
 
-  <main class="pt-16">
+  <!-- FULL-SCREEN NAV OVERLAY -->
+  <div id="navOverlay" class="nav-overlay flex flex-col justify-between px-6 sm:px-10 py-24">
+    <nav class="flex-1 flex flex-col justify-center gap-1 sm:gap-2">
+      <a href="/" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:40ms">Home</a>
+      <a href="/about/" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:90ms">About</a>
+      <a href="/blog/" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:140ms">Blog</a>
+      <a href="#book" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:190ms">Book</a>
+      <a href="#research" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:240ms">Research</a>
+      <a href="#contact" class="font-heading font-extrabold text-accent text-5xl sm:text-7xl tracking-tight uppercase hover:text-primary transition-colors" style="transition-delay:290ms">Contact</a>
+    </nav>
+    <div class="nav-overlay-item flex flex-wrap items-center gap-5 sm:gap-6" style="transition-delay:340ms">
+      <a href="https://linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">LinkedIn</a>
+      <a href="https://github.com/Onyemuwa" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">GitHub</a>
+      <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">X</a>
+      <a href="https://youtube.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">YouTube</a>
+      <a href="https://instagram.com/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">Instagram</a>
+      <a href="https://tiktok.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">TikTok</a>
+    </div>
+  </div>
+
+  <main>
 
     <!-- HERO -->
-    <section class="max-w-[1000px] mx-auto px-6 pt-20 sm:pt-28 pb-20 sm:pb-24 text-center">
+    <section class="hero-mesh grain relative min-h-screen flex flex-col items-center justify-center px-6 pt-28 pb-16 text-center overflow-hidden">
       <img
         src="assets/godwin-ubani.jpg"
         width="744" height="982" fetchpriority="high" decoding="async"
         alt="Godwin Ubani — Fractional CTO and software engineer"
-        class="reveal mx-auto w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-white shadow-cardHover ring-1 ring-border"
-        style="animation-delay:0ms"
+        class="reveal relative z-10 mx-auto w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover ring-2 ring-accent/50"
+        style="animation-delay:0ms; box-shadow: 0 0 0 1px rgb(59 130 246 / 0.2), 0 0 60px 10px rgb(59 130 246 / 0.25);"
       />
 
-      <div class="reveal mt-8 flex flex-wrap items-center justify-center gap-2" style="animation-delay:80ms">
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-secondary">
+      <div class="reveal relative z-10 mt-7 flex flex-wrap items-center justify-center gap-2" style="animation-delay:80ms">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 backdrop-blur px-3 py-1 text-[11px] sm:text-xs font-medium uppercase tracking-wider text-secondary">
           <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> Fractional CTO
         </span>
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-secondary">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 backdrop-blur px-3 py-1 text-[11px] sm:text-xs font-medium uppercase tracking-wider text-secondary">
           <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> AI Product Builder
         </span>
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-secondary">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 backdrop-blur px-3 py-1 text-[11px] sm:text-xs font-medium uppercase tracking-wider text-secondary">
           <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> Published Author
         </span>
       </div>
 
-      <h1 class="reveal mt-6 font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl md:text-6xl" style="animation-delay:140ms">
-        Hi, I'm Godwin&nbsp;Ubani.
+      <h1 class="reveal relative z-10 mt-8 font-heading font-extrabold uppercase tracking-tight text-primary leading-[0.92] text-[clamp(3rem,13vw,8.5rem)]" style="animation-delay:140ms">
+        Godwin<br />Ubani
       </h1>
-      <p class="reveal mt-3 text-sm font-medium text-secondary" style="animation-delay:180ms">
-        Godwin Ubani Onyemuwa · Fractional CTO & Software Engineer · Author of <a href="#book" class="text-accent hover:underline">Shield Up</a>
+
+      <p class="reveal relative z-10 mt-6 text-sm font-medium text-secondary" style="animation-delay:180ms">
+        Godwin Ubani Onyemuwa · Fractional CTO &amp; Software Engineer · Author of <a href="#book" class="text-accent hover:underline">Shield Up</a>
       </p>
 
-      <p class="reveal mt-6 max-w-2xl mx-auto text-base sm:text-lg text-secondary leading-relaxed" style="animation-delay:220ms">
+      <p class="reveal relative z-10 mt-5 max-w-xl text-base sm:text-lg text-secondary leading-relaxed text-balance" style="animation-delay:220ms">
         I build AI-powered products, provide senior tech leadership, and create cross-border trade infrastructure. I believe technology should connect people, markets, and ideas — not separate them.
       </p>
 
-      <div class="reveal mt-9 flex flex-wrap items-center justify-center gap-4" style="animation-delay:300ms">
+      <div class="reveal relative z-10 mt-9 flex flex-wrap items-center justify-center gap-4" style="animation-delay:300ms">
         <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
+           class="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
           Work with me
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a href="#why"
-           class="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-primary hover:border-primary hover:scale-[1.03] transition-all">
+           class="inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 backdrop-blur px-7 py-3.5 text-sm font-semibold text-primary hover:border-accent transition-all">
           Why work with me
         </a>
+      </div>
+
+      <a href="#why" aria-label="Scroll down" class="reveal absolute bottom-8 left-1/2 -translate-x-1/2 text-secondary hover:text-accent transition-colors animate-bounce" style="animation-delay:400ms">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="border-y border-border py-5 bg-surface/30">
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span class="flex items-center gap-10 pr-10 font-heading font-bold uppercase tracking-wide text-xl sm:text-2xl text-secondary">
+            <span>Fractional CTO</span><span class="text-accent">✦</span>
+            <span>AI Product Builder</span><span class="text-accent">✦</span>
+            <span>Cross-Border Trade</span><span class="text-accent">✦</span>
+            <span>Author of Shield Up</span><span class="text-accent">✦</span>
+            <span>Software Engineer</span><span class="text-accent">✦</span>
+          </span>
+          <span class="flex items-center gap-10 pr-10 font-heading font-bold uppercase tracking-wide text-xl sm:text-2xl text-secondary" aria-hidden="true">
+            <span>Fractional CTO</span><span class="text-accent">✦</span>
+            <span>AI Product Builder</span><span class="text-accent">✦</span>
+            <span>Cross-Border Trade</span><span class="text-accent">✦</span>
+            <span>Author of Shield Up</span><span class="text-accent">✦</span>
+            <span>Software Engineer</span><span class="text-accent">✦</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT TEASER -->
+    <section class="min-h-screen flex items-center max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
+      <div class="grid md:grid-cols-[0.9fr_1.1fr] gap-10 sm:gap-16 items-center w-full">
+        <div class="reveal photo-duotone rounded-3xl aspect-[4/5] order-2 md:order-1">
+          <img src="assets/1.jpg" width="1023" height="1537" loading="lazy" decoding="async" alt="Godwin Ubani" class="w-full h-full object-cover" />
+        </div>
+        <div class="order-1 md:order-2">
+          <p class="reveal text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-5">Who I Am</p>
+          <h2 class="reveal font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-5xl leading-tight text-balance" style="animation-delay:60ms">
+            Building the bridge between ideas, markets, and the people who need them.
+          </h2>
+          <p class="reveal mt-6 text-secondary leading-relaxed max-w-md" style="animation-delay:120ms">
+            A Fractional CTO, software engineer, and entrepreneur based in China — building AI-powered products and cross-border trade infrastructure between Africa and Asia.
+          </p>
+          <a href="/about/" class="reveal mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline" style="animation-delay:180ms">
+            Read my story
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- WHY WORK WITH ME -->
-    <section id="why" class="max-w-[1000px] mx-auto px-6 py-16 sm:py-24">
-      <div class="reveal text-center mb-14">
-        <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">What I bring</p>
-        <h2 class="font-heading font-bold tracking-tight text-primary text-3xl sm:text-4xl">Why teams work with me</h2>
+    <section id="why" class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="reveal text-center mb-16">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">What I Bring</p>
+        <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl">Why teams work with me</h2>
         <p class="mt-4 max-w-xl mx-auto text-secondary">Senior technical judgment, applied to real products — not theory.</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-6">
-        <!-- Card 1 -->
-        <div class="reveal group rounded-2xl border border-border bg-surface p-7 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition-all duration-300">
-          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-5 text-accent">
+      <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 1 1-10 0V7a5 5 0 0 1 5-5Z"/><path d="M8 14v2a4 4 0 0 0 8 0v-2"/><line x1="12" y1="20" x2="12" y2="22"/></svg>
           </div>
           <h3 class="font-heading font-bold text-lg text-primary">Fractional CTO leadership</h3>
-          <p class="mt-2.5 text-sm text-secondary leading-relaxed">I step into early-stage teams and give them senior-level technical direction — architecture, hiring, and roadmap decisions — without the cost of a full-time hire.</p>
+          <p class="mt-3 text-sm text-secondary leading-relaxed">I step into early-stage teams and give them senior-level technical direction — architecture, hiring, and roadmap decisions — without the cost of a full-time hire.</p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="reveal group rounded-2xl border border-border bg-surface p-7 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition-all duration-300" style="animation-delay:80ms">
-          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-5 text-accent">
+        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:80ms">
+          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
           </div>
           <h3 class="font-heading font-bold text-lg text-primary">AI-powered product development</h3>
-          <p class="mt-2.5 text-sm text-secondary leading-relaxed">I design and ship full-stack products with AI integrated at the core — from architecture and data pipelines through to production deployment.</p>
+          <p class="mt-3 text-sm text-secondary leading-relaxed">I design and ship full-stack products with AI integrated at the core — from architecture and data pipelines through to production deployment.</p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="reveal group rounded-2xl border border-border bg-surface p-7 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition-all duration-300" style="animation-delay:160ms">
-          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-5 text-accent">
+        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:160ms">
+          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
           </div>
           <h3 class="font-heading font-bold text-lg text-primary">Cross-border trade infrastructure</h3>
-          <p class="mt-2.5 text-sm text-secondary leading-relaxed">Based in China and working across Africa, I design the systems that make payments and operations between the two regions simpler and more secure.</p>
+          <p class="mt-3 text-sm text-secondary leading-relaxed">Based in China and working across Africa, I design the systems that make payments and operations between the two regions simpler and more secure.</p>
         </div>
 
-        <!-- Card 4 -->
-        <div class="reveal group rounded-2xl border border-border bg-surface p-7 shadow-card hover:shadow-cardHover hover:-translate-y-1 transition-all duration-300" style="animation-delay:240ms">
-          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-5 text-accent">
+        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:240ms">
+          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
           </div>
           <h3 class="font-heading font-bold text-lg text-primary">Published author &amp; researcher</h3>
-          <p class="mt-2.5 text-sm text-secondary leading-relaxed">My work spans peer-reviewed academic research and a published cybersecurity book — I write about the things I actually build.</p>
+          <p class="mt-3 text-sm text-secondary leading-relaxed">My work spans peer-reviewed academic research and a published cybersecurity book — I write about the things I actually build.</p>
         </div>
       </div>
     </section>
 
     <!-- BOOK -->
-    <section id="book" class="max-w-[1000px] mx-auto px-6 py-16 sm:py-24">
-      <div class="rounded-3xl border border-border bg-surface p-8 sm:p-14 shadow-card">
-        <div class="grid sm:grid-cols-2 gap-10 sm:gap-14 items-center">
-          <div class="reveal flex justify-center sm:justify-start">
+    <section id="book" class="min-h-screen flex items-center max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
+      <div class="grid md:grid-cols-2 gap-12 sm:gap-20 items-center w-full">
+        <div class="reveal flex justify-center md:justify-start order-1">
+          <div class="relative">
+            <div class="absolute -inset-6 rounded-full bg-accent/20 blur-3xl"></div>
             <img
               id="bookCover"
               src="assets/book-cover.png"
               width="375" height="583" loading="lazy" decoding="async"
               alt="Shield Up: Defending Your Digital World — book cover"
-              class="w-48 sm:w-60 rounded-md shadow-book"
+              class="relative w-56 sm:w-72 rounded-md shadow-book"
             />
           </div>
-          <div class="reveal" style="animation-delay:100ms">
-            <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">My Book</p>
-            <h2 class="font-heading font-bold tracking-tight text-primary text-2xl sm:text-3xl">Shield Up: Defending Your Digital World</h2>
-            <p class="mt-4 text-secondary leading-relaxed">A comprehensive guide to understanding cybersecurity, protecting your data, and building a resilient digital life.</p>
-            <a href="assets/shield-up-defending-your-digital-world.pdf" download="Shield Up - Defending Your Digital World.pdf"
-               class="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Download Free Book
-            </a>
-          </div>
+        </div>
+        <div class="reveal order-2" style="animation-delay:100ms">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">My Book</p>
+          <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-5xl leading-tight">Shield Up: Defending Your Digital World</h2>
+          <p class="mt-5 text-secondary leading-relaxed max-w-md">A comprehensive guide to understanding cybersecurity, protecting your data, and building a resilient digital life.</p>
+          <a href="assets/shield-up-defending-your-digital-world.pdf" download="Shield Up - Defending Your Digital World.pdf"
+             class="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Free Book
+          </a>
         </div>
       </div>
     </section>
 
     <!-- RESEARCH -->
-    <section id="research" class="max-w-[1000px] mx-auto px-6 py-16 sm:py-24">
-      <div class="reveal text-center mb-12">
-        <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Academic Research</p>
-        <h2 class="font-heading font-bold tracking-tight text-primary text-3xl sm:text-4xl">Published work</h2>
+    <section id="research" class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="reveal text-center mb-14">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">Academic Research</p>
+        <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl">Published work</h2>
       </div>
 
-      <div class="reveal rounded-2xl border border-border bg-surface p-7 sm:p-9 shadow-card hover:shadow-cardHover transition-all duration-300">
+      <div class="reveal rounded-3xl border border-border bg-surface/60 p-8 sm:p-10 hover:border-accent transition-all duration-300">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
             <h3 class="font-heading font-bold text-lg sm:text-xl text-primary">A General U-Shaped Transformer for Image Restoration</h3>
@@ -302,7 +345,7 @@
           </div>
           <a href="https://docs.google.com/presentation/d/1id1kDKIBZ1rl5KvJev85Jma5lsypfGVL/edit?usp=drive_link&ouid=110763833694176085421&rtpof=true&sd=true"
              target="_blank" rel="noopener noreferrer"
-             class="shrink-0 inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-primary hover:border-primary hover:scale-[1.03] transition-all">
+             class="shrink-0 inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-primary hover:border-accent transition-all">
             Read Paper
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
           </a>
@@ -310,64 +353,12 @@
       </div>
     </section>
 
-    <!-- SOCIAL -->
-    <section class="max-w-[1000px] mx-auto px-6 py-16 sm:py-24">
-      <div class="reveal text-center mb-10">
-        <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Elsewhere</p>
-        <h2 class="font-heading font-bold tracking-tight text-primary text-2xl sm:text-3xl">Let's connect</h2>
-      </div>
-      <div class="reveal grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-        <a href="https://linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 sm:px-5 py-4 hover:border-accent hover:shadow-card transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">LinkedIn</span>
-        </a>
-        <a href="https://github.com/Onyemuwa" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 sm:px-5 py-4 hover:border-accent hover:shadow-card transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">GitHub</span>
-        </a>
-        <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 sm:px-5 py-4 hover:border-accent hover:shadow-card transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">X (Twitter)</span>
-        </a>
-        <a href="https://youtube.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 sm:px-5 py-4 hover:border-accent hover:shadow-card transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24 24 0 0 1 0-10c.2-1 1-1.8 2-2a44 44 0 0 1 15 0c1 .2 1.8 1 2 2a24 24 0 0 1 0 10c-.2 1-1 1.8-2 2a44 44 0 0 1-15 0c-1-.2-1.8-1-2-2Z"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">YouTube</span>
-        </a>
-        <a href="https://instagram.com/iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 sm:px-5 py-4 hover:border-accent hover:shadow-card transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">Instagram</span>
-        </a>
-        <a href="https://tiktok.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 sm:px-5 py-4 hover:border-accent hover:shadow-card transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">TikTok</span>
-        </a>
-      </div>
-    </section>
-
     <!-- BLOG PREVIEW -->
-    <section class="max-w-[1000px] mx-auto px-6 py-16 sm:py-24">
-      <div class="reveal flex items-end justify-between mb-10 gap-4">
+    <section class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="reveal flex items-end justify-between mb-12 gap-4">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">From the Blog</p>
-          <h2 class="font-heading font-bold tracking-tight text-primary text-2xl sm:text-3xl">Notes on building</h2>
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">From the Blog</p>
+          <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-5xl">Notes on building</h2>
         </div>
         <a href="/blog/" class="hidden sm:inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
           View all posts
@@ -377,37 +368,90 @@
 
       <div class="grid sm:grid-cols-3 gap-5">
         <a href="/blog/why-i-became-a-fractional-cto/"
-           class="reveal group block rounded-2xl border border-border bg-surface p-6 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300">
-          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Career</p>
+           class="reveal group block rounded-3xl border border-border bg-surface/60 p-7 hover:border-accent hover:bg-surface transition-all duration-300">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Career</p>
           <h3 class="font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">Why I Chose to Be a Fractional CTO Instead of Chasing a Full-Time Title</h3>
-          <p class="mt-4 text-xs font-medium text-secondary">6 min read</p>
+          <p class="mt-5 text-xs font-medium text-secondary">6 min read</p>
         </a>
         <a href="/blog/lessons-from-building-korvanta/"
-           class="reveal group block rounded-2xl border border-border bg-surface p-6 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300" style="animation-delay:80ms">
-          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Building Korvanta</p>
+           class="reveal group block rounded-3xl border border-border bg-surface/60 p-7 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:80ms">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Building Korvanta</p>
           <h3 class="font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">What Building Korvanta Taught Me About Cross-Border Trade Infrastructure</h3>
-          <p class="mt-4 text-xs font-medium text-secondary">7 min read</p>
+          <p class="mt-5 text-xs font-medium text-secondary">7 min read</p>
         </a>
         <a href="/blog/cybersecurity-habits-for-gen-z-builders/"
-           class="reveal group block rounded-2xl border border-border bg-surface p-6 shadow-card hover:shadow-cardHover hover:-translate-y-0.5 transition-all duration-300" style="animation-delay:160ms">
-          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-3">Cybersecurity</p>
+           class="reveal group block rounded-3xl border border-border bg-surface/60 p-7 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:160ms">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Cybersecurity</p>
           <h3 class="font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">5 Cybersecurity Habits Every Gen Z Builder Needs</h3>
-          <p class="mt-4 text-xs font-medium text-secondary">5 min read</p>
+          <p class="mt-5 text-xs font-medium text-secondary">5 min read</p>
         </a>
       </div>
 
-      <a href="/blog/" class="reveal sm:hidden mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
+      <a href="/blog/" class="reveal sm:hidden mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
         View all posts
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </section>
 
+    <!-- SOCIAL -->
+    <section class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="reveal text-center mb-12">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">Elsewhere</p>
+        <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-4xl">Let's connect</h2>
+      </div>
+      <div class="reveal grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+        <a href="https://linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener noreferrer"
+           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
+          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </span>
+          <span class="text-sm font-semibold text-primary">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Onyemuwa" target="_blank" rel="noopener noreferrer"
+           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
+          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </span>
+          <span class="text-sm font-semibold text-primary">GitHub</span>
+        </a>
+        <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener noreferrer"
+           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
+          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+          </span>
+          <span class="text-sm font-semibold text-primary">X (Twitter)</span>
+        </a>
+        <a href="https://youtube.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer"
+           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
+          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24 24 0 0 1 0-10c.2-1 1-1.8 2-2a44 44 0 0 1 15 0c1 .2 1.8 1 2 2a24 24 0 0 1 0 10c-.2 1-1 1.8-2 2a44 44 0 0 1-15 0c-1-.2-1.8-1-2-2Z"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
+          </span>
+          <span class="text-sm font-semibold text-primary">YouTube</span>
+        </a>
+        <a href="https://instagram.com/iamgodwinubani" target="_blank" rel="noopener noreferrer"
+           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
+          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+          </span>
+          <span class="text-sm font-semibold text-primary">Instagram</span>
+        </a>
+        <a href="https://tiktok.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer"
+           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
+          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </span>
+          <span class="text-sm font-semibold text-primary">TikTok</span>
+        </a>
+      </div>
+    </section>
+
     <!-- CONTACT FOOTER -->
-    <section id="contact" class="max-w-[1000px] mx-auto px-6 py-16 sm:py-24">
-      <div class="reveal rounded-3xl border border-border bg-surface px-8 sm:px-14 py-14 text-center shadow-card">
-        <h2 class="font-heading font-bold tracking-tight text-primary text-2xl sm:text-3xl">Need a Fractional CTO or dev help?</h2>
+    <section id="contact" class="hero-mesh min-h-[90vh] flex items-center justify-center px-6 py-20">
+      <div class="reveal text-center max-w-xl">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-5">Let's Build</p>
+        <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-6xl leading-tight text-balance">Need a Fractional CTO or dev help?</h2>
         <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
-           class="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
+           class="mt-9 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
           Book a Call
         </a>
 
@@ -415,7 +459,7 @@
 
         <h3 class="font-heading font-semibold text-primary text-lg">Want to say hi? Drop me an email.</h3>
         <a href="mailto:iamgodwinubani@gmail.com?subject=Hi%20Godwin!&body=Hi%20Godwin,%0A%0AI%20just%20saw%20your%20portfolio%20and%20wanted%20to%20reach%20out.%0A%0ABest,%0A%5BYour%20Name%5D"
-           class="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-7 py-3.5 text-sm font-semibold text-primary hover:border-primary hover:scale-[1.03] transition-all">
+           class="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-primary hover:border-accent transition-all">
           Send Email
         </a>
       </div>
@@ -423,7 +467,7 @@
 
   </main>
 
-  <footer class="max-w-[1000px] mx-auto px-6 pb-10">
+  <footer class="max-w-[1200px] mx-auto px-6 sm:px-10 pb-10">
     <p class="text-center text-xs text-secondary">© <span id="year"></span> Godwin Ubani. All rights reserved.</p>
   </footer>
 
@@ -448,18 +492,19 @@
     }
 
     const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme')
-        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      const next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
+    const navOverlay = document.getElementById('navOverlay');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navOverlay.classList.toggle('open');
+      menuBtn.classList.toggle('is-open', isOpen);
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
+    navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navOverlay.classList.remove('open');
+      menuBtn.classList.remove('is-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }));
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
