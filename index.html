@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
   <link rel="manifest" href="assets/site.webmanifest" />
-  <meta name="theme-color" content="#020617" />
+  <meta name="theme-color" content="#FFFFFF" />
 
   <link rel="me" href="https://github.com/Onyemuwa" />
   <link rel="me" href="https://x.com/iamgodwinubani" />
@@ -43,7 +43,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/assets/style.css" />
 
@@ -122,6 +122,37 @@
         "author": { "@id": "https://godwinubani.me/#person" },
         "about": "Image restoration using a general U-Shaped Transformer architecture to improve visual quality and reconstruction accuracy.",
         "url": "https://docs.google.com/presentation/d/1id1kDKIBZ1rl5KvJev85Jma5lsypfGVL/edit?usp=drive_link"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://godwinubani.me/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you work with early-stage startups that don't have a codebase yet?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. A lot of fractional CTO work starts before the first line of code — choosing the stack, scoping the MVP, and avoiding the architecture decisions that are expensive to undo later." }
+          },
+          {
+            "@type": "Question",
+            "name": "What's actually included in a Fractional CTO engagement?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Architecture reviews, hiring and technical interviews for engineering roles, build-vs-buy calls, roadmap and sprint planning, and being the senior technical voice in the room when decisions get made." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help with just one part of the stack, like AI integration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Not every engagement needs full CTO coverage — sometimes it's scoping and shipping one AI feature correctly, or reviewing a specific architecture decision before a team commits to it." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with teams outside China?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, remotely. Most of my cross-border trade work already spans Africa and Asia, so distributed teams and time zones aren't a blocker." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do we get started?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Book a call through the link on this site or send an email. We'll talk through what you're building and whether fractional support actually fits what you need right now." }
+          }
+        ]
       }
     ]
   }
@@ -131,156 +162,309 @@
 <body class="font-sans text-primary antialiased">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 bg-bg/60 backdrop-blur-md">
+  <header class="border-b border-border">
     <nav class="max-w-[1200px] mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
-      <a href="/" class="font-heading font-extrabold text-base sm:text-lg tracking-[0.08em] text-primary uppercase">Godwin Ubani</a>
-      <button id="menuBtn" class="menu-btn relative z-[110] w-11 h-11 rounded-full border border-border bg-bg/40 backdrop-blur-xl flex items-center justify-center text-primary hover:border-accent transition-colors" aria-label="Open menu" aria-expanded="false">
+      <a href="/" class="font-heading font-extrabold text-lg tracking-tight text-primary">Godwin<span class="text-accent">.</span>U</a>
+      <div class="hidden md:flex items-center gap-9">
+        <a href="/" class="text-sm font-medium text-primary">Home</a>
+        <a href="/about/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About</a>
+        <a href="#work" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Work</a>
+        <a href="/blog/" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Blog</a>
+        <a href="#faq" class="text-sm font-medium text-secondary hover:text-primary transition-colors">FAQ</a>
+      </div>
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-bg hover:bg-accent transition-colors">
+        Contact
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+      <button id="menuBtn" class="menu-btn md:hidden relative z-[110] w-10 h-10 rounded-full border border-border flex items-center justify-center text-primary" aria-label="Open menu" aria-expanded="false">
         <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </nav>
   </header>
 
-  <!-- FULL-SCREEN NAV OVERLAY -->
-  <div id="navOverlay" class="nav-overlay flex flex-col justify-between px-6 sm:px-10 py-24">
-    <nav class="flex-1 flex flex-col justify-center gap-1 sm:gap-2">
-      <a href="/" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:40ms">Home</a>
-      <a href="/about/" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:90ms">About</a>
-      <a href="/blog/" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:140ms">Blog</a>
-      <a href="#book" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:190ms">Book</a>
-      <a href="#research" class="font-heading font-extrabold text-primary text-5xl sm:text-7xl tracking-tight uppercase hover:text-accent transition-colors" style="transition-delay:240ms">Research</a>
-      <a href="#contact" class="font-heading font-extrabold text-accent text-5xl sm:text-7xl tracking-tight uppercase hover:text-primary transition-colors" style="transition-delay:290ms">Contact</a>
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="navOverlay" class="nav-overlay flex flex-col justify-center px-6 sm:px-10">
+    <nav class="flex flex-col gap-1">
+      <a href="/" class="font-heading font-extrabold text-primary text-4xl tracking-tight" style="transition-delay:40ms">Home</a>
+      <a href="/about/" class="font-heading font-extrabold text-primary text-4xl tracking-tight" style="transition-delay:80ms">About</a>
+      <a href="#work" class="font-heading font-extrabold text-primary text-4xl tracking-tight" style="transition-delay:120ms">Work</a>
+      <a href="/blog/" class="font-heading font-extrabold text-primary text-4xl tracking-tight" style="transition-delay:160ms">Blog</a>
+      <a href="#faq" class="font-heading font-extrabold text-primary text-4xl tracking-tight" style="transition-delay:200ms">FAQ</a>
+      <a href="#contact" class="font-heading font-extrabold text-accent text-4xl tracking-tight" style="transition-delay:240ms">Contact</a>
     </nav>
-    <div class="nav-overlay-item flex flex-wrap items-center gap-5 sm:gap-6" style="transition-delay:340ms">
-      <a href="https://linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">LinkedIn</a>
-      <a href="https://github.com/Onyemuwa" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">GitHub</a>
-      <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">X</a>
-      <a href="https://youtube.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">YouTube</a>
-      <a href="https://instagram.com/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">Instagram</a>
-      <a href="https://tiktok.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-secondary hover:text-accent transition-colors">TikTok</a>
-    </div>
   </div>
 
   <main>
 
     <!-- HERO -->
-    <section class="hero-mesh relative min-h-screen flex flex-col items-center justify-center px-6 pt-28 pb-16 text-center overflow-hidden">
-      <img
-        src="assets/godwin-ubani.jpg"
-        width="744" height="982" fetchpriority="high" decoding="async"
-        alt="Godwin Ubani — Fractional CTO and software engineer"
-        class="reveal relative z-10 mx-auto w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border border-border"
-        style="animation-delay:0ms"
-      />
-
-      <div class="reveal relative z-10 mt-7 flex flex-wrap items-center justify-center gap-2" style="animation-delay:80ms">
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 backdrop-blur px-3 py-1 text-[11px] sm:text-xs font-medium uppercase tracking-wider text-secondary">
-          <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> Fractional CTO
-        </span>
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 backdrop-blur px-3 py-1 text-[11px] sm:text-xs font-medium uppercase tracking-wider text-secondary">
-          <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> AI Product Builder
-        </span>
-        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 backdrop-blur px-3 py-1 text-[11px] sm:text-xs font-medium uppercase tracking-wider text-secondary">
-          <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> Published Author
-        </span>
+    <section class="max-w-[1200px] mx-auto px-6 sm:px-10 pt-14 sm:pt-20 pb-4">
+      <div class="reveal grid grid-cols-2 sm:grid-cols-3 gap-6 pb-10 border-b border-border text-xs sm:text-sm">
+        <div>
+          <p class="text-secondary">Fractional CTO</p>
+          <p class="font-semibold text-primary mt-1">Software Engineer</p>
+        </div>
+        <div>
+          <p class="text-secondary">Based in</p>
+          <p class="font-semibold text-primary mt-1">China</p>
+        </div>
+        <div>
+          <p class="text-secondary">Available for</p>
+          <p class="font-semibold text-primary mt-1">New Projects</p>
+        </div>
       </div>
 
-      <h1 class="reveal relative z-10 mt-8 font-heading font-extrabold uppercase tracking-tight text-primary leading-[0.92] text-[clamp(3rem,13vw,8.5rem)]" style="animation-delay:140ms">
-        Godwin<br />Ubani
+      <h1 class="reveal font-heading font-black uppercase tracking-tight text-primary leading-[0.88] text-[clamp(3rem,13vw,9rem)] pt-8" style="animation-delay:60ms">
+        Godwin Ubani
       </h1>
 
-      <p class="reveal relative z-10 mt-6 text-sm font-medium text-secondary" style="animation-delay:180ms">
-        Godwin Ubani Onyemuwa · Fractional CTO &amp; Software Engineer · Author of <a href="#book" class="text-accent hover:underline">Shield Up</a>
+      <p class="reveal max-w-xl mx-auto text-center font-heading font-medium text-primary text-lg sm:text-xl leading-snug pt-10 pb-10" style="animation-delay:120ms">
+        [A Fractional CTO and AI product builder based in China, Godwin designs the systems that move ideas, money, and trust between Africa and Asia.]
       </p>
-
-      <p class="reveal relative z-10 mt-5 max-w-xl text-base sm:text-lg text-secondary leading-relaxed text-balance" style="animation-delay:220ms">
-        I build AI-powered products, step in as a senior technical lead for early-stage teams, and help businesses move money and goods between Africa and China without the usual friction.
-      </p>
-
-      <div class="reveal relative z-10 mt-9 flex flex-wrap items-center justify-center gap-4" style="animation-delay:300ms">
-        <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
-          Work with me
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#why"
-           class="inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 backdrop-blur px-7 py-3.5 text-sm font-semibold text-primary hover:border-accent transition-all">
-          Why work with me
-        </a>
-      </div>
-
-      <a href="#why" aria-label="Scroll down" class="reveal absolute bottom-8 left-1/2 -translate-x-1/2 text-secondary hover:text-accent transition-colors animate-bounce" style="animation-delay:400ms">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-      </a>
     </section>
 
-    <!-- ABOUT TEASER -->
-    <section class="min-h-screen flex items-center max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
-      <div class="grid md:grid-cols-[0.9fr_1.1fr] gap-10 sm:gap-16 items-center w-full">
-        <div class="reveal photo-duotone rounded-3xl aspect-[4/5] order-2 md:order-1">
-          <img src="assets/1.jpg" width="1023" height="1537" loading="lazy" decoding="async" alt="Godwin Ubani" class="w-full h-full object-cover" />
-        </div>
-        <div class="order-1 md:order-2">
-          <p class="reveal text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-5">Who I Am</p>
-          <h2 class="reveal font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-5xl leading-tight text-balance" style="animation-delay:60ms">
-            I spend most of my time between codebases, time zones, and other people's roadmaps.
-          </h2>
-          <p class="reveal mt-6 text-secondary leading-relaxed max-w-md" style="animation-delay:120ms">
-            A Fractional CTO, software engineer, and entrepreneur based in China, working on AI products and the trade infrastructure that connects businesses across Africa and Asia.
-          </p>
-          <a href="/about/" class="reveal mt-8 inline-block text-sm font-semibold text-accent hover:underline" style="animation-delay:180ms">
-            Read my story
-          </a>
-        </div>
+    <section class="reveal w-full bg-surface" style="animation-delay:180ms">
+      <div class="max-w-md sm:max-w-lg mx-auto aspect-[3/4] overflow-hidden">
+        <img src="assets/godwin-ubani.jpg" width="744" height="982" fetchpriority="high" decoding="async"
+             alt="Godwin Ubani — Fractional CTO and software engineer"
+             class="w-full h-full object-cover" />
       </div>
     </section>
 
-    <!-- WHY WORK WITH ME -->
-    <section id="why" class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
-      <div class="reveal text-center mb-16">
-        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">What I Bring</p>
-        <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl">Why teams work with me</h2>
-        <p class="mt-4 max-w-xl mx-auto text-secondary">Four things I've actually done more than once, for more than one company.</p>
+    <!-- SELECTED WORK -->
+    <section id="work" class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="reveal text-center mb-14">
+        <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl">Selected Work</h2>
+        <p class="mt-4 max-w-lg mx-auto text-secondary">The things I've actually shipped — a book, a published paper, and the work I take on for clients.</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
-        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 1 1-10 0V7a5 5 0 0 1 5-5Z"/><path d="M8 14v2a4 4 0 0 0 8 0v-2"/><line x1="12" y1="20" x2="12" y2="22"/></svg>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <a href="#book" class="reveal group block rounded-2xl overflow-hidden border border-border hover:shadow-cardHover transition-all duration-300">
+          <div class="aspect-[4/3] bg-surface flex items-center justify-center p-8">
+            <img src="assets/book-cover.png" alt="Shield Up book cover" class="h-full w-auto object-contain rounded shadow-book group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <h3 class="font-heading font-bold text-lg text-primary">Fractional CTO leadership</h3>
-          <p class="mt-3 text-sm text-secondary leading-relaxed">I step into early-stage teams and give them senior-level technical direction — architecture, hiring, and roadmap decisions — without the cost of a full-time hire.</p>
+          <div class="flex items-center justify-between px-5 py-4">
+            <p class="font-heading font-bold text-primary">Shield Up</p>
+            <p class="text-xs text-secondary">Book · Cybersecurity</p>
+          </div>
+        </a>
+
+        <a href="#research" class="reveal group block rounded-2xl overflow-hidden border border-border hover:shadow-cardHover transition-all duration-300" style="animation-delay:60ms">
+          <div class="aspect-[4/3] flex items-center justify-center p-8" style="background:#0F172A;">
+            <p class="font-heading font-extrabold text-white text-2xl sm:text-3xl text-center leading-tight">U-Shaped<br />Transformer</p>
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <p class="font-heading font-bold text-primary">Research Paper</p>
+            <p class="text-xs text-secondary">Research · AI</p>
+          </div>
+        </a>
+
+        <a href="/about/" class="reveal group block rounded-2xl overflow-hidden border border-border hover:shadow-cardHover transition-all duration-300" style="animation-delay:120ms">
+          <div class="aspect-[4/3] flex items-center justify-center p-8" style="background:#2563EB;">
+            <p class="font-heading font-extrabold text-white text-2xl sm:text-3xl text-center leading-tight">Fractional<br />CTO Work</p>
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <p class="font-heading font-bold text-primary">Leadership</p>
+            <p class="text-xs text-secondary">Strategy · Architecture</p>
+          </div>
+        </a>
+
+        <a href="/about/" class="reveal group block rounded-2xl overflow-hidden border border-border hover:shadow-cardHover transition-all duration-300" style="animation-delay:180ms">
+          <div class="aspect-[4/3] flex items-center justify-center p-8" style="background:#111117;">
+            <p class="font-heading font-extrabold text-white text-2xl sm:text-3xl text-center leading-tight">Cross-Border<br />Trade</p>
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <p class="font-heading font-bold text-primary">Korvanta</p>
+            <p class="text-xs text-secondary">Fintech · Trade</p>
+          </div>
+        </a>
+
+        <a href="/blog/" class="reveal group block rounded-2xl overflow-hidden border border-border hover:shadow-cardHover transition-all duration-300 sm:col-span-2" style="animation-delay:240ms">
+          <div class="aspect-[16/6] flex items-center justify-center p-8" style="background:#93C5FD;">
+            <p class="font-heading font-extrabold text-primary text-2xl sm:text-3xl text-center leading-tight">Notes on Building</p>
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <p class="font-heading font-bold text-primary">The Blog</p>
+            <p class="text-xs text-secondary">Writing · Career</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- BEST SERVICES -->
+    <section id="services" class="bg-surface border-y border-border">
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+        <div class="reveal text-center mb-14">
+          <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl">What I Bring</h2>
+          <p class="mt-4 max-w-lg mx-auto text-secondary">Senior technical judgment, applied to real products.</p>
         </div>
 
-        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:80ms">
-          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+        <div class="divide-y divide-border border-t border-b border-border">
+          <div class="reveal flex items-start gap-6 py-7">
+            <span class="font-heading font-bold text-secondary text-sm w-10 shrink-0">01</span>
+            <div class="flex-1">
+              <h3 class="font-heading font-bold text-lg sm:text-xl text-primary">Fractional CTO Leadership</h3>
+              <p class="mt-1.5 text-sm text-secondary max-w-lg">Senior-level technical direction for early-stage teams — architecture, hiring, and roadmap decisions — without the cost of a full-time hire.</p>
+            </div>
+            <div class="hidden sm:flex w-12 h-12 rounded-xl bg-bg border border-border items-center justify-center text-primary shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 1 1-10 0V7a5 5 0 0 1 5-5Z"/><path d="M8 14v2a4 4 0 0 0 8 0v-2"/><line x1="12" y1="20" x2="12" y2="22"/></svg>
+            </div>
           </div>
-          <h3 class="font-heading font-bold text-lg text-primary">AI-powered product development</h3>
-          <p class="mt-3 text-sm text-secondary leading-relaxed">I design and ship full-stack products with AI integrated at the core — from architecture and data pipelines through to production deployment.</p>
+
+          <div class="reveal flex items-start gap-6 py-7" style="animation-delay:60ms">
+            <span class="font-heading font-bold text-secondary text-sm w-10 shrink-0">02</span>
+            <div class="flex-1">
+              <h3 class="font-heading font-bold text-lg sm:text-xl text-primary">AI Product Development</h3>
+              <p class="mt-1.5 text-sm text-secondary max-w-lg">Full-stack products with AI integrated at the core — from architecture and data pipelines through to production deployment.</p>
+            </div>
+            <div class="hidden sm:flex w-12 h-12 rounded-xl bg-bg border border-border items-center justify-center text-primary shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+          </div>
+
+          <div class="reveal flex items-start gap-6 py-7" style="animation-delay:120ms">
+            <span class="font-heading font-bold text-secondary text-sm w-10 shrink-0">03</span>
+            <div class="flex-1">
+              <h3 class="font-heading font-bold text-lg sm:text-xl text-primary">Cross-Border Trade Infrastructure</h3>
+              <p class="mt-1.5 text-sm text-secondary max-w-lg">Based in China and working across Africa, I design the systems that make payments and operations between the two regions simpler and more secure.</p>
+            </div>
+            <div class="hidden sm:flex w-12 h-12 rounded-xl bg-bg border border-border items-center justify-center text-primary shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+            </div>
+          </div>
+
+          <div class="reveal flex items-start gap-6 py-7" style="animation-delay:180ms">
+            <span class="font-heading font-bold text-secondary text-sm w-10 shrink-0">04</span>
+            <div class="flex-1">
+              <h3 class="font-heading font-bold text-lg sm:text-xl text-primary">Published Author &amp; Researcher</h3>
+              <p class="mt-1.5 text-sm text-secondary max-w-lg">My work spans peer-reviewed academic research and a published cybersecurity book — I write about the things I actually build.</p>
+            </div>
+            <div class="hidden sm:flex w-12 h-12 rounded-xl bg-bg border border-border items-center justify-center text-primary shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHERE I'VE STUDIED & BUILT -->
+    <section class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="grid md:grid-cols-[0.8fr_1.2fr] gap-10 md:gap-16 items-center">
+        <div class="reveal">
+          <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-4xl leading-tight">Where I've<br />studied &amp; built</h2>
+          <p class="mt-4 text-secondary max-w-xs">No client logos yet — the ventures I'm building are still early. Here's where the actual work has happened.</p>
+        </div>
+        <div class="reveal grid grid-cols-2 gap-4" style="animation-delay:80ms">
+          <div class="rounded-2xl border border-border p-6">
+            <p class="text-xs uppercase tracking-wider text-secondary mb-2">Founder</p>
+            <p class="font-heading font-bold text-primary">Korvanta</p>
+          </div>
+          <div class="rounded-2xl border border-border p-6">
+            <p class="text-xs uppercase tracking-wider text-secondary mb-2">Education</p>
+            <p class="font-heading font-bold text-primary">Jiangxi University of Science &amp; Technology</p>
+          </div>
+          <div class="rounded-2xl border border-border p-6">
+            <p class="text-xs uppercase tracking-wider text-secondary mb-2">Education</p>
+            <p class="font-heading font-bold text-primary">Aptech</p>
+          </div>
+          <div class="rounded-2xl border border-border p-6">
+            <p class="text-xs uppercase tracking-wider text-secondary mb-2">Early Career</p>
+            <p class="font-heading font-bold text-primary">Mobile Tech Hub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-surface border-y border-border">
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+        <div class="reveal text-center mb-14">
+          <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl">FAQ</h2>
+          <p class="mt-4 max-w-lg mx-auto text-secondary">Common questions before we work together.</p>
         </div>
 
-        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:160ms">
-          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+        <div class="reveal max-w-2xl mx-auto divide-y divide-border border-t border-b border-border">
+          <div class="faq-item py-2">
+            <button class="faq-toggle w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-primary">Do you work with early-stage startups that don't have a codebase yet?</span>
+              <span class="shrink-0 w-7 h-7 rounded-full border border-border flex items-center justify-center text-primary">
+                <svg class="faq-icon-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg class="faq-icon-minus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p class="pb-5 text-sm text-secondary leading-relaxed max-w-xl">Yes. A lot of fractional CTO work starts before the first line of code — choosing the stack, scoping the MVP, and avoiding the architecture decisions that are expensive to undo later.</p>
+              </div>
+            </div>
           </div>
-          <h3 class="font-heading font-bold text-lg text-primary">Cross-border trade infrastructure</h3>
-          <p class="mt-3 text-sm text-secondary leading-relaxed">Based in China and working across Africa, I design the systems that make payments and operations between the two regions simpler and more secure.</p>
-        </div>
 
-        <div class="reveal group rounded-3xl border border-border bg-surface/60 p-8 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:240ms">
-          <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 text-accent">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+          <div class="faq-item py-2">
+            <button class="faq-toggle w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-primary">What's actually included in a Fractional CTO engagement?</span>
+              <span class="shrink-0 w-7 h-7 rounded-full border border-border flex items-center justify-center text-primary">
+                <svg class="faq-icon-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg class="faq-icon-minus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p class="pb-5 text-sm text-secondary leading-relaxed max-w-xl">Architecture reviews, hiring and technical interviews, build-vs-buy calls, roadmap and sprint planning, and being the senior technical voice in the room when decisions get made.</p>
+              </div>
+            </div>
           </div>
-          <h3 class="font-heading font-bold text-lg text-primary">Published author &amp; researcher</h3>
-          <p class="mt-3 text-sm text-secondary leading-relaxed">My work spans peer-reviewed academic research and a published cybersecurity book — I write about the things I actually build.</p>
+
+          <div class="faq-item py-2">
+            <button class="faq-toggle w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-primary">Can you help with just one part of the stack, like AI integration?</span>
+              <span class="shrink-0 w-7 h-7 rounded-full border border-border flex items-center justify-center text-primary">
+                <svg class="faq-icon-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg class="faq-icon-minus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p class="pb-5 text-sm text-secondary leading-relaxed max-w-xl">Yes. Not every engagement needs full CTO coverage — sometimes it's scoping and shipping one AI feature correctly, or reviewing a specific architecture decision before a team commits to it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item py-2">
+            <button class="faq-toggle w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-primary">Do you work with teams outside China?</span>
+              <span class="shrink-0 w-7 h-7 rounded-full border border-border flex items-center justify-center text-primary">
+                <svg class="faq-icon-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg class="faq-icon-minus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p class="pb-5 text-sm text-secondary leading-relaxed max-w-xl">Yes, remotely. Most of my cross-border trade work already spans Africa and Asia, so distributed teams and time zones aren't a blocker.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item py-2">
+            <button class="faq-toggle w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-primary">How do we get started?</span>
+              <span class="shrink-0 w-7 h-7 rounded-full border border-border flex items-center justify-center text-primary">
+                <svg class="faq-icon-plus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg class="faq-icon-minus" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p class="pb-5 text-sm text-secondary leading-relaxed max-w-xl">Book a call through the link on this site, or send an email. We'll talk through what you're building and whether fractional support actually fits what you need right now.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- BOOK -->
-    <section id="book" class="min-h-screen flex items-center max-w-[1200px] mx-auto px-6 sm:px-10 py-20">
-      <div class="grid md:grid-cols-2 gap-12 sm:gap-20 items-center w-full">
+    <section id="book" class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="grid md:grid-cols-2 gap-12 sm:gap-20 items-center">
         <div class="reveal flex justify-center md:justify-start order-1">
           <img
             id="bookCover"
@@ -295,7 +479,7 @@
           <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-5xl leading-tight">Shield Up: Defending Your Digital World</h2>
           <p class="mt-5 text-secondary leading-relaxed max-w-md">A comprehensive guide to understanding cybersecurity, protecting your data, and building a resilient digital life.</p>
           <a href="assets/shield-up-defending-your-digital-world.pdf" download="Shield Up - Defending Your Digital World.pdf"
-             class="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
+             class="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-bg hover:bg-accent transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download Free Book
           </a>
@@ -304,15 +488,11 @@
     </section>
 
     <!-- RESEARCH -->
-    <section id="research" class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
-      <div class="reveal text-center mb-14">
-        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">Academic Research</p>
-        <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-5xl">Published work</h2>
-      </div>
-
-      <div class="reveal rounded-3xl border border-border bg-surface/60 p-8 sm:p-10 hover:border-accent transition-all duration-300">
+    <section id="research" class="max-w-[1200px] mx-auto px-6 sm:px-10 pb-20 sm:pb-28">
+      <div class="reveal rounded-2xl border border-border p-8 sm:p-10">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-3">Academic Research</p>
             <h3 class="font-heading font-bold text-lg sm:text-xl text-primary">A General U-Shaped Transformer for Image Restoration</h3>
             <p class="mt-1.5 text-sm font-medium text-secondary">Godwin Ubani Onyemuwa · Jiangxi University of Science and Technology</p>
             <p class="mt-3 text-sm text-secondary leading-relaxed max-w-xl">Research on image restoration utilizing a general U-Shaped Transformer architecture to improve visual quality and reconstruction accuracy.</p>
@@ -326,120 +506,130 @@
       </div>
     </section>
 
-    <!-- BLOG PREVIEW -->
-    <section class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
-      <div class="reveal flex items-end justify-between mb-12 gap-4">
-        <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">From the Blog</p>
-          <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-5xl">Notes on building</h2>
+    <!-- BLOG & ARTICLES -->
+    <section class="bg-surface border-y border-border">
+      <div class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+        <div class="reveal flex items-end justify-between mb-12 gap-4">
+          <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-5xl">Blog &amp; Articles</h2>
+          <a href="/blog/" class="hidden sm:inline-block shrink-0 text-sm font-semibold text-accent hover:underline">View all posts</a>
         </div>
-        <a href="/blog/" class="hidden sm:inline-block shrink-0 text-sm font-semibold text-accent hover:underline">
-          View all posts
-        </a>
-      </div>
 
-      <div class="grid sm:grid-cols-3 gap-5">
-        <a href="/blog/why-i-became-a-fractional-cto/"
-           class="reveal group block rounded-3xl border border-border bg-surface/60 p-7 hover:border-accent hover:bg-surface transition-all duration-300">
-          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Career</p>
-          <h3 class="font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">Why I Chose to Be a Fractional CTO Instead of Chasing a Full-Time Title</h3>
-          <p class="mt-5 text-xs font-medium text-secondary">6 min read</p>
-        </a>
-        <a href="/blog/lessons-from-building-korvanta/"
-           class="reveal group block rounded-3xl border border-border bg-surface/60 p-7 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:80ms">
-          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Building Korvanta</p>
-          <h3 class="font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">What Building Korvanta Taught Me About Cross-Border Trade Infrastructure</h3>
-          <p class="mt-5 text-xs font-medium text-secondary">7 min read</p>
-        </a>
-        <a href="/blog/cybersecurity-habits-for-gen-z-builders/"
-           class="reveal group block rounded-3xl border border-border bg-surface/60 p-7 hover:border-accent hover:bg-surface transition-all duration-300" style="animation-delay:160ms">
-          <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-4">Cybersecurity</p>
-          <h3 class="font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">5 Cybersecurity Habits Every Gen Z Builder Needs</h3>
-          <p class="mt-5 text-xs font-medium text-secondary">5 min read</p>
-        </a>
-      </div>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <a href="/blog/why-i-became-a-fractional-cto/" class="reveal group block rounded-2xl overflow-hidden border border-border bg-bg hover:shadow-cardHover transition-all duration-300">
+            <div class="aspect-[4/3] flex items-center justify-center p-6" style="background:#2563EB;">
+              <p class="font-heading font-extrabold text-white text-lg text-center leading-tight">Fractional CTO</p>
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-medium text-secondary">November 2026 · 6 min read</p>
+              <h3 class="mt-2 font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">Why I Chose to Be a Fractional CTO Instead of Chasing a Full-Time Title</h3>
+            </div>
+          </a>
+          <a href="/blog/lessons-from-building-korvanta/" class="reveal group block rounded-2xl overflow-hidden border border-border bg-bg hover:shadow-cardHover transition-all duration-300" style="animation-delay:80ms">
+            <div class="aspect-[4/3] flex items-center justify-center p-6" style="background:#111117;">
+              <p class="font-heading font-extrabold text-white text-lg text-center leading-tight">Korvanta</p>
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-medium text-secondary">November 2026 · 7 min read</p>
+              <h3 class="mt-2 font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">What Building Korvanta Taught Me About Cross-Border Trade Infrastructure</h3>
+            </div>
+          </a>
+          <a href="/blog/cybersecurity-habits-for-gen-z-builders/" class="reveal group block rounded-2xl overflow-hidden border border-border bg-bg hover:shadow-cardHover transition-all duration-300" style="animation-delay:160ms">
+            <div class="aspect-[4/3] flex items-center justify-center p-6" style="background:#93C5FD;">
+              <p class="font-heading font-extrabold text-primary text-lg text-center leading-tight">Shield Up</p>
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-medium text-secondary">November 2026 · 5 min read</p>
+              <h3 class="mt-2 font-heading font-bold text-primary leading-snug group-hover:text-accent transition-colors">5 Cybersecurity Habits Every Gen Z Builder Needs</h3>
+            </div>
+          </a>
+        </div>
 
-      <a href="/blog/" class="reveal sm:hidden mt-8 inline-block text-sm font-semibold text-accent hover:underline">
-        View all posts
-      </a>
-    </section>
-
-    <!-- SOCIAL -->
-    <section class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
-      <div class="reveal text-center mb-12">
-        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">Elsewhere</p>
-        <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-4xl">Let's connect</h2>
-      </div>
-      <div class="reveal grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-        <a href="https://linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">LinkedIn</span>
-        </a>
-        <a href="https://github.com/Onyemuwa" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">GitHub</span>
-        </a>
-        <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">X (Twitter)</span>
-        </a>
-        <a href="https://youtube.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24 24 0 0 1 0-10c.2-1 1-1.8 2-2a44 44 0 0 1 15 0c1 .2 1.8 1 2 2a24 24 0 0 1 0 10c-.2 1-1 1.8-2 2a44 44 0 0 1-15 0c-1-.2-1.8-1-2-2Z"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">YouTube</span>
-        </a>
-        <a href="https://instagram.com/iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">Instagram</span>
-        </a>
-        <a href="https://tiktok.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer"
-           class="social-link group flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-4 sm:px-5 py-4 hover:border-accent transition-all">
-          <span class="icon-wrap w-10 h-10 shrink-0 rounded-xl bg-accent/10 text-accent flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
-          </span>
-          <span class="text-sm font-semibold text-primary">TikTok</span>
-        </a>
+        <a href="/blog/" class="reveal sm:hidden mt-8 inline-block text-sm font-semibold text-accent hover:underline">View all posts</a>
       </div>
     </section>
 
-    <!-- CONTACT FOOTER -->
-    <section id="contact" class="hero-mesh min-h-[90vh] flex items-center justify-center px-6 py-20">
-      <div class="reveal text-center max-w-xl">
-        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-5">Get in Touch</p>
-        <h2 class="font-heading font-extrabold tracking-tight text-primary text-4xl sm:text-6xl leading-tight text-balance">Need a Fractional CTO or dev help?</h2>
-        <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
-           class="mt-9 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-semibold text-white shadow-card hover:bg-accentDark hover:shadow-cardHover hover:scale-[1.03] transition-all">
-          Book a Call
-        </a>
-
-        <div class="my-10 h-px bg-border max-w-xs mx-auto"></div>
-
-        <h3 class="font-heading font-semibold text-primary text-lg">Want to say hi? Drop me an email.</h3>
-        <a href="mailto:iamgodwinubani@gmail.com?subject=Hi%20Godwin!&body=Hi%20Godwin,%0A%0AI%20just%20saw%20your%20portfolio%20and%20wanted%20to%20reach%20out.%0A%0ABest,%0A%5BYour%20Name%5D"
-           class="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-primary hover:border-accent transition-all">
-          Send Email
-        </a>
+    <!-- CONTACT / SOCIAL -->
+    <section id="contact" class="max-w-[1200px] mx-auto px-6 sm:px-10 py-20 sm:py-28">
+      <div class="reveal grid sm:grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-5">Have any project in mind?</p>
+          <h2 class="font-heading font-extrabold tracking-tight text-primary text-3xl sm:text-4xl leading-tight">Let's talk about what you're building.</h2>
+          <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer"
+             class="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-bg hover:bg-accent transition-colors">
+            Book a Call
+          </a>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-secondary mb-3">Elsewhere</p>
+          <div class="grid grid-cols-2 gap-3">
+            <a href="https://linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-accent transition-colors">LinkedIn ↗</a>
+            <a href="https://github.com/Onyemuwa" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-accent transition-colors">GitHub ↗</a>
+            <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-accent transition-colors">X ↗</a>
+            <a href="https://youtube.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-accent transition-colors">YouTube ↗</a>
+            <a href="https://instagram.com/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-accent transition-colors">Instagram ↗</a>
+            <a href="https://tiktok.com/@iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-accent transition-colors">TikTok ↗</a>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="max-w-[1200px] mx-auto px-6 sm:px-10 pb-10">
-    <p class="text-center text-xs text-secondary">© <span id="year"></span> Godwin Ubani. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer class="bg-surface border-t border-border">
+    <div class="max-w-[1200px] mx-auto px-6 sm:px-10 pt-16 pb-10">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 pb-12 border-b border-border">
+        <p class="font-heading font-bold text-2xl sm:text-3xl text-primary max-w-sm">Want to say hi?<br />Drop me an email.</p>
+        <a href="mailto:iamgodwinubani@gmail.com?subject=Hi%20Godwin!&body=Hi%20Godwin,%0A%0AI%20just%20saw%20your%20portfolio%20and%20wanted%20to%20reach%20out.%0A%0ABest,%0A%5BYour%20Name%5D"
+           class="font-heading font-bold text-xl sm:text-2xl text-primary hover:text-accent transition-colors whitespace-nowrap">
+          iamgodwinubani@gmail.com ↗
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 py-12">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-secondary mb-4">Site</p>
+          <div class="flex flex-col gap-2.5 text-sm">
+            <a href="/" class="text-primary hover:text-accent transition-colors">Home</a>
+            <a href="/about/" class="text-primary hover:text-accent transition-colors">About</a>
+            <a href="/blog/" class="text-primary hover:text-accent transition-colors">Blog</a>
+            <a href="#faq" class="text-primary hover:text-accent transition-colors">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-secondary mb-4">Work</p>
+          <div class="flex flex-col gap-2.5 text-sm">
+            <a href="#work" class="text-primary hover:text-accent transition-colors">Selected Work</a>
+            <a href="#book" class="text-primary hover:text-accent transition-colors">Shield Up</a>
+            <a href="#research" class="text-primary hover:text-accent transition-colors">Research</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-secondary mb-4">Elsewhere</p>
+          <div class="flex flex-col gap-2.5 text-sm">
+            <a href="https://linkedin.com/in/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent transition-colors">LinkedIn</a>
+            <a href="https://github.com/Onyemuwa" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent transition-colors">GitHub</a>
+            <a href="https://x.com/iamgodwinubani" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent transition-colors">X</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-secondary mb-4">Contact</p>
+          <div class="flex flex-col gap-2.5 text-sm">
+            <a href="https://tally.so/r/ob6vLx" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-accent transition-colors">Book a Call</a>
+            <a href="mailto:iamgodwinubani@gmail.com" class="text-primary hover:text-accent transition-colors">Email</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-border">
+        <p class="text-xs text-secondary">© <span id="year"></span> Godwin Ubani. All rights reserved.</p>
+        <p class="text-xs text-secondary">Designed &amp; built by Godwin Ubani</p>
+      </div>
+    </div>
+
+    <div class="overflow-hidden select-none pointer-events-none">
+      <p class="font-heading font-black uppercase text-primary leading-none text-[16vw] -mb-[2vw] whitespace-nowrap text-center">Godwin Ubani</p>
+    </div>
   </footer>
 
   <script>
@@ -476,6 +666,14 @@
       menuBtn.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }));
+
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
