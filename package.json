@@ -1,26 +1,30 @@
 {
-  "name": "godwinubani.me",
-  "version": "1.0.0",
-  "description": "Godwin Ubani's personal portfolio site",
-  "main": "index.js",
+  "name": "godwinubani",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./assets/style.css --minify",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/style.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "deploy": "node scripts/deploy.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Iamgodwinubani/Iamgodwinubani.github.io.git"
+  "dependencies": {
+    "geist": "^1.9.2",
+    "lucide-react": "^1.76.0",
+    "motion": "^14.14.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Iamgodwinubani/Iamgodwinubani.github.io/issues"
-  },
-  "homepage": "https://github.com/Iamgodwinubani/Iamgodwinubani.github.io#readme",
   "devDependencies": {
-    "tailwindcss": "^3.4.19"
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5"
   }
 }
