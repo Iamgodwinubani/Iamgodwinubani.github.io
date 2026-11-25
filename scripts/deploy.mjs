@@ -2,7 +2,7 @@
 // Usage: npm run deploy            (builds first)
 //        npm run deploy -- --skip-build
 import { execSync } from "node:child_process";
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const run = (cmd, cwd) => execSync(cmd, { cwd, stdio: "inherit" });
@@ -20,6 +20,8 @@ writeFileSync(join(out, ".nojekyll"), "");
 writeFileSync(join(out, "CNAME"), "godwinubani.me\n");
 
 const sha = read("git rev-parse --short HEAD", root);
+// Start from a clean repository each time (a previous failed run may have left one).
+rmSync(join(out, ".git"), { recursive: true, force: true });
 run("git init -q -b gh-pages", out);
 run("git add -A", out);
 run(`git -c user.name="${read("git config user.name", root)}" -c user.email="${read("git config user.email", root)}" commit -q -m "Deploy ${sha}"`, out);
