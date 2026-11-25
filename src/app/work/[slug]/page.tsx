@@ -86,7 +86,7 @@ async function ProjectContent({ params }: { params: Promise<{ slug: string }> })
         <Reveal delay={0.2} className="mt-14 md:mt-20">
           <ProjectVisual project={project} priority />
           <p className="label-mono mt-3 text-subtle">
-            {project.screenshot ? "Product interface" : "Illustrative composition — not a live product screenshot"}
+            {project.screenshot ? `${project.name} website` : "Image coming soon"}
           </p>
         </Reveal>
 

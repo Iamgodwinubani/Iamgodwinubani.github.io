@@ -15,10 +15,11 @@
   --line-strong: rgba(255, 255, 255, 0.16);
 
   /* Product identities */
-  --quentavo: #b5f36b;
-  --relyvo: #8fd3ff;
-  --balnexa: #f2c879;
-  --auvetra: #ff9b85;
+  --pavlo: #5b8cff;
+  --nodly: #a77bff;
+  --melyo: #3ddc97;
+  --sivra: #ff8a3d;
+  --danger: #ff9b85;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --nav-h: 72px;
@@ -34,10 +35,11 @@
   --color-accent: var(--accent);
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
-  --color-quentavo: var(--quentavo);
-  --color-relyvo: var(--relyvo);
-  --color-balnexa: var(--balnexa);
-  --color-auvetra: var(--auvetra);
+  --color-pavlo: var(--pavlo);
+  --color-nodly: var(--nodly);
+  --color-melyo: var(--melyo);
+  --color-sivra: var(--sivra);
+  --color-danger: var(--danger);
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;

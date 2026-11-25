@@ -29,12 +29,12 @@ All text lives in three files. Edit the words between the quotes and save.
 
 The photo then appears in the hero and the About section.
 
-### Add real product screenshots
+### Product images
 
-The product visuals are illustrative compositions, labelled "Illustrative" on the site. To replace one with a real screenshot:
+Each product's image lives in `public/images/projects/` (e.g. `pavlo.webp`). To replace one:
 
-1. Save the image as, for example, `public/images/projects/quentavo.png`. A 3:2 ratio works best (e.g. 2400×1600).
-2. In `src/content/projects.ts`, set `screenshot: "/images/projects/quentavo.png"` for that product.
+1. Save the new image there (WebP, PNG or JPG; at least 1600px wide looks sharpest).
+2. In `src/content/projects.ts`, update that product's `screenshot` with the file path and its width and height in pixels.
 3. Optionally set `link: "https://..."` to show a "Visit" link on the project page.
 
 ### Social sharing image

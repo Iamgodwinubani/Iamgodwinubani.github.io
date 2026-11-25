@@ -105,7 +105,7 @@ export function ContactForm() {
               setErrors(validateContact(values));
             },
             className:
-              "peer w-full resize-none border-0 border-b border-line-strong bg-transparent px-0 pb-3 pt-2 text-[17px] text-fg placeholder:text-subtle transition-colors duration-300 focus:border-accent focus:outline-none focus-visible:outline-none focus:ring-0 aria-[invalid=true]:border-auvetra",
+              "peer w-full resize-none border-0 border-b border-line-strong bg-transparent px-0 pb-3 pt-2 text-[17px] text-fg placeholder:text-subtle transition-colors duration-300 focus:border-accent focus:outline-none focus-visible:outline-none focus:ring-0 aria-[invalid=true]:border-danger",
           };
           return (
             <div key={f.name} className={`group relative pb-8 ${f.half ? "" : "sm:col-span-2"}`}>
@@ -123,7 +123,7 @@ export function ContactForm() {
                 />
               )}
               {err ? (
-                <p id={`${id}-error`} className="absolute bottom-2 left-0 text-[13px] text-auvetra">
+                <p id={`${id}-error`} className="absolute bottom-2 left-0 text-[13px] text-danger">
                   {err}
                 </p>
               ) : null}
@@ -186,10 +186,10 @@ function Notice({ tone, icon, children }: { tone: "ok" | "error"; icon?: React.R
       exit={{ opacity: 0, y: -4 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
       className={`flex items-start gap-3 border-l-2 py-1 pl-4 text-[15px] leading-relaxed ${
-        tone === "ok" ? "border-accent text-fg" : "border-auvetra text-fg"
+        tone === "ok" ? "border-accent text-fg" : "border-danger text-fg"
       }`}
     >
-      {icon ? <span className={`mt-1 ${tone === "ok" ? "text-accent" : "text-auvetra"}`}>{icon}</span> : null}
+      {icon ? <span className={`mt-1 ${tone === "ok" ? "text-accent" : "text-danger"}`}>{icon}</span> : null}
       <p>{children}</p>
     </motion.div>
   );

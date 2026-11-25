@@ -1,11 +1,10 @@
 /**
  * Product portfolio content.
  * Each product has its own identity colour, description and focus areas.
- * The visuals shown on the site are illustrative compositions — replace them
- * with real screenshots by setting `screenshot` to an image path in /public.
+ * Product images live in /public/images/projects.
  */
 
-export type ProjectSlug = "quentavo" | "relyvo" | "balnexa" | "auvetra";
+export type ProjectSlug = "pavlo" | "nodly" | "melyo" | "sivra";
 
 export type Project = {
   slug: ProjectSlug;
@@ -22,23 +21,23 @@ export type Project = {
   status: string;
   /** CSS colour variable for the product identity */
   color: string;
-  /** Optional real screenshot path, e.g. "/images/projects/quentavo.png" */
-  screenshot: string | null;
+  /** Product image in /public, with its pixel size, or null for a placeholder */
+  screenshot: { src: string; width: number; height: number } | null;
   /** Optional live URL for the product */
   link: string | null;
 };
 
 export const projects: Project[] = [
   {
-    slug: "quentavo",
+    slug: "pavlo",
     index: "01",
-    name: "Quentavo",
+    name: "Pavlo",
     category: "Payment Orchestration & Financial Infrastructure",
     summary:
       "A payment orchestration product focused on simplifying and connecting digital payment workflows.",
     overview: [
-      "Quentavo is a payment orchestration product built to simplify how digital payment workflows are connected and managed.",
-      "Instead of treating every payment integration as a separate project, Quentavo brings payment flows into one coordinated layer, so the logic of how a payment moves is clear, structured, and easier to evolve.",
+      "Pavlo is a payment orchestration product built to simplify how digital payment workflows are connected and managed.",
+      "Instead of treating every payment integration as a separate project, Pavlo brings payment flows into one coordinated layer, so the logic of how a payment moves is clear, structured, and easier to evolve.",
     ],
     focus: [
       {
@@ -61,19 +60,19 @@ export const projects: Project[] = [
     tags: ["Payments", "Orchestration", "APIs", "Integrations", "Transactions"],
     role: "Founder · Product · Engineering",
     status: "Built",
-    color: "var(--quentavo)",
-    screenshot: null,
+    color: "var(--pavlo)",
+    screenshot: { src: "/images/projects/pavlo.webp", width: 743, height: 526 },
     link: null,
   },
   {
-    slug: "relyvo",
+    slug: "nodly",
     index: "02",
-    name: "Relyvo",
+    name: "Nodly",
     category: "Webhook Delivery & Monitoring Infrastructure",
     summary:
       "A webhook infrastructure product designed for reliable event delivery, monitoring, and management.",
     overview: [
-      "Relyvo is webhook infrastructure designed around one idea: events should arrive where they are supposed to, and you should be able to see when they do not.",
+      "Nodly is webhook infrastructure designed around one idea: events should arrive where they are supposed to, and you should be able to see when they do not.",
       "It gives teams a dedicated layer for sending, tracking, and managing webhook events, turning a part of the stack that is often invisible into something observable and dependable.",
     ],
     focus: [
@@ -97,19 +96,19 @@ export const projects: Project[] = [
     tags: ["Webhooks", "Event Delivery", "Monitoring", "APIs", "Reliability"],
     role: "Founder · Product · Engineering",
     status: "Built",
-    color: "var(--relyvo)",
-    screenshot: null,
+    color: "var(--nodly)",
+    screenshot: { src: "/images/projects/nodly.webp", width: 734, height: 531 },
     link: null,
   },
   {
-    slug: "balnexa",
+    slug: "melyo",
     index: "03",
-    name: "Balnexa",
+    name: "Melyo",
     category: "Financial Reconciliation & Automation",
     summary:
       "A financial technology product focused on simplifying transaction matching, reconciliation, and financial operations.",
     overview: [
-      "Balnexa is a financial technology product that brings structure to reconciliation, the work of making sure records on both sides of a transaction agree.",
+      "Melyo is a financial technology product that brings structure to reconciliation, the work of making sure records on both sides of a transaction agree.",
       "It focuses on matching transactions, surfacing what does not line up, and automating the repetitive steps of financial operations so teams can spend their attention where it matters.",
     ],
     focus: [
@@ -133,19 +132,19 @@ export const projects: Project[] = [
     tags: ["Reconciliation", "Matching", "Automation", "Ledgers", "Finance Ops"],
     role: "Founder · Product · Engineering",
     status: "Built",
-    color: "var(--balnexa)",
-    screenshot: null,
+    color: "var(--melyo)",
+    screenshot: { src: "/images/projects/melyo.webp", width: 742, height: 440 },
     link: null,
   },
   {
-    slug: "auvetra",
+    slug: "sivra",
     index: "04",
-    name: "Auvetra",
+    name: "Sivra",
     category: "Fraud Detection & Digital Trust",
     summary:
       "A digital trust product focused on scam detection, information verification, and helping businesses make more informed decisions.",
     overview: [
-      "Auvetra is a digital trust product built to help people and businesses make more informed decisions in environments where not everything is what it appears to be.",
+      "Sivra is a digital trust product built to help people and businesses make more informed decisions in environments where not everything is what it appears to be.",
       "It focuses on detecting signs of scams, verifying information, and presenting risk in a way that is clear enough to act on.",
     ],
     focus: [
@@ -169,8 +168,8 @@ export const projects: Project[] = [
     tags: ["Fraud Detection", "Verification", "Risk", "Trust & Safety"],
     role: "Founder · Product · Engineering",
     status: "Built",
-    color: "var(--auvetra)",
-    screenshot: null,
+    color: "var(--sivra)",
+    screenshot: { src: "/images/projects/sivra.webp", width: 734, height: 433 },
     link: null,
   },
 ];
