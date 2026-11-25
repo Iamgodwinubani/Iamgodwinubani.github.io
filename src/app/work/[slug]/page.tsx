@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
@@ -31,16 +30,9 @@ export async function generateMetadata({ params }: PageProps<"/work/[slug]">): P
   };
 }
 
-export default function ProjectPage({ params }: PageProps<"/work/[slug]">) {
-  // Params resolve inside Suspense so navigation can show the shell instantly.
-  return (
-    <Suspense fallback={<div className="min-h-dvh" aria-busy="true" />}>
-      <ProjectContent params={params} />
-    </Suspense>
-  );
-}
+export const dynamicParams = false;
 
-async function ProjectContent({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProjectPage({ params }: PageProps<"/work/[slug]">) {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
